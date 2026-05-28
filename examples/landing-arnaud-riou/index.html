@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="NOINDEX, NOFOLLOW">
+<title>Les 10 Portes du Chamanisme — avec Arnaud Riou</title>
+<meta property="og:title" content="Les 10 Portes du Chamanisme — avec Arnaud Riou">
+<link rel="icon" href="https://pure-sante-cdn.pubfac.io/uploads/PURST_favicon.png">
+<link href="https://cdn-common.pubfac.com/falcon/grapesjs-preset-webpage.front.css" rel="stylesheet">
+<script defer src="https://cdn-common.pubfac.com/falcon/boot.js" data-app="front"></script>
+<script>
+  window.pageUid  = 'VOTRE_PAGE_UID';
+  window.pageType = 'falcon_landing';
+  window.pageId   = 'VOTRE_PAGE_ID';
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════════════════════
+   MYSTIC EDITORIAL — design tokens
+   ─ Dark grimoire, parchment surfaces, ember & alchemy gold
+   ─ Cinzel / Cormorant Garamond / Crimson Pro / JetBrains Mono
+═══════════════════════════════════════════════════════════════ */
+:root{
+  /* Surfaces — nocturnal */
+  --night-0:        #06090F;
+  --night-1:        #0A0F1F;
+  --night-2:        #111729;
+  --night-3:        #1A2138;
+
+  /* Surfaces — parchment */
+  --parch-0:        #F4EBD8;
+  --parch-1:        #EBE0C9;
+  --parch-2:        #DDD0B4;
+  --parch-ink:      #1A130C;
+  --parch-ink-2:    #3C2E20;
+  --parch-muted:    #6A5A45;
+
+  /* Accents */
+  --ember:          #D9542B;
+  --ember-deep:     #A53D1E;
+  --ember-glow:     rgba(217, 84, 43, 0.45);
+  --gold:           #C9A075;
+  --gold-bright:    #E5C696;
+  --gold-deep:      #8B6F46;
+
+  /* Lines */
+  --line-dark:      rgba(244, 235, 216, 0.10);
+  --line-dark-2:    rgba(244, 235, 216, 0.22);
+  --line-light:     rgba(26, 19, 12, 0.10);
+  --line-light-2:   rgba(26, 19, 12, 0.22);
+
+  /* Type */
+  --ft-display:     'Cinzel', serif;
+  --ft-heading:     'Cormorant Garamond', serif;
+  --ft-body:        'Crimson Pro', Georgia, serif;
+  --ft-mono:        'JetBrains Mono', ui-monospace, monospace;
+
+  /* Rhythm */
+  --r-xs: 4px;
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 18px;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --space-7: 96px;
+  --space-8: 128px;
+
+  --container: 1200px;
+  --reading:   720px;
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{font-size:18px;scroll-behavior:smooth;background:var(--night-0)}
+body{
+  font-family:var(--ft-body);
+  background:var(--night-0);
+  color:var(--parch-0);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.65;
+  font-size:1.05rem;
+  overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+::selection{background:var(--ember);color:var(--parch-0)}
+
+/* ═══════ AMBIENT BACKGROUND ═══════ */
+.ambient{
+  position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none;
+  background:
+    radial-gradient(ellipse at top, var(--night-2) 0%, var(--night-0) 60%),
+    var(--night-0);
+}
+.ambient__video{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  opacity:0.22;mix-blend-mode:screen;
+}
+.ambient__veil{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(217,84,43,0.08), transparent 55%),
+    linear-gradient(180deg, rgba(6,9,15,0.20) 0%, rgba(6,9,15,0.78) 60%, rgba(6,9,15,0.95) 100%);
+}
+.ambient__grain{
+  position:absolute;inset:0;opacity:0.5;mix-blend-mode:overlay;pointer-events:none;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' seed='5'/><feColorMatrix values='0 0 0 0 0.95 0 0 0 0 0.85 0 0 0 0 0.65 0 0 0 0.05 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+@media (prefers-reduced-motion: reduce){
+  .ambient__video{display:none}
+}
+
+/* ═══════ LAYOUT ═══════ */
+.container{max-width:var(--container);margin:0 auto;padding:0 24px}
+.container-narrow{max-width:var(--reading);margin:0 auto;padding:0 24px}
+
+/* ═══════ TOPBAR — PureSanté ═══════ */
+.topbar{
+  background:var(--night-0);
+  border-bottom:1px solid var(--line-dark);
+  padding:12px 24px;text-align:center;position:relative;z-index:5;
+}
+.topbar img{max-height:30px;width:auto;display:inline-block;opacity:0.85}
+
+/* ═══════ MARGINALIA — section numbering like a grimoire ═══════ */
+.marker{
+  font-family:var(--ft-mono);
+  font-size:0.7rem;
+  letter-spacing:0.32em;
+  text-transform:uppercase;
+  color:var(--gold);
+  display:inline-flex;align-items:center;gap:14px;
+}
+.marker::before{
+  content:'';width:32px;height:1px;background:var(--gold);opacity:0.6;
+}
+.marker--center{justify-content:center}
+.marker--center::after{
+  content:'';width:32px;height:1px;background:var(--gold);opacity:0.6;
+}
+
+/* ═══════ HERO ═══════ */
+.hero{
+  position:relative;
+  padding:80px 0 60px;
+  text-align:center;
+  overflow:hidden;
+}
+.hero__numeral{
+  font-family:var(--ft-display);
+  font-weight:400;
+  font-size:clamp(180px, 32vw, 380px);
+  line-height:0.85;
+  letter-spacing:-0.02em;
+  color:transparent;
+  -webkit-text-stroke:1px rgba(201,160,117,0.28);
+  text-stroke:1px rgba(201,160,117,0.28);
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%, -55%);
+  user-select:none;
+  pointer-events:none;
+  z-index:0;
+  font-feature-settings: 'lnum';
+}
+.hero__inner{position:relative;z-index:1;padding:0 24px;max-width:900px;margin:0 auto}
+.hero__overline{margin-bottom:32px;opacity:0;animation:fadeUp .8s .15s forwards}
+.hero__title{
+  font-family:var(--ft-heading);
+  font-weight:400;
+  font-size:clamp(2.2rem, 6vw, 4.4rem);
+  line-height:1.05;
+  letter-spacing:-0.01em;
+  margin-bottom:20px;
+  color:var(--parch-0);
+  opacity:0;animation:fadeUp .9s .3s forwards;
+}
+.hero__title em{
+  font-style:italic;
+  color:var(--gold-bright);
+  font-weight:300;
+}
+.hero__subtitle{
+  font-family:var(--ft-heading);
+  font-style:italic;
+  font-weight:300;
+  font-size:clamp(1.15rem, 2.3vw, 1.55rem);
+  color:rgba(244,235,216,0.72);
+  margin-bottom:48px;
+  opacity:0;animation:fadeUp .9s .45s forwards;
+}
+
+/* Video container */
+.video-frame{
+  max-width:920px;margin:0 auto;
+  border:1px solid var(--gold);
+  background:var(--night-0);
+  position:relative;
+  opacity:0;animation:fadeUp 1s .6s forwards;
+}
+.video-frame::before,
+.video-frame::after{
+  content:'';position:absolute;width:12px;height:12px;
+  border:1px solid var(--gold);
+}
+.video-frame::before{top:-7px;left:-7px;border-right:none;border-bottom:none}
+.video-frame::after{bottom:-7px;right:-7px;border-left:none;border-top:none}
+.video-corner{
+  position:absolute;width:12px;height:12px;border:1px solid var(--gold);
+}
+.video-corner.tr{top:-7px;right:-7px;border-left:none;border-bottom:none}
+.video-corner.bl{bottom:-7px;left:-7px;border-right:none;border-top:none}
+
+/* ═══════ SECTION SCAFFOLD ═══════ */
+section{padding:96px 0;position:relative}
+.section-title{
+  font-family:var(--ft-heading);
+  font-weight:400;
+  font-size:clamp(2rem, 4vw, 3rem);
+  line-height:1.1;
+  letter-spacing:-0.005em;
+  text-align:center;
+  color:var(--parch-0);
+  margin-top:24px;
+  margin-bottom:20px;
+}
+.section-title em{font-style:italic;color:var(--gold-bright);font-weight:300}
+.section-lede{
+  font-family:var(--ft-heading);
+  font-style:italic;
+  font-weight:300;
+  font-size:clamp(1.1rem, 2vw, 1.4rem);
+  line-height:1.5;
+  color:rgba(244,235,216,0.7);
+  text-align:center;
+  max-width:680px;
+  margin:0 auto;
+}
+
+/* Divider — print-style ornament */
+.ornament{
+  display:flex;align-items:center;justify-content:center;gap:14px;
+  margin:64px auto;max-width:300px;
+}
+.ornament__line{flex:1;height:1px;background:var(--gold);opacity:0.35}
+.ornament__mark{
+  width:6px;height:6px;background:var(--gold);transform:rotate(45deg);
+}
+
+/* ═══════ THE GATE — first offer block (parchment surface) ═══════ */
+.gate{
+  position:relative;
+  background:var(--parch-0);
+  color:var(--parch-ink);
+  padding:88px 0;
+  margin:32px 0;
+}
+.gate::before,.gate::after{
+  content:'';position:absolute;left:0;right:0;height:24px;pointer-events:none;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' seed='7'/><feColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.07 0 0 0 0 0.05 0 0 0 0.5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  background-size:200px;opacity:0.5;
+}
+.gate::before{top:0;mask-image:linear-gradient(to bottom, black, transparent)}
+.gate::after{bottom:0;mask-image:linear-gradient(to top, black, transparent)}
+
+.gate .marker{color:var(--ember-deep)}
+.gate .marker::before,
+.gate .marker--center::after{background:var(--ember-deep);opacity:0.7}
+.gate .section-title{color:var(--parch-ink)}
+.gate .section-title em{color:var(--ember-deep);font-weight:400}
+.gate .section-lede{color:var(--parch-muted)}
+
+/* Recap card */
+.recap{
+  max-width:760px;margin:48px auto 0;
+  background:var(--parch-1);
+  border:1px solid var(--line-light-2);
+  padding:48px 40px;
+  position:relative;
+}
+.recap::before,.recap::after{
+  content:'';position:absolute;width:14px;height:14px;border:1px solid var(--ember-deep);
+}
+.recap::before{top:-1px;left:-1px;border-right:none;border-bottom:none}
+.recap::after{bottom:-1px;right:-1px;border-left:none;border-top:none}
+
+.recap__head{text-align:center;margin-bottom:32px}
+.recap__head .marker{color:var(--ember-deep);justify-content:center}
+.recap__head .marker::before,
+.recap__head .marker::after{content:'';width:32px;height:1px;background:var(--ember-deep);opacity:0.5}
+.recap__title{
+  font-family:var(--ft-heading);
+  font-weight:400;
+  font-size:clamp(1.6rem,3vw,2.2rem);
+  letter-spacing:-0.005em;
+  color:var(--parch-ink);
+  margin-top:16px;
+  line-height:1.2;
+}
+.recap__mockup{max-width:480px;margin:32px auto 40px;text-align:center}
+.recap__mockup img{
+  width:100%;display:block;
+  filter:drop-shadow(0 18px 28px rgba(26,19,12,0.18))
+         drop-shadow(0 4px 10px rgba(26,19,12,0.10));
+  transition:transform .4s cubic-bezier(0.16,1,0.3,1);
+}
+.recap__mockup img:hover{transform:translateY(-4px)}
+
+.recap__list{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:16px 36px;
+  margin:0 auto;max-width:600px;
+}
+.recap__item{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:14px 0;
+  border-bottom:1px solid var(--line-light);
+  font-family:var(--ft-body);
+  font-size:1rem;line-height:1.5;color:var(--parch-ink-2);
+}
+.recap__item:nth-last-child(-n+2){border-bottom:none}
+.recap__item-icon{
+  flex-shrink:0;width:22px;height:22px;color:var(--ember-deep);margin-top:2px;
+}
+.recap__item-icon svg{width:100%;height:100%;display:block}
+.recap__item strong{font-family:var(--ft-heading);color:var(--parch-ink);font-weight:600;font-size:1.05rem;display:block;line-height:1.3}
+
+/* ═══════ BUTTONS ═══════ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:12px;
+  padding:18px 38px;
+  font-family:var(--ft-display);
+  font-weight:600;
+  font-size:0.82rem;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  border:1px solid transparent;
+  background:var(--ember);
+  color:var(--parch-0);
+  cursor:pointer;
+  position:relative;
+  transition:transform .2s cubic-bezier(0.16,1,0.3,1), background .2s, box-shadow .25s;
+  text-decoration:none;
+  box-shadow:
+    0 8px 20px rgba(217,84,43,0.32),
+    inset 0 1px 0 rgba(255,255,255,0.18);
+  min-height:56px;
+  cursor:pointer;
+}
+.btn:hover{
+  background:var(--ember-deep);
+  transform:translateY(-2px);
+  box-shadow:
+    0 14px 32px rgba(217,84,43,0.45),
+    inset 0 1px 0 rgba(255,255,255,0.18);
+}
+.btn:active{transform:translateY(0)}
+.btn:focus-visible{outline:2px solid var(--gold-bright);outline-offset:4px}
+.btn--full{width:100%}
+.btn--ghost{
+  background:transparent;border-color:var(--gold);color:var(--gold-bright);
+  box-shadow:none;
+}
+.btn--ghost:hover{background:rgba(201,160,117,0.10);border-color:var(--gold-bright);box-shadow:none}
+.btn .btn__arrow{width:14px;height:14px;transition:transform .25s}
+.btn:hover .btn__arrow{transform:translateX(4px)}
+
+.cta-wrap{text-align:center;margin-top:48px}
+
+/* ═══════ THE 10 GATES — editorial magazine grid ═══════ */
+.gates-section{padding:120px 0}
+.gates-intro{text-align:center;margin-bottom:80px}
+
+.gates-grid{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:0 24px;
+  display:grid;
+  grid-template-columns:repeat(12, 1fr);
+  gap:1px;
+  background:var(--line-dark-2);
+  border:1px solid var(--line-dark-2);
+}
+.gate-card{
+  background:var(--night-1);
+  padding:48px 36px 44px;
+  position:relative;
+  transition:background .35s ease;
+  min-height:340px;
+  display:flex;flex-direction:column;
+}
+.gate-card:hover{background:var(--night-2)}
+.gate-card--6{grid-column:span 6}
+.gate-card--4{grid-column:span 4}
+.gate-card--8{grid-column:span 8}
+.gate-card--12{grid-column:span 12}
+
+.gate-card__numeral{
+  position:absolute;
+  top:24px;right:32px;
+  font-family:var(--ft-display);
+  font-weight:400;
+  font-size:5.2rem;
+  line-height:1;
+  color:transparent;
+  -webkit-text-stroke:1px rgba(201,160,117,0.32);
+  text-stroke:1px rgba(201,160,117,0.32);
+  letter-spacing:-0.01em;
+  pointer-events:none;
+  user-select:none;
+  transition:color .4s ease, -webkit-text-stroke-color .4s ease;
+}
+.gate-card:hover .gate-card__numeral{
+  -webkit-text-stroke-color:var(--gold);
+  color:rgba(201,160,117,0.08);
+}
+
+.gate-card__label{
+  font-family:var(--ft-mono);
+  font-size:0.7rem;
+  font-weight:500;
+  letter-spacing:0.28em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:18px;
+}
+.gate-card__title{
+  font-family:var(--ft-heading);
+  font-weight:400;
+  font-size:1.85rem;
+  line-height:1.15;
+  letter-spacing:-0.005em;
+  color:var(--parch-0);
+  margin-bottom:18px;
+  max-width:18ch;
+}
+.gate-card__title em{font-style:italic;color:var(--gold-bright);font-weight:300}
+.gate-card__desc{
+  font-family:var(--ft-body);
+  font-size:1.02rem;
+  line-height:1.6;
+  color:rgba(244,235,216,0.78);
+  max-width:42ch;
+}
+
+.gate-card__hairline{
+  width:42px;height:1px;background:var(--gold);opacity:0.6;
+  margin-bottom:22px;
+}
+
+/* Theme separators */
+.gates-theme{
+  grid-column:1 / -1;
+  padding:36px 36px;
+  background:var(--night-2);
+  display:flex;align-items:center;gap:24px;
+  border-top:1px solid var(--line-dark-2);
+  border-bottom:1px solid var(--line-dark-2);
+}
+.gates-theme:first-of-type{border-top:none}
+.gates-theme__icon{
+  width:42px;height:42px;flex-shrink:0;color:var(--gold);
+}
+.gates-theme__icon svg{width:100%;height:100%;display:block}
+.gates-theme__text{flex:1}
+.gates-theme__label{
+  font-family:var(--ft-display);
+  font-weight:500;
+  font-size:1.15rem;
+  letter-spacing:0.04em;
+  color:var(--parch-0);
+  margin-bottom:6px;
+}
+.gates-theme__sub{
+  font-family:var(--ft-heading);
+  font-style:italic;
+  font-size:1.05rem;
+  color:rgba(244,235,216,0.6);
+}
+
+.gates-footer{
+  margin-top:48px;text-align:center;
+  font-family:var(--ft-heading);
+  font-style:italic;
+  color:rgba(244,235,216,0.62);
+  font-size:1.05rem;
+}
+
+/* ═══════ PULL QUOTE ═══════ */
+.pull-quote{
+  max-width:920px;margin:0 auto;padding:120px 24px;
+  text-align:center;position:relative;
+}
+.pull-quote__mark{
+  font-family:var(--ft-display);
+  font-size:9rem;
+  line-height:0.5;
+  color:var(--ember);
+  opacity:0.55;
+  margin-bottom:24px;
+  user-select:none;
+  font-weight:400;
+}
+.pull-quote__text{
+  font-family:var(--ft-heading);
+  font-style:italic;
+  font-weight:300;
+  font-size:clamp(1.5rem, 3.5vw, 2.4rem);
+  line-height:1.35;
+  color:var(--parch-0);
+  margin-bottom:36px;
+  letter-spacing:-0.005em;
+}
+.pull-quote__text em{color:var(--gold-bright);font-style:italic}
+.pull-quote__attr{
+  font-family:var(--ft-display);
+  font-size:0.78rem;
+  font-weight:500;
+  letter-spacing:0.28em;
+  text-transform:uppercase;
+  color:var(--gold);
+  display:inline-flex;align-items:center;gap:14px;
+}
+.pull-quote__attr::before{content:'';width:32px;height:1px;background:var(--gold);opacity:0.6}
+
+/* ═══════ PRICING ═══════ */
+.pricing-section{padding:80px 0 120px}
+.pricing-frame{
+  max-width:780px;margin:64px auto 0;
+  background:linear-gradient(180deg, var(--parch-0) 0%, var(--parch-1) 100%);
+  padding:80px 56px;
+  color:var(--parch-ink);
+  position:relative;
+  border:1px solid var(--gold);
+}
+.pricing-frame::before,
+.pricing-frame::after,
+.pricing-corner-tr,
+.pricing-corner-bl{
+  content:'';position:absolute;width:18px;height:18px;border:1px solid var(--ember-deep);
+}
+.pricing-frame::before{top:-1px;left:-1px;border-right:none;border-bottom:none}
+.pricing-frame::after{bottom:-1px;right:-1px;border-left:none;border-top:none}
+.pricing-corner-tr{top:-1px;right:-1px;border-left:none;border-bottom:none}
+.pricing-corner-bl{bottom:-1px;left:-1px;border-right:none;border-top:none}
+
+.pricing-frame .marker{color:var(--ember-deep);justify-content:center}
+.pricing-frame .marker::before,
+.pricing-frame .marker--center::after{background:var(--ember-deep);opacity:0.6}
+.pricing-title{
+  font-family:var(--ft-heading);
+  font-weight:400;
+  font-size:clamp(1.6rem,3vw,2.4rem);
+  text-align:center;
+  margin-top:18px;
+  margin-bottom:48px;
+  color:var(--parch-ink);
+  letter-spacing:-0.005em;
+  line-height:1.15;
+}
+
+.pricing-mockup{max-width:520px;margin:0 auto 56px}
+.pricing-mockup img{
+  filter:drop-shadow(0 24px 36px rgba(26,19,12,0.22))
+         drop-shadow(0 6px 12px rgba(26,19,12,0.12));
+  transition:transform .4s cubic-bezier(0.16,1,0.3,1);
+}
+.pricing-mockup img:hover{transform:translateY(-4px)}
+
+.pricing-details{
+  display:grid;grid-template-columns:1fr 1fr;gap:28px 40px;
+  margin-bottom:56px;
+}
+.pricing-detail{
+  display:flex;gap:16px;
+  padding-bottom:20px;
+  border-bottom:1px solid var(--line-light);
+}
+.pricing-detail__icon{
+  flex-shrink:0;width:28px;height:28px;color:var(--ember-deep);margin-top:2px;
+}
+.pricing-detail__icon svg{width:100%;height:100%;display:block}
+.pricing-detail strong{
+  font-family:var(--ft-heading);font-weight:600;color:var(--parch-ink);
+  font-size:1.1rem;display:block;line-height:1.3;margin-bottom:8px;letter-spacing:-0.005em;
+}
+.pricing-detail p{
+  font-family:var(--ft-body);font-size:0.98rem;line-height:1.55;color:var(--parch-ink-2);
+}
+
+/* Price card */
+.price-card{
+  background:var(--night-1);
+  color:var(--parch-0);
+  padding:56px 44px 44px;
+  margin:0 auto;max-width:480px;
+  position:relative;
+  border:1px solid var(--gold);
+  text-align:center;
+}
+.price-card__badge{
+  position:absolute;top:-14px;left:50%;transform:translateX(-50%);
+  background:var(--ember);color:var(--parch-0);
+  font-family:var(--ft-display);font-weight:600;
+  font-size:0.66rem;letter-spacing:0.22em;text-transform:uppercase;
+  padding:8px 22px;
+  border:1px solid var(--ember-deep);
+}
+.price-card__name{
+  font-family:var(--ft-heading);font-weight:400;
+  font-size:1.5rem;letter-spacing:-0.005em;
+  margin-bottom:6px;color:var(--parch-0);
+}
+.price-card__desc{
+  font-family:var(--ft-heading);font-style:italic;font-weight:300;
+  font-size:1.05rem;color:rgba(244,235,216,0.6);
+  margin-bottom:36px;
+}
+.price-card__price{
+  font-family:var(--ft-display);font-weight:500;
+  font-size:4.8rem;line-height:1;color:var(--gold-bright);
+  display:inline-flex;align-items:flex-start;
+  margin-bottom:12px;
+  font-feature-settings:'lnum';
+}
+.price-card__currency{
+  font-size:2rem;margin-top:8px;margin-left:4px;color:var(--gold);
+}
+.price-card__period{
+  font-family:var(--ft-mono);font-size:0.7rem;letter-spacing:0.24em;
+  text-transform:uppercase;color:rgba(244,235,216,0.5);
+  margin-bottom:36px;
+}
+.price-card__features{
+  list-style:none;text-align:left;margin:0 0 36px;
+  max-width:340px;margin-left:auto;margin-right:auto;
+}
+.price-card__features li{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:12px 0;
+  font-family:var(--ft-body);font-size:1rem;
+  color:rgba(244,235,216,0.92);
+  border-bottom:1px solid var(--line-dark);
+}
+.price-card__features li:last-child{border-bottom:none}
+.price-card__features li svg{
+  width:18px;height:18px;flex-shrink:0;color:var(--gold-bright);margin-top:3px;
+}
+
+.guarantee{
+  display:flex;justify-content:center;gap:32px;
+  margin-top:32px;flex-wrap:wrap;
+  font-family:var(--ft-mono);font-size:0.7rem;
+  letter-spacing:0.18em;text-transform:uppercase;color:var(--parch-muted);
+}
+.guarantee span{display:inline-flex;align-items:center;gap:8px}
+.guarantee svg{width:14px;height:14px}
+
+/* ═══════ MANIFESTO — why this program ═══════ */
+.manifesto{
+  padding:120px 0;
+  position:relative;
+}
+.manifesto__inner{
+  max-width:960px;margin:0 auto;padding:0 24px;
+}
+.manifesto-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:48px;
+  margin-top:64px;
+}
+.manifesto-item{
+  position:relative;padding-left:40px;
+  font-family:var(--ft-body);font-size:1.08rem;line-height:1.65;
+  color:rgba(244,235,216,0.86);
+}
+.manifesto-item__num{
+  position:absolute;left:0;top:-4px;
+  font-family:var(--ft-display);font-weight:500;
+  font-size:0.95rem;letter-spacing:0.04em;
+  color:var(--ember);
+  font-feature-settings:'lnum';
+}
+.manifesto-item strong{color:var(--gold-bright);font-weight:600}
+
+.manifesto-cards{
+  display:grid;grid-template-columns:1fr 1fr;gap:24px;
+  margin-top:64px;
+}
+.manifesto-card{
+  border:1px solid var(--line-dark-2);
+  padding:36px 32px;
+  background:rgba(244,235,216,0.02);
+  transition:background .35s ease, border-color .35s ease;
+}
+.manifesto-card:hover{
+  background:rgba(244,235,216,0.04);
+  border-color:rgba(201,160,117,0.4);
+}
+.manifesto-card__icon{
+  width:36px;height:36px;color:var(--gold);margin-bottom:20px;
+}
+.manifesto-card h4{
+  font-family:var(--ft-heading);font-weight:500;
+  font-size:1.35rem;color:var(--parch-0);
+  margin-bottom:14px;letter-spacing:-0.005em;
+}
+.manifesto-card p{
+  font-family:var(--ft-body);font-size:1rem;line-height:1.6;
+  color:rgba(244,235,216,0.74);
+}
+
+/* ═══════ ABOUT ARNAUD ═══════ */
+.about{
+  padding:120px 0;
+  background:var(--night-1);
+  border-top:1px solid var(--line-dark);
+  border-bottom:1px solid var(--line-dark);
+}
+.about-grid{
+  display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:center;
+  max-width:1080px;margin:0 auto;padding:0 24px;
+}
+.about-portrait{
+  position:relative;
+  border:1px solid var(--gold);
+  overflow:hidden;
+}
+.about-portrait::before,
+.about-portrait::after{
+  content:'';position:absolute;width:14px;height:14px;border:1px solid var(--gold);z-index:2;
+}
+.about-portrait::before{top:-1px;left:-1px;border-right:none;border-bottom:none}
+.about-portrait::after{bottom:-1px;right:-1px;border-left:none;border-top:none}
+.about-portrait img{
+  width:100%;display:block;
+  filter:grayscale(15%) contrast(1.05);
+}
+
+.about-text .marker{margin-bottom:24px}
+.about-text h2{
+  font-family:var(--ft-heading);font-weight:400;
+  font-size:clamp(2rem,3.5vw,2.8rem);line-height:1.1;
+  letter-spacing:-0.005em;
+  color:var(--parch-0);
+  margin-bottom:36px;
+}
+.about-text h2 em{color:var(--gold-bright);font-style:italic;font-weight:300}
+
+.about-text p{
+  font-family:var(--ft-body);font-size:1.08rem;line-height:1.7;
+  color:rgba(244,235,216,0.82);margin-bottom:20px;
+}
+.about-text p strong{color:var(--gold-bright);font-weight:600}
+.about-text p:first-of-type::first-letter{
+  font-family:var(--ft-display);font-weight:500;
+  font-size:4.5rem;line-height:0.85;
+  float:left;color:var(--ember);
+  padding-right:14px;padding-top:6px;
+  font-feature-settings:'lnum';
+}
+
+/* ═══════ FAQ ═══════ */
+.faq{padding:120px 0}
+.faq-list{max-width:760px;margin:64px auto 0;padding:0 24px}
+.faq-item{
+  border-top:1px solid var(--line-dark-2);
+}
+.faq-item:last-child{border-bottom:1px solid var(--line-dark-2)}
+.faq-q{
+  width:100%;text-align:left;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  padding:28px 0;
+  font-family:var(--ft-heading);font-weight:500;
+  font-size:1.2rem;line-height:1.3;color:var(--parch-0);
+  cursor:pointer;
+  transition:color .25s;
+  letter-spacing:-0.005em;
+}
+.faq-q:hover{color:var(--gold-bright)}
+.faq-q:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.faq-q__icon{
+  width:18px;height:18px;flex-shrink:0;color:var(--gold);
+  transition:transform .35s cubic-bezier(0.16,1,0.3,1);
+}
+.faq-q.open .faq-q__icon{transform:rotate(45deg)}
+.faq-a{
+  max-height:0;overflow:hidden;
+  transition:max-height .4s ease;
+}
+.faq-a__inner{
+  padding:0 0 28px;font-family:var(--ft-body);
+  font-size:1.05rem;line-height:1.7;color:rgba(244,235,216,0.74);
+  max-width:90%;
+}
+
+/* ═══════ FOOTER ═══════ */
+footer{
+  padding:48px 24px;text-align:center;
+  border-top:1px solid var(--line-dark);
+  font-family:var(--ft-mono);font-size:0.7rem;
+  letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--parch-muted);
+}
+
+/* ═══════ ANIMATIONS ═══════ */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(18px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease, transform .8s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+}
+
+/* ═══════ RESPONSIVE ═══════ */
+@media (max-width: 960px){
+  .hero{padding:64px 0 48px}
+  section{padding:72px 0}
+  .gate-card--6,.gate-card--4,.gate-card--8{grid-column:span 12}
+  .gate-card{min-height:280px}
+  .gate-card__numeral{font-size:4.4rem;top:18px;right:24px}
+  .about-grid{grid-template-columns:1fr;gap:48px}
+  .about-portrait{max-width:380px;margin:0 auto}
+  .manifesto-grid{grid-template-columns:1fr;gap:32px}
+  .manifesto-cards{grid-template-columns:1fr}
+  .pricing-details{grid-template-columns:1fr;gap:20px}
+  .pricing-frame{padding:56px 32px}
+  .gate{padding:64px 0}
+  .recap{padding:36px 28px}
+  .recap__list{grid-template-columns:1fr;gap:8px 0}
+  .recap__item:nth-last-child(-n+2){border-bottom:1px solid var(--line-light)}
+  .recap__item:last-child{border-bottom:none}
+}
+@media (max-width: 560px){
+  html{font-size:17px}
+  .hero__numeral{font-size:42vw}
+  .gate-card{padding:36px 28px 32px}
+  .gate-card__title{font-size:1.55rem}
+  .price-card{padding:44px 28px 36px}
+  .price-card__price{font-size:3.8rem}
+  .pricing-frame{padding:48px 22px}
+  .pull-quote{padding:80px 24px}
+  .pull-quote__mark{font-size:6rem}
+  .gates-theme{padding:24px}
+  .gates-theme__icon{width:34px;height:34px}
+  .gates-theme__label{font-size:1.02rem}
+  .gates-theme__sub{font-size:0.95rem}
+  .btn{padding:16px 28px;font-size:0.74rem;letter-spacing:0.18em}
+  .guarantee{gap:18px}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════ AMBIENT BACKGROUND ═══════ -->
+<div class="ambient" aria-hidden="true">
+  <video class="ambient__video"
+         src="https://pure-sante-cdn.pubfac.io/uploads/ambient-background.mp4"
+         poster="https://pure-sante-cdn.pubfac.io/uploads/ambient-background.jpg"
+         autoplay loop muted playsinline preload="auto"></video>
+  <div class="ambient__veil"></div>
+  <div class="ambient__grain"></div>
+</div>
+
+<!-- ═══════ TOPBAR ═══════ -->
+<div class="topbar">
+  <a href="https://www.pure-sante.info" target="_blank" rel="noopener" aria-label="PureSanté — accueil">
+    <img src="https://pure-sante-cdn.pubfac.io/uploads/logo_PURST_blanc-01_new.png" alt="PureSanté">
+  </a>
+</div>
+
+<!-- ═══════ HERO ═══════ -->
+<header class="hero">
+  <div class="hero__numeral" aria-hidden="true">X</div>
+  <div class="hero__inner">
+    <span class="marker marker--center hero__overline">Puresanté présente</span>
+    <h1 class="hero__title">Les 10 Portes <em>du Chamanisme</em></h1>
+    <p class="hero__subtitle">Une transmission d'Arnaud Riou — 35 ans entre les peuples premiers et le monde moderne.</p>
+
+    <div class="video-frame">
+      <span class="video-corner tr" aria-hidden="true"></span>
+      <span class="video-corner bl" aria-hidden="true"></span>
+      <div class="vidyard-zone active" id="vidyardZone" data-videoid="kQrCajJP74kRoWabZiwxXH">
+        <div class="vidyard-player-wrapper">
+          <script src="https://play.vidyard.com/embed/v4.js" type="text/javascript" async></script>
+          <img style="width:100%;margin:auto;display:block"
+               class="vidyard-player-embed"
+               src="https://pure-sante-cdn.pubfac.io/uploads/imgwebiarp.png"
+               data-uuid="kQrCajJP74kRoWabZiwxXH"
+               data-v="4"
+               data-type="inline"
+               alt="Reportage — Les 10 Portes du Chamanisme avec Arnaud Riou">
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════ GATE — first offer (parchment) ═══════ -->
+<section class="gate" id="offer">
+  <div class="container-narrow" style="text-align:center">
+    <span class="marker marker--center">I. Le seuil</span>
+    <h2 class="section-title">Accédez au programme <em>complet</em></h2>
+    <p class="section-lede">12 vidéos. 10 portes. Des dizaines d'exercices et de méditations.<br>Tournées au Moulin de Beaupré, dans le temple personnel d'Arnaud Riou.</p>
+  </div>
+
+  <div class="container">
+    <div class="recap">
+      <div class="recap__head">
+        <span class="marker marker--center">Ce que vous recevez</span>
+        <h3 class="recap__title">Une transmission, livrée dans son intégralité</h3>
+      </div>
+
+      <div class="recap__mockup">
+        <img src="https://pure-sante-cdn.pubfac.io/uploads/Mockuparp.png"
+             alt="Aperçu du programme Les 10 Portes du Chamanisme — accès aux 12 vidéos"
+             loading="lazy" width="480" height="320">
+      </div>
+
+      <div class="recap__list">
+        <div class="recap__item">
+          <span class="recap__item-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="1"/><polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none"/>
+            </svg>
+          </span>
+          <span><strong>12 vidéos d'enseignement</strong>Filmées dans l'intimité du temple</span>
+        </div>
+        <div class="recap__item">
+          <span class="recap__item-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="12" cy="9" rx="9" ry="4"/><path d="M3 9v6c0 2.2 4 4 9 4s9-1.8 9-4V9"/><path d="M8 13l-2 5M16 13l2 5"/>
+            </svg>
+          </span>
+          <span><strong>Méditations &amp; voyages au tambour</strong>Modifient votre état de conscience</span>
+        </div>
+        <div class="recap__item">
+          <span class="recap__item-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h12a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4z"/><path d="M19 17H7a3 3 0 0 0-3 3"/><line x1="8" y1="9" x2="15" y2="9"/><line x1="8" y1="13" x2="15" y2="13"/>
+            </svg>
+          </span>
+          <span><strong>Exercices pratiques</strong>Protocoles testés sur des milliers</span>
+        </div>
+        <div class="recap__item">
+          <span class="recap__item-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/>
+            </svg>
+          </span>
+          <span><strong>Tourné au Moulin de Beaupré</strong>Le temple personnel d'Arnaud Riou</span>
+        </div>
+        <div class="recap__item">
+          <span class="recap__item-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
+            </svg>
+          </span>
+          <span><strong>35 ans de pratique transmise</strong>Mongolie, Tibet, Amazonie, Kenya</span>
+        </div>
+        <div class="recap__item">
+          <span class="recap__item-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 9a3 3 0 1 1 3 3 3 3 0 1 1 -3 3 3 3 0 1 1 -3 -3 3 3 0 1 1 3 -3z"/><path d="M15 9a3 3 0 1 1 0 6 3 3 0 1 1 0 -6z"/>
+            </svg>
+          </span>
+          <span><strong>Accès à vie, à votre rythme</strong>Ce programme vous attendra toujours</span>
+        </div>
+      </div>
+
+      <div class="cta-wrap" style="margin-top:40px">
+        <a href="#pricing" class="btn">Accéder au programme
+          <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="13,6 19,12 13,18"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ THE 10 GATES ═══════ -->
+<section class="gates-section" aria-labelledby="gates-title">
+  <div class="container-narrow gates-intro">
+    <span class="marker marker--center">II. Le programme complet</span>
+    <h2 class="section-title" id="gates-title">Dix portes, <em>deux mondes</em> — un chemin</h2>
+    <p class="section-lede">Dix passages pour reprendre la main sur votre intuition, votre énergie, vos décisions, votre santé. Chacun ouvre sur une transformation concrète, ancrée dans votre quotidien.</p>
+  </div>
+
+  <div class="gates-grid">
+
+    <!-- Theme A -->
+    <div class="gates-theme">
+      <div class="gates-theme__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2v20"/><path d="M12 8c-4-3-7-1-7 3s3 6 7 6"/><path d="M12 8c4-3 7-1 7 3s-3 6-7 6"/>
+        </svg>
+      </div>
+      <div class="gates-theme__text">
+        <div class="gates-theme__label">Le corps &amp; l'énergie</div>
+        <div class="gates-theme__sub">4 portes pour vous ancrer, comprendre l'énergie, vous protéger</div>
+      </div>
+    </div>
+
+    <!-- Porte 1 -->
+    <article class="gate-card gate-card--6">
+      <span class="gate-card__numeral" aria-hidden="true">I</span>
+      <span class="gate-card__label">Porte 1</span>
+      <span class="gate-card__hairline" aria-hidden="true"></span>
+      <h3 class="gate-card__title">La porte <em>du corps</em></h3>
+      <p class="gate-card__desc">Apprenez à habiter vraiment votre corps. Pour que vos décisions viennent enfin de votre instinct et non de votre mental qui tourne en boucle.</p>
+    </article>
+
+    <!-- Porte 2 -->
+    <article class="gate-card gate-card--6">
+      <span class="gate-card__numeral" aria-hidden="true">II</span>
+      <span class="gate-card__label">Porte 2</span>
+      <span class="gate-card__hairline" aria-hidden="true"></span>
+      <h3 class="gate-card__title">La porte <em>de l'énergie</em></h3>
+      <p class="gate-card__desc">Développez la capacité de ressentir instantanément si une personne, un lieu ou une situation est bon pour vous — et ne regrettez plus jamais de ne pas avoir écouté votre intuition.</p>
+    </article>
+
+    <!-- Porte 3 -->
+    <article class="gate-card gate-card--6">
+      <span class="gate-card__numeral" aria-hidden="true">III</span>
+      <span class="gate-card__label">Porte 3</span>
+      <span class="gate-card__hairline" aria-hidden="true"></span>
+      <h3 class="gate-card__title">La porte de la <em>purification</em></h3>
+      <p class="gate-card__desc">Nettoyez les énergies stagnantes chez vous et en vous avec des gestes simples issus du chamanisme. Pour retrouver légèreté, clarté et vitalité.</p>
+    </article>
+
+    <!-- Porte 4 -->
+    <article class="gate-card gate-card--6">
+      <span class="gate-card__numeral" aria-hidden="true">IV</span>
+      <span class="gate-card__label">Porte 4</span>
+      <span class="gate-card__hairline" aria-hidden="true"></span>
+      <h3 class="gate-card__title">La porte de la <em>protection</em></h3>
+      <p class="gate-card__desc">Arrêtez de vous laisser vider par les autres et découvrez que la vraie protection ne vient pas d'un grigri — mais d'un état intérieur que vous activez en quelques minutes.</p>
+    </article>
+
+    <!-- Theme B -->
+    <div class="gates-theme">
+      <div class="gates-theme__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s-7-5-7-12a7 7 0 0 1 14 0c0 7-7 12-7 12z"/><path d="M12 22c-3-4-5-7-5-10a5 5 0 0 1 10 0c0 3-2 6-5 10z"/>
+        </svg>
+      </div>
+      <div class="gates-theme__text">
+        <div class="gates-theme__label">L'invisible &amp; les pratiques</div>
+        <div class="gates-theme__sub">6 portes pour ouvrir au monde subtil, recevoir, guérir, pratiquer</div>
+      </div>
+    </div>
+
+    <!-- Porte 5 -->
+    <article class="gate-card gate-card--4">
+      <span class="gate-card__numeral" aria-hidden="true">V</span>
+      <span class="gate-card__label">Porte 5</span>
+      <span class="gate-card__hairline" aria-hidden="true"></span>
+      <h3 class="gate-card__title">La porte <em>des guides</em></h3>
+      <p class="gate-card__desc">Vos ancêtres n'attendent qu'une chose : que vous leur demandiez de l'aide. Apprenez à contacter les guides.</p>
+    </article>
+
+    <!-- Porte 6 -->
+    <article class="gate-card gate-card--4">
+      <span class="gate-card__numeral" aria-hidden="true">VI</span>
+      <span class="gate-card__label">Porte 6</span>
+      <span class="gate-card__hairline" aria-hidden="true"></span>
+      <h3 class="gate-card__title">La porte de la <em>sagesse</em></h3>
+      <p class="gate-card__desc">Comprenez pourquoi rien n'arrive par hasard. Transformez vos épreuves les plus dures en leviers de croissance.</p>
+    </article>
+
+    <!-- Porte 7 -->
+    <article class="gate-card gate-card--4">
+      <span class="gate-card__numeral" aria-hidden="true">VII</span>
+      <span class="gate-card__label">Porte 7</span>
+      <span class="gate-card__hairline" aria-hidden="true"></span>
+      <h3 class="gate-card__title">La porte <em>du rêve</em></h3>
+      <p class="gate-card__desc">Préparez, orientez et décodez vos rêves comme les chamans le font depuis des millénaires. Sources d'informations, de guidance, de guérison.</p>
+    </article>
+
+    <!-- Porte 8 -->
+    <article class="gate-card gate-card--6">
+      <span class="gate-card__numeral" aria-hidden="true">VIII</span>
+      <span class="gate-card__label">Porte 8</span>
+      <span class="gate-card__hairline" aria-hidden="true"></span>
+      <h3 class="gate-card__title">La porte de la <em>guérison</em></h3>
+      <p class="gate-card__desc">Devenez acteur de votre propre santé en comprenant le lien direct entre vos émotions, votre discours intérieur et vos symptômes — avec des pratiques quotidiennes pour soutenir votre corps de l'intérieur.</p>
+    </article>
+
+    <!-- Porte 9 -->
+    <article class="gate-card gate-card--6">
+      <span class="gate-card__numeral" aria-hidden="true">IX</span>
+      <span class="gate-card__label">Porte 9</span>
+      <span class="gate-card__hairline" aria-hidden="true"></span>
+      <h3 class="gate-card__title">La porte des <em>synchronicités</em></h3>
+      <p class="gate-card__desc">Apprenez à reconnaître les signes que la vie vous envoie pour vous guider — et ne prenez plus jamais une décision importante dans le flou et l'incertitude.</p>
+    </article>
+
+    <!-- Porte 10 -->
+    <article class="gate-card gate-card--12">
+      <span class="gate-card__numeral" aria-hidden="true">X</span>
+      <span class="gate-card__label">Porte 10 — la dernière</span>
+      <span class="gate-card__hairline" aria-hidden="true"></span>
+      <h3 class="gate-card__title">La porte <em>des rituels</em></h3>
+      <p class="gate-card__desc">Donnez une force concrète à vos intentions en les ancrant dans des rituels simples — pour attirer dans votre vie ce que vous voulez vraiment, au lieu d'attendre que ça arrive tout seul.</p>
+    </article>
+
+  </div>
+
+  <p class="gates-footer">Auxquelles s'ajoutent une vidéo d'introduction et une vidéo de conclusion.</p>
+</section>
+
+<!-- ═══════ PULL QUOTE ═══════ -->
+<section class="pull-quote">
+  <div class="pull-quote__mark" aria-hidden="true">&ldquo;</div>
+  <p class="pull-quote__text">Je n'aime pas faire de fausses promesses. Quand on souhaite sincèrement transformer quelque chose dans sa vie, il y a vraiment des pas à faire — et <em>la voie chamanique est la voie spirituelle la plus ancienne de l'humanité.</em></p>
+  <p class="pull-quote__attr">Arnaud Riou</p>
+</section>
+
+<!-- ═══════ PRICING ═══════ -->
+<section class="pricing-section" id="pricing">
+  <div class="container-narrow" style="text-align:center">
+    <span class="marker marker--center">III. L'accès</span>
+    <h2 class="section-title">Tout ce que vous <em>recevez</em></h2>
+    <p class="section-lede">Un paiement unique. Un accès à vie. Une voie ouverte dès ce soir.</p>
+  </div>
+
+  <div class="container">
+    <div class="pricing-frame">
+      <span class="pricing-corner-tr" aria-hidden="true"></span>
+      <span class="pricing-corner-bl" aria-hidden="true"></span>
+
+      <div style="text-align:center">
+        <span class="marker marker--center">Accès immédiat</span>
+        <h3 class="pricing-title">Une transmission complète, à parcourir à votre rythme</h3>
+      </div>
+
+      <div class="pricing-mockup">
+        <img src="https://pure-sante-cdn.pubfac.io/uploads/Mockuparp.png"
+             alt="Aperçu du programme Les 10 Portes du Chamanisme"
+             loading="lazy" width="520" height="350">
+      </div>
+
+      <div class="pricing-details">
+        <div class="pricing-detail">
+          <span class="pricing-detail__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="1"/><polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none"/>
+            </svg>
+          </span>
+          <div>
+            <strong>12 vidéos d'enseignement</strong>
+            <p>10 portes. 10 dimensions du réel que vous n'avez jamais explorées. Disponibles dès maintenant, dans votre canapé.</p>
+          </div>
+        </div>
+        <div class="pricing-detail">
+          <span class="pricing-detail__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="12" cy="9" rx="9" ry="4"/><path d="M3 9v6c0 2.2 4 4 9 4s9-1.8 9-4V9"/>
+            </svg>
+          </span>
+          <div>
+            <strong>Méditations &amp; voyages au tambour</strong>
+            <p>Le tambour chamanique modifie votre état de conscience en quelques minutes. Chaque vidéo vous emmène là où aucun livre ne peut vous conduire.</p>
+          </div>
+        </div>
+        <div class="pricing-detail">
+          <span class="pricing-detail__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h12a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4z"/><line x1="8" y1="9" x2="15" y2="9"/><line x1="8" y1="13" x2="15" y2="13"/>
+            </svg>
+          </span>
+          <div>
+            <strong>Exercices pratiques</strong>
+            <p>Pas de la théorie mais des protocoles testés sur des milliers de personnes. Vous les appliquez ce soir, vous ressentez la différence demain matin.</p>
+          </div>
+        </div>
+        <div class="pricing-detail">
+          <span class="pricing-detail__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/>
+            </svg>
+          </span>
+          <div>
+            <strong>Tourné au Moulin de Beaupré</strong>
+            <p>Le sanctuaire privé d'Arnaud Riou en Bourgogne. L'endroit exact où il pratique, enseigne et vit le chamanisme depuis 35 ans.</p>
+          </div>
+        </div>
+        <div class="pricing-detail">
+          <span class="pricing-detail__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
+            </svg>
+          </span>
+          <div>
+            <strong>35 ans de pratique transmise</strong>
+            <p>Mongolie, Tibet, Amazonie, Kenya, Maroc. Ce que les chamans transmettent en années d'initiation, Arnaud vous le donne en 10 portes.</p>
+          </div>
+        </div>
+        <div class="pricing-detail">
+          <span class="pricing-detail__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 9a3 3 0 1 1 3 3 3 3 0 1 1 -3 3 3 3 0 1 1 -3 -3 3 3 0 1 1 3 -3z"/>
+            </svg>
+          </span>
+          <div>
+            <strong>Accès à vie, à votre rythme</strong>
+            <p>Certaines portes ne s'ouvrent pas la première fois qu'on les pousse. Revenez quand vous êtes prêt : ce programme vous attendra toujours.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="price-card">
+        <span class="price-card__badge">Accès à vie</span>
+        <div class="price-card__name">Les 10 Portes du Chamanisme</div>
+        <div class="price-card__desc">Le programme complet, pour toujours</div>
+        <div class="price-card__price">129<span class="price-card__currency">€</span></div>
+        <div class="price-card__period">paiement unique</div>
+        <ul class="price-card__features">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5,12 10,17 19,7"/></svg>
+            Les 12 vidéos en accès illimité
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5,12 10,17 19,7"/></svg>
+            Méditations &amp; voyages au tambour
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5,12 10,17 19,7"/></svg>
+            Tous les exercices et rituels
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5,12 10,17 19,7"/></svg>
+            Satisfait ou remboursé 14 jours
+          </li>
+        </ul>
+        <button class="btn-order-form-button btn btn-primary buttonCheck block-1c_sepa-or-1c_cc btn btn--full"
+                data-use-default-offer="true"
+                data-type-link="1c_sepa-or-1c_cc"
+                data-order-form-code="pstearp-129-light"
+                data-1c-sepa-id="219446"
+                data-1c-cc-id="219447">
+          <span data-text-code="">Accéder au programme</span>
+          <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="13,6 19,12 13,18"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="guarantee">
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="1"/><path d="M8 11V7a4 4 0 1 1 8 0v4"/></svg>
+          Paiement 100% sécurisé
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="8,12 11,15 16,9"/></svg>
+          Satisfait ou remboursé 14 jours
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ MANIFESTO — why this program ═══════ -->
+<section class="manifesto">
+  <div class="manifesto__inner">
+    <div style="text-align:center">
+      <span class="marker marker--center">IV. Ce qui fait la différence</span>
+      <h2 class="section-title">Pourquoi ce programme est <em>différent</em></h2>
+    </div>
+
+    <div class="manifesto-grid reveal">
+      <div class="manifesto-item">
+        <span class="manifesto-item__num">I.</span>
+        Arnaud Riou est <strong>reconnu chaman dans la tradition mongole</strong> — pas auto-proclamé. Dans cette tradition, on ne devient pas chaman, on l'est reconnu par les anciens.
+      </div>
+      <div class="manifesto-item">
+        <span class="manifesto-item__num">II.</span>
+        Le programme a été tourné <strong>au Moulin de Beaupré</strong>, son temple personnel en Bourgogne, où il accueille les chamans du monde entier depuis 25 ans.
+      </div>
+      <div class="manifesto-item">
+        <span class="manifesto-item__num">III.</span>
+        35 ans de transmission auprès de <strong>chamans mongols, lamas tibétains, masaï du Kenya, berbères du Maroc, chamans d'Amazonie</strong> — synthétisés dans 10 portes accessibles.
+      </div>
+      <div class="manifesto-item">
+        <span class="manifesto-item__num">IV.</span>
+        Aucune promesse miracle. Une voie pragmatique : <strong>« Ce n'est pas un programme pour devenir chaman »</strong> — c'est une invitation à changer votre regard.
+      </div>
+    </div>
+
+    <div class="manifesto-cards reveal">
+      <div class="manifesto-card">
+        <div class="manifesto-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C8 6 6 10 6 14a6 6 0 0 0 12 0c0-4-2-8-6-12z"/><path d="M12 14v8"/>
+          </svg>
+        </div>
+        <h4>Une voie de 80 000 ans</h4>
+        <p>Le chamanisme est la voie spirituelle la plus ancienne de l'humanité. Présent sur les 5 continents — du Tibet à l'Amazonie en passant par les forêts des Celtes. Pas une mode, une mémoire.</p>
+      </div>
+      <div class="manifesto-card">
+        <div class="manifesto-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+          </svg>
+        </div>
+        <h4>Du pragmatique, pas du new age</h4>
+        <p>Pas d'arc-en-ciel qui vous sort par les oreilles. Des outils concrets : 3 respirations, 7 chakras, 4 éléments de purification, 3 lois de sagesse. Vous testez, vous gardez ce qui marche.</p>
+      </div>
+    </div>
+
+    <div class="cta-wrap">
+      <a href="#pricing" class="btn">Accéder au programme
+        <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="13,6 19,12 13,18"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ ABOUT ARNAUD ═══════ -->
+<section class="about">
+  <div class="about-grid">
+    <div class="about-portrait reveal">
+      <img src="https://pure-sante-cdn.pubfac.io/uploads/riouportrait.png"
+           alt="Portrait d'Arnaud Riou"
+           loading="lazy" width="480" height="600">
+    </div>
+    <div class="about-text reveal">
+      <span class="marker">V. Le passeur</span>
+      <h2>Qui est <em>Arnaud Riou</em> ?</h2>
+
+      <p>Depuis <strong>35 ans</strong>, Arnaud Riou donne des conférences, anime des stages, et étudie les traditions chamaniques du monde entier. Auteur d'une <strong>vingtaine d'ouvrages</strong> sur la spiritualité, le chamanisme et le bouddhisme, il a réalisé un film de cinéma reliant la sagesse des peuples premiers au monde moderne.</p>
+
+      <p>Pendant <strong>15 ans, il s'est formé auprès des maîtres tibétains</strong>, puis a été reconnu et initié <strong>chaman dans la tradition mongole</strong>. Il accueille régulièrement chez lui des chamans d'Amazonie, du Kenya, du Maroc et de Mongolie au Moulin de Beaupré, son temple personnel en Bourgogne.</p>
+
+      <p>Il a fondé <strong>l'École du chamanisme unifié</strong> et préside <strong>l'association Terre Anima</strong>, qui soutient les peuples premiers à travers le monde. L'an dernier, il a été reçu en audience par <strong>le Dalaï Lama</strong> à Dharamsala.</p>
+
+      <p>Sa conviction : la spiritualité n'est pas une fuite. Elle ne se mesure pas à ce qu'on voit, mais à ce qu'on devient.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ FAQ ═══════ -->
+<section class="faq" id="faqSection">
+  <div class="container-narrow" style="text-align:center">
+    <span class="marker marker--center">VI. Avant de pousser la porte</span>
+    <h2 class="section-title">Questions <em>fréquentes</em></h2>
+    <p class="section-lede">Tout ce que vous devez savoir avant de commencer.</p>
+  </div>
+
+  <div class="faq-list">
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">
+        <span>Vais-je devenir chaman après ce programme ?</span>
+        <svg class="faq-q__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><line x1="12" y1="5" x2="12" y2="19"/></svg>
+      </button>
+      <div class="faq-a">
+        <div class="faq-a__inner">Non, et ce n'est pas l'ambition du programme. Arnaud Riou est très clair là-dessus : dans toutes les traditions, on ne s'autoproclame pas chaman — on est reconnu par les anciens, les esprits ou les parents. Ce programme est une voie d'accès au chamanisme pour mieux vous comprendre, vous protéger, communiquer avec l'invisible. Comme on peut prendre soin de sa santé sans être médecin, on peut pratiquer le chamanisme sans être chaman.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">
+        <span>Combien de temps dure le programme ?</span>
+        <svg class="faq-q__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><line x1="12" y1="5" x2="12" y2="19"/></svg>
+      </button>
+      <div class="faq-a">
+        <div class="faq-a__inner">Le programme comprend 12 vidéos d'enseignement (introduction + 10 portes + conclusion), à parcourir à votre rythme. Arnaud propose un format « une porte par jour pendant 10 jours » mais vous êtes entièrement libre — certains préfèrent passer une semaine entière sur une seule porte. Votre accès est illimité dans le temps.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">
+        <span>Ai-je besoin d'un tambour ou d'objets particuliers ?</span>
+        <svg class="faq-q__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><line x1="12" y1="5" x2="12" y2="19"/></svg>
+      </button>
+      <div class="faq-a">
+        <div class="faq-a__inner">Non. Les méditations au tambour utilisent les enregistrements d'Arnaud. Pour la porte des rituels et la porte de la purification, quelques objets très simples peuvent enrichir la pratique (sauge, sel, bougie, ficelle, papier) — mais ils ne sont pas obligatoires, et tout est accessible en grande surface ou en herboristerie.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">
+        <span>Est-ce compatible avec ma religion ou ma pratique spirituelle ?</span>
+        <svg class="faq-q__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><line x1="12" y1="5" x2="12" y2="19"/></svg>
+      </button>
+      <div class="faq-a">
+        <div class="faq-a__inner">Oui. Arnaud Riou défend ce qu'il appelle une « sagesse intégrative » — comme la santé intégrative en médecine. Le chamanisme dialogue très bien avec le bouddhisme, l'animisme, la physique quantique, les neurosciences. Il ne s'agit pas de remplacer une croyance par une autre, mais d'ajouter un prisme de compréhension du monde.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">
+        <span>Comment accéder au programme après l'achat ?</span>
+        <svg class="faq-q__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><line x1="12" y1="5" x2="12" y2="19"/></svg>
+      </button>
+      <div class="faq-a">
+        <div class="faq-a__inner">Immédiatement. Vous recevez un email avec vos identifiants quelques minutes après votre commande. Les vidéos sont en streaming, accessibles depuis n'importe quel appareil — ordinateur, tablette, smartphone.</div>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">
+        <span>Puis-je me faire rembourser ?</span>
+        <svg class="faq-q__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><line x1="12" y1="5" x2="12" y2="19"/></svg>
+      </button>
+      <div class="faq-a">
+        <div class="faq-a__inner">Oui. Garantie satisfait ou remboursé pendant 14 jours. Si le programme ne vous correspond pas, contactez le service client et vous obtiendrez un remboursement intégral, sans question.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>PURESANTÉ ÉDITIONS © 2026 — TOUS DROITS RÉSERVÉS</footer>
+
+<!-- ═══════ JS — reveal, faq, vidyard unlock ═══════ -->
+<script>
+(function(){
+  /* Scroll reveal */
+  if ('IntersectionObserver' in window){
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('visible'); });
+  }
+
+  /* FAQ accordion */
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var answer = btn.nextElementSibling;
+      var isOpen = btn.classList.contains('open');
+      document.querySelectorAll('.faq-q.open').forEach(function(b){
+        b.classList.remove('open');
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.style.maxHeight = '0';
+      });
+      if (!isOpen){
+        btn.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+})();
+</script>
+
+<!-- ═══════ PLAYER CONTROLLER ═══════
+  Le HTML reste identique : la zone d'offre est visible immédiatement
+  (pas de gate). On garde simplement le listener Vidyard au cas où la
+  plateforme attend cet identifiant.
+═══════════════════════════════════════════════════════════════════════ -->
+<script>
+(function(){
+  var PLAYER_UUID = 'kQrCajJP74kRoWabZiwxXH';
+  var UNLOCK_AT_SECONDS = 16 * 60 + 45;
+
+  var prev = window.onVidyardAPI;
+  window.onVidyardAPI = function(vyApi){
+    if (typeof prev === 'function'){
+      try { prev(vyApi); } catch(e){ console.warn(e); }
+    }
+    try {
+      var players = vyApi.api.getPlayersByUUID(PLAYER_UUID);
+      if (!players || !players.length) return;
+      var p = players[0];
+      p.on('playerProgress', function(t){
+        var sec = (typeof t === 'object' && t !== null) ? t.time : t;
+        if (typeof sec === 'number' && sec >= UNLOCK_AT_SECONDS){
+          /* point d'extension : déverrouillage différé si besoin */
+        }
+      });
+    } catch(e){ console.warn('Vidyard init error', e); }
+  };
+})();
+</script>
+
+</body>
+</html>
