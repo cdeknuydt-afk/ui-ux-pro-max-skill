@@ -1216,6 +1216,83 @@
     .story-steps .story-captions{
       height:150px}
   }
+  /* ── MÉTHODE FINLANDAISE ── */
+  .finland-panel{
+    max-width:980px;
+    margin:0 auto;
+    background:var(--surface);
+    border-radius:var(--r-lg);
+    padding:4rem 3rem;
+    text-align:center}
+  .finland-panel h2{
+    font-size:clamp(1.7rem,3vw,2.3rem);
+    margin-bottom:1rem}
+  .finland-lead{
+    font-size:1.05rem;
+    color:var(--ink-soft);
+    line-height:1.7;
+    max-width:660px;
+    margin:0 auto 2.6rem}
+  .finland-stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1rem;
+    max-width:780px;
+    margin:0 auto 1.1rem}
+  .fstat{
+    background:#fff;
+    border-radius:var(--r);
+    padding:1.8rem 1.2rem}
+  .fstat .stat-num{
+    font-size:clamp(2rem,3.4vw,2.8rem)}
+  .fstat .stat-label{
+    display:block;
+    margin-top:.35rem;
+    line-height:1.45}
+  .finland-note-exp{
+    font-size:.78rem;
+    color:var(--muted-2);
+    max-width:540px;
+    margin:0 auto 2.4rem}
+  .finland-chips{
+    display:flex;
+    gap:.8rem;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-bottom:2.4rem}
+  .chip{
+    display:inline-flex;
+    align-items:center;
+    gap:.5rem;
+    background:#fff;
+    border:1px solid var(--line-soft);
+    border-radius:999px;
+    padding:.6rem 1.2rem;
+    font-size:.88rem;
+    font-weight:500;
+    color:var(--ink)}
+  .chip svg{
+    width:16px;
+    height:16px;
+    flex:none}
+  .finland-why{
+    max-width:660px;
+    margin:0 auto 2.4rem;
+    border-top:1px solid var(--line);
+    padding-top:1.8rem}
+  .finland-why p{
+    font-size:.97rem;
+    color:var(--muted);
+    line-height:1.7}
+  .finland-why strong{
+    color:var(--ink);
+    font-weight:600}
+  @media(max-width:768px){
+    .finland-panel{
+      padding:2.5rem 1.4rem}
+    .finland-stats{
+      grid-template-columns:1fr}
+  }
 </style>
 </head>
 <body class="fr-view">
@@ -1286,6 +1363,54 @@
       </div>
       <p class="extrait-foot">La piste complète est déjà disponible sur la plateforme Oriondes — incluse pour tous les membres.
       </p>
+    </div>
+  </div>
+</section>
+<!-- ══════════ MÉTHODE FINLANDAISE ══════════ -->
+<section class="finland-section" id="methode">
+  <div class="container">
+    <div class="finland-panel reveal">
+      <p class="overline">La méthode venue de Finlande
+      </p>
+      <h2>50 ans d'avance sur les douleurs articulaires
+      </h2>
+      <p class="finland-lead">Dans les années 70, à l'hôpital de Seinäjoki en Finlande, le médecin Petri Lehikoinen met au point une méthode révolutionnaire : inhiber le signal de douleur envoyé par les articulations au cerveau, grâce à une composition spécifique de fréquences — dont la plus connue en médecine, le 40&nbsp;Hz.
+      </p>
+      <div class="finland-stats">
+        <div class="fstat">
+          <span class="stat-num" data-count="74" data-suffix=" %">74 %</span>
+          <span class="stat-label">ont vu leur douleur disparaître</span>
+        </div>
+        <div class="fstat">
+          <span class="stat-num" data-count="25" data-suffix=" %">25 %</span>
+          <span class="stat-label">se passent désormais de médicaments</span>
+        </div>
+        <div class="fstat">
+          <span class="stat-num" data-count="40" data-suffix=" Hz">40 Hz</span>
+          <span class="stat-label">la fréquence clé de la méthode</span>
+        </div>
+      </div>
+      <p class="finland-note-exp">Résultats observés lors de l'expérimentation menée à Seinäjoki auprès de femmes souffrant de douleurs articulaires chroniques.
+      </p>
+      <div class="finland-chips">
+        <span class="chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+          Sans chimie
+        </span>
+        <span class="chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Sans contrainte
+        </span>
+        <span class="chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+          Sans effet secondaire
+        </span>
+      </div>
+      <div class="finland-why">
+        <p>Un son ne se brevette pas. Il ne se vend ni en pilule, ni en pommade — et n'intéresse donc pas l'industrie. C'est pourquoi cette méthode est restée confinée en Finlande pendant 50 ans… <strong>et que Georges Vieilledent est aujourd'hui le seul à la proposer en France.</strong>
+        </p>
+      </div>
+      <a href="#pricing" class="btn btn-dark">Accéder à la plateforme</a>
     </div>
   </div>
 </section>
@@ -1800,11 +1925,8 @@
         </h2>
         <p class="about-lead">Compositeur, ingénieur du son et chercheur — l'homme qui a fait du son un outil de transformation.
         </p>
-        <p>À 17 ans, un grave accident de moto plonge Georges dans le coma. À son réveil, un phénomène inattendu : il lui suffit de
-          <strong>poser la main sur un livre pour en assimiler le contenu</strong>. Plutôt que le mysticisme, il choisit le pragmatisme — et oriente cette capacité vers l'exploration du son.
-        </p>
         <p>Pendant
-          <strong>plus de 40 ans</strong>, il développe des environnements sonores immersifs — sons binauraux, spatialisation 8D, micro-courants, fréquences spécifiques. Son expertise l'amène jusqu'à
+          <strong>plus de 40 ans</strong>, Georges Vieilledent développe des environnements sonores immersifs — sons binauraux, spatialisation 8D, micro-courants, fréquences spécifiques. Son expertise l'amène jusqu'à
           <strong>Hollywood</strong>, où il conçoit des expériences sonores pour le cinéma.
         </p>
         <p>Il coopère ensuite avec le
@@ -1813,6 +1935,9 @@
         </p>
         <p>Sa conviction :
           <strong>le son n'est pas seulement un phénomène acoustique, mais un langage fondamental du vivant</strong>.
+        </p>
+        <p>Mais une fois les premiers résultats positifs publiés… Georges s'est retrouvé face à un mur qui n'était plus de la science…
+          <strong>mais de l'économie</strong>.
         </p>
       </div>
     </div>
