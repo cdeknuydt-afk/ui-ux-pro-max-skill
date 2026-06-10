@@ -1100,22 +1100,9 @@
     font-weight:600;
     text-decoration:underline;
     text-underline-offset:3px}
-  .story-dots{
+  .story-controls{
     display:none}
-  .story-live{
-    height:380vh;
-    padding:0}
-  .story-live .story-sticky{
-    position:sticky;
-    top:0;
-    height:100vh;
-    height:100dvh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
-    padding:4.5rem 1.5rem 1.5rem}
-  .story-live .story-stage{
+  .story-steps .story-stage{
     display:block;
     position:relative;
     height:300px;
@@ -1123,7 +1110,8 @@
     margin:0 auto 1.8rem;
     background:var(--surface);
     border-radius:var(--r-lg);
-    overflow:hidden}
+    overflow:hidden;
+    transition:box-shadow .6s ease}
   .story-layer{
     position:absolute;
     left:6%;
@@ -1132,7 +1120,8 @@
     height:120px;
     margin-top:-60px;
     opacity:0;
-    will-change:transform,opacity}
+    will-change:transform,opacity;
+    transition:transform .75s cubic-bezier(.3,.7,.2,1),opacity .6s ease}
   .story-layer svg{
     width:100%;
     height:100%;
@@ -1149,12 +1138,12 @@
     to{
       transform:translateX(-600px)}
   }
-  .story-live .story-captions{
+  .story-steps .story-captions{
     position:relative;
     height:118px;
     max-width:560px;
     margin:0 auto}
-  .story-live .story-caption{
+  .story-steps .story-caption{
     position:absolute;
     inset:0;
     padding:0;
@@ -1162,22 +1151,49 @@
     transform:translateY(14px);
     transition:opacity .45s ease,transform .45s ease;
     pointer-events:none}
-  .story-live .story-caption.is-active{
+  .story-steps .story-caption.is-active{
     opacity:1;
     transform:none;
     pointer-events:auto}
-  .story-live .story-dots{
+  .story-steps .story-controls{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:1.4rem;
+    margin-top:.4rem}
+  .story-arrow{
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    border:1px solid var(--line);
+    background:#fff;
+    color:var(--ink);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:background-color .2s ease,color .2s ease,border-color .2s ease,opacity .2s ease}
+  .story-arrow:hover:not(:disabled){
+    background:var(--ink);
+    border-color:var(--ink);
+    color:#fff}
+  .story-arrow:disabled{
+    opacity:.35;
+    cursor:default}
+  .story-dots{
     display:flex;
     gap:.5rem;
-    justify-content:center;
-    margin-top:.4rem}
-  .story-dots span{
+    justify-content:center}
+  .story-dot{
     width:8px;
     height:8px;
+    padding:0;
+    border:none;
     border-radius:999px;
     background:rgba(0,0,0,.18);
+    cursor:pointer;
     transition:width .3s ease,background-color .3s ease}
-  .story-dots span.is-active{
+  .story-dot.is-active{
     width:24px;
     background:var(--ink)}
   /* ── TEXTE QUI S'ALLUME AU SCROLL ── */
@@ -1213,20 +1229,10 @@
       gap:2rem 0}
     .stat:nth-child(3){
       border-left:0}
-    .story-live{
-      height:330vh}
-    .story-live .story-stage{
+    .story-steps .story-stage{
       height:215px}
-    .story-live .story-captions{
+    .story-steps .story-captions{
       height:150px}
-  }
-  @media(max-height:720px){
-    .story-live .story-stage{
-      height:200px;
-      margin-bottom:1.2rem}
-    .story-live .story-inner h2{
-      font-size:1.5rem;
-      margin-bottom:1.2rem}
   }
 </style>
 </head>
@@ -1305,7 +1311,7 @@
     </div>
   </div>
 </section>
-<!-- ══════════ SCROLL-STORY « COUCHES SONORES » ══════════ -->
+<!-- ══════════ STORY « COUCHES SONORES » — navigation par flèches ══════════ -->
 <section class="story-section" id="procede">
   <div class="story-sticky">
     <div class="story-inner">
@@ -1336,7 +1342,20 @@
           <p>Vous écoutez, vous voyagez — les fréquences agissent. <a href="#extrait">Écouter l'extrait</a></p>
         </div>
       </div>
-      <div class="story-dots" aria-hidden="true"><span class="is-active"></span><span></span><span></span><span></span></div>
+      <div class="story-controls">
+        <button class="story-arrow" id="storyPrev" aria-label="Étape précédente" disabled>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <div class="story-dots">
+          <button class="story-dot is-active" aria-label="Étape 1"></button>
+          <button class="story-dot" aria-label="Étape 2"></button>
+          <button class="story-dot" aria-label="Étape 3"></button>
+          <button class="story-dot" aria-label="Étape 4"></button>
+        </div>
+        <button class="story-arrow" id="storyNext" aria-label="Étape suivante">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
     </div>
   </div>
 </section>
@@ -2116,10 +2135,10 @@
       var off=clamp((r.top+r.height/2-vh/2)/vh*-26,-26,26);
       el.style.transform='translate3d(0,'+off.toFixed(1)+'px,0)';
     });
-    /* ── Scroll-story « couches sonores » ── */
+    /* ── Story « couches sonores » : navigation par flèches ── */
     var story=document.getElementById('procede');
-    if(story&&motionOK){
-      story.classList.add('story-live');
+    if(story){
+      story.classList.add('story-steps');
       var stage=story.querySelector('.story-stage');
       function sinePath(wl,amp,cy){
         var half=wl/2,d='M0,'+cy,up=true,first=true;
@@ -2151,38 +2170,46 @@
       makeWave('storyL2',200,20,'#8a8a8a',3,'0.1 9');
       makeWave('storyL3',60,14,'#b45309',2,null);
       var L=[document.getElementById('storyL1'),document.getElementById('storyL2'),document.getElementById('storyL3')];
-      var KY=[[26,0,-62,-70,-24],[40,40,0,0,0],[90,90,84,64,24]];
-      var KO=[[0,1,1,1,1],[0,0,1,1,1],[0,0,0,1,1]];
+      var SY=[[0,40,90],[-62,0,90],[-70,0,64],[-24,0,24]];
+      var SO=[[1,0,0],[1,1,0],[1,1,1],[1,1,1]];
       var caps=story.querySelectorAll('.story-caption');
-      var dots=story.querySelectorAll('.story-dots span');
-      var lastCap=-1;
-      function interp(arr,P){
-        var seg=Math.min(3,Math.floor(P*4)),
-            t=smooth(clamp(P*4-seg,0,1));
-        return arr[seg]+(arr[seg+1]-arr[seg])*t;
-      }
-      ticks.push(function(vh){
-        var r=story.getBoundingClientRect();
-        if(r.bottom<0||r.top>vh)return;
-        var total=r.height-vh;
-        var P=clamp(-r.top/(total||1),0,1);
+      var dots=story.querySelectorAll('.story-dot');
+      var prevBtn=document.getElementById('storyPrev');
+      var nextBtn=document.getElementById('storyNext');
+      var step=-1;
+      function goTo(s){
+        s=clamp(s,0,3);
+        if(s===step)return;
+        step=s;
         var k=stage?stage.offsetHeight/300:1;
         for(var i=0;i<3;i++){
           if(!L[i])continue;
-          L[i].style.transform='translate3d(0,'+(interp(KY[i],P)*k).toFixed(1)+'px,0)';
-          L[i].style.opacity=interp(KO[i],P).toFixed(3);
+          L[i].style.transform='translate3d(0,'+(SY[s][i]*k).toFixed(1)+'px,0)';
+          L[i].style.opacity=SO[s][i];
         }
-        var c=P<.20?0:P<.45?1:P<.70?2:3;
-        if(c!==lastCap){
-          for(var j=0;j<caps.length;j++)caps[j].classList.toggle('is-active',j===c);
-          for(var j2=0;j2<dots.length;j2++)dots[j2].classList.toggle('is-active',j2===c);
-          lastCap=c;
-        }
-        if(stage){
-          var g=smooth(clamp((P-.72)/.23,0,1));
-          stage.style.boxShadow='0 24px 70px rgba(0,0,0,'+(0.10*g).toFixed(3)+')';
-        }
+        for(var j=0;j<caps.length;j++)caps[j].classList.toggle('is-active',j===s);
+        for(var d2=0;d2<dots.length;d2++)dots[d2].classList.toggle('is-active',d2===s);
+        if(prevBtn)prevBtn.disabled=(s===0);
+        if(nextBtn)nextBtn.disabled=(s===3);
+        if(stage)stage.style.boxShadow=(s===3)?'0 24px 70px rgba(0,0,0,.10)':'none';
+      }
+      if(prevBtn)prevBtn.addEventListener('click',function(){
+        goTo(step-1);
       });
+      if(nextBtn)nextBtn.addEventListener('click',function(){
+        goTo(step+1);
+      });
+      dots.forEach(function(d,i){
+        d.addEventListener('click',function(){
+          goTo(i);
+        });
+      });
+      window.addEventListener('resize',function(){
+        var s=step;
+        step=-1;
+        goTo(s<0?0:s);
+      });
+      goTo(0);
     }
     /* ── Equalizer audio-réactif (Web Audio API) ──
        Pré-check CORS : si le CDN n'autorise pas l'analyse, on garde
