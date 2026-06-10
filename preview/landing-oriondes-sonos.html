@@ -177,16 +177,21 @@
     line-height:1.65}
   /* ── HERO ── */
   .hero{
-    padding:10rem 0 0;
+    min-height:100vh;
+    min-height:100dvh;
+    padding:5.5rem 0 1.5rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
     text-align:center}
   .hero-inner{
     max-width:860px;
     margin:0 auto}
   .hero h1{
-    font-size:clamp(2.3rem,5.2vw,3.9rem);
-    letter-spacing:-.035em;
-    line-height:1.06;
-    margin-bottom:1.4rem}
+    font-size:clamp(1.7rem,3.4vw,2.6rem);
+    letter-spacing:-.03em;
+    line-height:1.08;
+    margin-bottom:1.1rem}
   .live-badge{
     display:inline-flex;
     align-items:center;
@@ -194,10 +199,10 @@
     background:var(--surface);
     border:1px solid var(--line-soft);
     border-radius:999px;
-    padding:.6rem 1.2rem;
-    font-size:.86rem;
+    padding:.5rem 1.1rem;
+    font-size:.84rem;
     color:var(--ink-soft);
-    margin-bottom:2rem}
+    margin-bottom:0}
   .live-badge strong{
     color:var(--ink);
     font-weight:600}
@@ -212,14 +217,20 @@
     display:flex;
     gap:.8rem;
     justify-content:center;
-    flex-wrap:wrap}
+    flex-wrap:wrap;
+    margin-top:1.8rem}
   .media-wrap{
-    max-width:1000px;
-    margin:3.5rem auto 0;
+    width:min(100%,1000px);
+    margin:1.8rem auto 0;
     border-radius:var(--r-lg);
     overflow:hidden;
     background:#000;
     box-shadow:var(--shadow-float)}
+  @media(min-width:768px){
+    .media-wrap{
+      width:min(100%,1000px,calc((100vh - 21rem)*1.77778));
+      width:min(100%,1000px,calc((100dvh - 21rem)*1.77778))}
+  }
   .vidyard-zone{
     display:none}
   .vidyard-zone.active{
@@ -997,8 +1008,6 @@
   @media(max-width:768px){
     section{
       padding:4.5rem 0}
-    .hero{
-      padding-top:8rem}
     .mod-3col,.mod-4col,.mod-2col{
       grid-template-columns:1fr}
     .pricing-grid{
@@ -1258,12 +1267,6 @@
         <span class="dot"></span>
         <span>Webinaire exclusif — la nouvelle piste <strong>«&nbsp;Douleurs articulaires&nbsp;»</strong> est en ligne</span>
       </div>
-      <div class="hero-actions fade-up d4">
-        <a href="#pricing" class="btn btn-dark">Accéder à la plateforme</a>
-        <a href="#extrait" class="btn btn-ghost">Écouter l'extrait
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
-        </a>
-      </div>
     </div>
     <div class="media-wrap fade-in" id="heroMedia">
       <!-- ⚠️ WEBINAIRE : une fois le webinaire tourné, remplacer l'ID Vidyard ci-dessous (data-videoid, data-uuid ET le .jpg du src). Vidéo actuelle = documentaire. -->
@@ -1273,6 +1276,12 @@
           <img style="width:100%;margin:auto;display:block" class="vidyard-player-embed" src="https://play.vidyard.com/GoJ4ccUSAUhJnSBLFKazYL.jpg" data-uuid="GoJ4ccUSAUhJnSBLFKazYL" data-v="4" data-type="inline" alt="Webinaire — L'Alchimiste du Son">
         </div>
       </div>
+    </div>
+    <div class="hero-actions fade-up d5">
+      <a href="#pricing" class="btn btn-dark">Accéder à la plateforme</a>
+      <a href="#extrait" class="btn btn-ghost">Écouter l'extrait
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+      </a>
     </div>
   </div>
 </header>
