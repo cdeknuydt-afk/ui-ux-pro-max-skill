@@ -192,27 +192,6 @@
     letter-spacing:-.03em;
     line-height:1.08;
     margin-bottom:1.1rem}
-  .live-badge{
-    display:inline-flex;
-    align-items:center;
-    gap:.6rem;
-    background:var(--surface);
-    border:1px solid var(--line-soft);
-    border-radius:999px;
-    padding:.5rem 1.1rem;
-    font-size:.84rem;
-    color:var(--ink-soft);
-    margin-bottom:0}
-  .live-badge strong{
-    color:var(--ink);
-    font-weight:600}
-  .live-badge .dot{
-    width:8px;
-    height:8px;
-    border-radius:50%;
-    background:var(--accent);
-    flex:none;
-    animation:blink 2s ease-in-out infinite}
   .hero-actions{
     display:flex;
     gap:.8rem;
@@ -228,8 +207,8 @@
     box-shadow:var(--shadow-float)}
   @media(min-width:768px){
     .media-wrap{
-      width:min(100%,1000px,calc((100vh - 21rem)*1.77778));
-      width:min(100%,1000px,calc((100dvh - 21rem)*1.77778))}
+      width:min(100%,1000px,calc((100vh - 19rem)*1.77778));
+      width:min(100%,1000px,calc((100dvh - 19rem)*1.77778))}
   }
   .vidyard-zone{
     display:none}
@@ -949,12 +928,6 @@
     font-size:.85rem;
     color:var(--muted-2)}
   /* ── ANIMATIONS ── */
-  @keyframes blink{
-    0%,100%{
-      opacity:1}
-    50%{
-      opacity:.3}
-  }
   @keyframes fadeUp{
     from{
       opacity:0;
@@ -1263,10 +1236,6 @@
       </p>
       <h1 class="fade-up d2">Douleurs articulaires : l'approche sonore de Georges Vieilledent
       </h1>
-      <div class="live-badge fade-up d3">
-        <span class="dot"></span>
-        <span>Webinaire exclusif — la nouvelle piste <strong>«&nbsp;Douleurs articulaires&nbsp;»</strong> est en ligne</span>
-      </div>
     </div>
     <div class="media-wrap fade-in" id="heroMedia">
       <!-- ⚠️ WEBINAIRE : une fois le webinaire tourné, remplacer l'ID Vidyard ci-dessous (data-videoid, data-uuid ET le .jpg du src). Vidéo actuelle = documentaire. -->
