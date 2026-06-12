@@ -1035,8 +1035,8 @@
     padding:4.5rem 0}
   .stats-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    max-width:1000px;
+    grid-template-columns:repeat(3,1fr);
+    max-width:840px;
     margin:0 auto}
   .stat{
     text-align:center;
@@ -1212,7 +1212,8 @@
       grid-template-columns:1fr 1fr;
       gap:2rem 0}
     .stat:nth-child(3){
-      border-left:0}
+      border-left:0;
+      grid-column:1/-1}
     .story-steps .story-stage{
       height:215px}
     .story-steps .story-captions{
@@ -1568,10 +1569,6 @@
 <section class="stats-section">
   <div class="container">
     <div class="stats-grid reveal">
-      <div class="stat">
-        <span class="stat-num" data-count="11">11</span>
-        <span class="stat-label">pistes disponibles</span>
-      </div>
       <div class="stat">
         <span class="stat-num" data-count="2">2</span>
         <span class="stat-label">nouveautés ce mois-ci</span>
