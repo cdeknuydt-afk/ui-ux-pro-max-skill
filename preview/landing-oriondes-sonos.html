@@ -1425,9 +1425,142 @@
     .testi-card{
       flex:0 0 100%}
   }
+  /* ═══ GATE / COMPTE À REBOURS (se débloque à 20h30) ═══ */
+  body.gate-locked{
+    overflow:hidden}
+  .gate{
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:2rem 1.5rem;
+    background:radial-gradient(circle at 50% 32%,#ffffff 0%,#f4f4f1 70%,#ededea 100%);
+    overflow:hidden;
+    opacity:1;
+    transition:opacity .6s ease,visibility .6s}
+  .gate.gate-hidden{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none}
+  .gate-rings{
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:min(150vmin,1100px);
+    height:min(150vmin,1100px);
+    transform:translate(-50%,-50%);
+    pointer-events:none;
+    z-index:1}
+  .gate-rings span{
+    position:absolute;
+    inset:0;
+    margin:auto;
+    border-radius:50%;
+    border:1px solid rgba(17,17,17,.06)}
+  .gate-rings span:nth-child(1){width:30%;height:30%}
+  .gate-rings span:nth-child(2){width:52%;height:52%}
+  .gate-rings span:nth-child(3){width:74%;height:74%}
+  .gate-rings span:nth-child(4){width:100%;height:100%}
+  .gate-rings.animate span{
+    animation:gateRing 7s ease-out infinite}
+  .gate-rings.animate span:nth-child(2){animation-delay:.9s}
+  .gate-rings.animate span:nth-child(3){animation-delay:1.8s}
+  .gate-rings.animate span:nth-child(4){animation-delay:2.7s}
+  @keyframes gateRing{
+    0%{transform:scale(.85);opacity:.5}
+    100%{transform:scale(1.15);opacity:0}
+  }
+  .gate-inner{
+    position:relative;
+    z-index:2;
+    max-width:660px;
+    width:100%}
+  .gate-logo{
+    height:24px;
+    width:auto;
+    margin:0 auto 2.2rem;
+    filter:brightness(0);
+    opacity:.85}
+  .gate-overline{
+    font-size:.72rem;
+    font-weight:600;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:1rem}
+  .gate-title{
+    font-size:clamp(1.7rem,4vw,2.6rem);
+    font-weight:600;
+    letter-spacing:-.03em;
+    line-height:1.12;
+    color:var(--ink);
+    margin-bottom:1rem}
+  .gate-sub{
+    font-size:1.02rem;
+    color:var(--muted);
+    line-height:1.65;
+    max-width:480px;
+    margin:0 auto 2.6rem}
+  .gate-countdown{
+    display:flex;
+    gap:.6rem;
+    justify-content:center}
+  .gate-unit{
+    min-width:92px;
+    background:#fff;
+    border:1px solid var(--line-soft);
+    border-radius:18px;
+    padding:1.2rem .6rem;
+    box-shadow:0 10px 30px rgba(0,0,0,.05)}
+  .gate-num{
+    display:block;
+    font-size:clamp(2.2rem,6vw,3.4rem);
+    font-weight:600;
+    letter-spacing:-.04em;
+    line-height:1;
+    color:var(--ink);
+    font-variant-numeric:tabular-nums}
+  .gate-lbl{
+    display:block;
+    font-size:.64rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-top:.6rem}
+  .gate-foot{
+    margin-top:2.4rem;
+    font-size:.84rem;
+    color:var(--muted-2)}
+  @media(max-width:480px){
+    .gate-unit{
+      min-width:74px;
+      padding:1rem .4rem;
+      border-radius:14px}
+    .gate-countdown{
+      gap:.45rem}
+  }
 </style>
 </head>
-<body class="fr-view">
+<body class="fr-view gate-locked">
+<!-- ═══ GATE : verrou avec compte à rebours jusqu'à 20h30 (à retirer après l'événement) ═══ -->
+<div class="gate" id="gate" role="dialog" aria-label="Le contenu se débloque à 20h30">
+  <div class="gate-rings" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+  <div class="gate-inner">
+    <img class="gate-logo" src="https://pure-sante-cdn.pubfac.io/uploads/logo_PURST_blanc-01_new.png" alt="PureSanté">
+    <p class="gate-overline">Webinaire exclusif · ce soir 20h30</p>
+    <h1 class="gate-title">Le contenu se débloque ce soir à 20h30</h1>
+    <p class="gate-sub">Rendez-vous à 20h30 pour découvrir la piste «&nbsp;Douleurs articulaires&nbsp;» avec Georges Vieilledent. Cette page s'ouvrira automatiquement.</p>
+    <div class="gate-countdown" id="gateCountdown" role="timer">
+      <div class="gate-unit"><span class="gate-num" id="gH">00</span><span class="gate-lbl">Heures</span></div>
+      <div class="gate-unit"><span class="gate-num" id="gM">00</span><span class="gate-lbl">Minutes</span></div>
+      <div class="gate-unit"><span class="gate-num" id="gS">00</span><span class="gate-lbl">Secondes</span></div>
+    </div>
+    <p class="gate-foot">Le compte à rebours se termine à l'ouverture du webinaire.</p>
+  </div>
+</div>
 <nav class="top-nav">
   <div class="container">
     <a href="#" class="top-nav-logo"><img src="https://pure-sante-cdn.pubfac.io/uploads/logo_PURST_blanc-01_new.png" alt="PureSanté"></a>
@@ -2601,6 +2734,39 @@
     }
     /* premier calcul au chargement */
     runTicks();
+  })();
+</script>
+<script>
+  /* ═══ GATE : déverrouillage automatique à 20h30 (heure de Paris) ═══
+     Pour changer la date/heure, modifier la constante ci-dessous (format ISO).
+     NB : ce verrou est côté navigateur ; il masque la page mais ne protège
+     pas réellement le contenu (toujours présent dans le code source).
+     Pour un vrai blocage, gérer l'accès côté serveur. */
+  (function(){
+    var gate=document.getElementById('gate');
+    if(!gate)return;
+    var TARGET=new Date('2026-06-16T20:30:00+02:00').getTime();
+    var gH=document.getElementById('gH'),gM=document.getElementById('gM'),gS=document.getElementById('gS'),timer=null;
+    function pad(n){return (n<10?'0':'')+n;}
+    function unlock(){
+      if(timer)clearInterval(timer);
+      gate.classList.add('gate-hidden');
+      document.body.classList.remove('gate-locked');
+      setTimeout(function(){if(gate.parentNode)gate.parentNode.removeChild(gate);},700);
+    }
+    function tick(){
+      var diff=TARGET-Date.now();
+      if(diff<=0){unlock();return;}
+      var t=Math.floor(diff/1000);
+      if(gH)gH.textContent=pad(Math.floor(t/3600));
+      if(gM)gM.textContent=pad(Math.floor((t%3600)/60));
+      if(gS)gS.textContent=pad(t%60);
+    }
+    if(TARGET-Date.now()<=0){unlock();return;}
+    var rings=gate.querySelector('.gate-rings');
+    if(rings&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches)rings.classList.add('animate');
+    tick();
+    timer=setInterval(tick,1000);
   })();
 </script>
 </body>
