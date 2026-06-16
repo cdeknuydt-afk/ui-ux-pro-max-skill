@@ -428,6 +428,21 @@
     height:18px;
     color:var(--ink)}
   /* ── ACCORDÉON "À VENIR" ── */
+  .mod-piste-soon{
+    opacity:.5;
+    cursor:default;
+    -webkit-mask-image:linear-gradient(180deg,#000 30%,rgba(0,0,0,.12));
+    mask-image:linear-gradient(180deg,#000 30%,rgba(0,0,0,.12))}
+  .mod-piste-soon:hover{
+    transform:none;
+    box-shadow:none;
+    border-color:transparent}
+  .story-hint{
+    text-align:center;
+    font-size:.82rem;
+    color:var(--muted);
+    margin-top:1.4rem;
+    margin-bottom:.2rem}
   .upcoming-trigger{
     width:100%;
     background:#fff;
@@ -1417,11 +1432,11 @@
           <rect y="4" width="18" height="3" fill="#002f6c"/>
         </svg>
       </span>
-      <p class="overline">La méthode venue de Finlande
+      <p class="overline">Une approche inspirée de la Finlande
       </p>
-      <h2>50 ans d'avance sur les douleurs articulaires
+      <h2>Une piste inspirée des hôpitaux finlandais
       </h2>
-      <p class="finland-lead">Dans les années 70, à l'hôpital de Seinäjoki en Finlande, le médecin Petri Lehikoinen met au point une méthode révolutionnaire : inhiber le signal de douleur envoyé par les articulations au cerveau, grâce à une composition spécifique de fréquences — dont la plus connue en médecine, le 40&nbsp;Hz.
+      <p class="finland-lead">Pour composer sa piste «&nbsp;Douleurs articulaires&nbsp;», Georges Vieilledent s'est inspiré d'approches explorées de longue date dans les hôpitaux finlandais : se servir de compositions de fréquences pour atténuer le signal de douleur transmis au cerveau.
       </p>
       <div class="finland-stats">
         <div class="fstat">
@@ -1433,11 +1448,11 @@
           <span class="stat-label">se passent désormais de médicaments</span>
         </div>
         <div class="fstat">
-          <span class="stat-num" data-count="40" data-suffix=" Hz">40 Hz</span>
-          <span class="stat-label">la fréquence clé de la méthode</span>
+          <span class="stat-num" data-count="50" data-suffix=" ans">50 ans</span>
+          <span class="stat-label">que ces approches sont étudiées en Finlande</span>
         </div>
       </div>
-      <p class="finland-note-exp">Résultats observés lors de l'expérimentation auprès de femmes souffrant de douleurs articulaires chroniques.
+      <p class="finland-note-exp">Résultats d'une étude finlandaise menée auprès de femmes souffrant de douleurs articulaires chroniques.
       </p>
       <div class="finland-chips">
         <span class="chip">
@@ -1454,7 +1469,7 @@
         </span>
       </div>
       <div class="finland-why">
-        <p>Un son ne se brevette pas. Il ne se vend ni en pilule, ni en pommade — et n'intéresse donc pas l'industrie. C'est pourquoi cette méthode est restée confinée en Finlande pendant 50 ans… <strong>et que Georges Vieilledent est aujourd'hui le seul à la proposer en France.</strong>
+        <p>Un son ne se brevette pas et ne se vend ni en pilule ni en pommade : il n'intéresse pas l'industrie du médicament. Ces approches sont donc longtemps restées cantonnées à quelques pays comme la Finlande. <strong>Georges Vieilledent s'en est inspiré pour composer une piste accessible à tous.</strong>
         </p>
       </div>
       <a href="#pricing" class="btn btn-dark">Accéder à la plateforme</a>
@@ -1477,33 +1492,35 @@
       <div class="story-captions">
         <div class="story-caption is-active">
           <h3>01 · Le voyage musical</h3>
-          <p>Une composition immersive — celle que votre oreille entend et savoure.</p>
+          <p>Une composition immersive, celle que votre oreille entend et savoure.</p>
         </div>
         <div class="story-caption">
           <h3>02 · La spatialisation 3D</h3>
-          <p>Le son tourne autour de vous et bluffe le cerveau — le procédé breveté par Georges Vieilledent et qui a séduit Hollywood.</p>
+          <p>Le son tourne autour de vous et bluffe le cerveau : le procédé breveté par Georges Vieilledent, qui a séduit Hollywood.</p>
         </div>
         <div class="story-caption">
           <h3>03 · Les fréquences de résonance</h3>
-          <p>Cachées sous la musique, elles font vibrer les zones ciblées — articulations comprises.</p>
+          <p>Cachées sous la musique, elles font vibrer les zones ciblées, articulations comprises.</p>
         </div>
         <div class="story-caption">
           <h3>04 · Empilées «&nbsp;en lasagnes&nbsp;»</h3>
-          <p>Vous écoutez, vous voyagez — les fréquences agissent.</p>
+          <p>Vous écoutez, vous voyagez, et les fréquences agissent.</p>
         </div>
       </div>
+      <p class="story-hint">Les couches se révèlent une à une : utilisez les flèches pour explorer
+      </p>
       <div class="story-controls">
-        <button class="story-arrow" id="storyPrev" aria-label="Étape précédente" disabled>
+        <button class="story-arrow" id="storyPrev" aria-label="Couche précédente">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
         </button>
         <div class="story-dots">
-          <button class="story-dot is-active" aria-label="Étape 1"></button>
-          <button class="story-dot" aria-label="Étape 2"></button>
-          <button class="story-dot" aria-label="Étape 3"></button>
-          <button class="story-dot" aria-label="Étape 4"></button>
+          <button class="story-dot is-active" aria-label="Couche 1"></button>
+          <button class="story-dot" aria-label="Couche 2"></button>
+          <button class="story-dot" aria-label="Couche 3"></button>
+          <button class="story-dot" aria-label="Couche 4"></button>
         </div>
-        <button class="story-arrow" id="storyNext" aria-label="Étape suivante">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+        <button class="btn btn-dark btn-sm" id="storyNext">Couche suivante
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
         </button>
       </div>
     </div>
@@ -1557,7 +1574,7 @@
           </p>
           <h2>Accédez à la plateforme Oriondes
           </h2>
-          <p class="plat-lead scroll-words" id="platLead">Les fréquences thérapeutiques de Georges Vieilledent. Des voyages sonores pour chaque organe, chaque émotion — articulations comprises. 15 minutes, un casque, c'est tout.
+          <p class="plat-lead scroll-words" id="platLead">Les fréquences thérapeutiques de Georges Vieilledent. Des voyages sonores pour chaque organe, chaque émotion, articulations comprises. 15 minutes, un casque, c'est tout.
           </p>
           <div class="feat-grid">
             <div class="feat">
@@ -1598,7 +1615,7 @@
   <section class="pistes-section">
     <div class="container">
       <div class="section-head reveal">
-        <h2>Deux grands thèmes, une approche complète
+        <h2>Des pistes pour le corps et l'esprit
         </h2>
       </div>
       <div class="showcase" id="showcase">
@@ -1606,17 +1623,17 @@
           <source src="https://pure-sante-cdn.pubfac.io/uploads/rerefzefz.mp4" type="video/mp4">
         </video>
       </div>
-      <!-- POUR LE CORPS -->
       <div class="mod-theme-block reveal">
-        <h3 class="mod-theme-label">Pour le Corps
-        </h3>
-        <p class="mod-theme-sub">Pour agir au niveau physique
-        </p>
         <div class="mod-pistes-grid mod-3col">
           <div class="mod-piste mod-piste-new mod-piste-static">
             <span class="mod-piste-count tag-new">Nouveau</span>
             <span class="mod-piste-name">Douleurs articulaires</span>
-            <span class="mod-piste-desc">Des fréquences de résonance ciblées sur les zones articulaires — au cœur du webinaire</span>
+            <span class="mod-piste-desc">Des fréquences de résonance ciblées sur les zones articulaires.</span>
+          </div>
+          <div class="mod-piste mod-piste-static">
+            <span class="mod-piste-count tag-new">Nouveau</span>
+            <span class="mod-piste-name">Sommeil profond</span>
+            <span class="mod-piste-desc">Plonger dans un sommeil profond et réparateur</span>
           </div>
           <div class="mod-piste" onclick="togglePisteImg('img-peau',this)">
             <span class="mod-piste-name">Peau d'orange</span>
@@ -1627,31 +1644,10 @@
           </div>
           <div class="mod-piste" onclick="togglePisteImg('img-rides',this)">
             <span class="mod-piste-name">Rides &amp; Éclat de la peau</span>
-            <span class="mod-piste-desc">Sensation de picotement dès la première écoute — testée et confirmée</span>
+            <span class="mod-piste-desc">Sensation de picotement dès la première écoute, testée et confirmée</span>
             <span class="mod-piste-cta">Voir la piste
               <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </span>
-          </div>
-        </div>
-        <div id="img-peau" class="mod-img-panel">
-          <img src="https://pure-sante-cdn.pubfac.io/uploads/PURST/vie/peauorange.png" alt="Peau d'orange" loading="lazy" decoding="async">
-        </div>
-        <div id="img-rides" class="mod-img-panel">
-          <img src="https://pure-sante-cdn.pubfac.io/uploads/PURST/vie/rideseteclat.png" alt="Rides et éclat de la peau" loading="lazy" decoding="async">
-        </div>
-      </div>
-      <!-- POUR L'ESPRIT -->
-      <div class="mod-theme-block reveal">
-        <h3 class="mod-theme-label">Pour l'Esprit
-        </h3>
-        <p class="mod-theme-sub">Pour agir sur vos émotions et votre mental
-        </p>
-        <div class="mod-pistes-grid mod-4col">
-          <!-- Visuel à brancher quand dispo sur le CDN (ex: /uploads/PURST/vie/sommeilprofond.png) : passer la carte en onclick="togglePisteImg(...)" + ajouter son mod-img-panel -->
-          <div class="mod-piste mod-piste-static">
-            <span class="mod-piste-count tag-new">Nouveau</span>
-            <span class="mod-piste-name">Sommeil profond</span>
-            <span class="mod-piste-desc">Plonger dans un sommeil profond et réparateur</span>
           </div>
           <div class="mod-piste" onclick="togglePisteImg('img-confiance',this)">
             <span class="mod-piste-name">Confiance en soi</span>
@@ -1674,6 +1670,22 @@
               <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </span>
           </div>
+          <div class="mod-piste mod-piste-soon">
+            <span class="mod-piste-count">Bientôt</span>
+            <span class="mod-piste-name">Clarté mentale</span>
+            <span class="mod-piste-desc">Retrouver une tête claire et concentrée</span>
+          </div>
+          <div class="mod-piste mod-piste-soon">
+            <span class="mod-piste-count">Bientôt</span>
+            <span class="mod-piste-name">Détente corporelle</span>
+            <span class="mod-piste-desc">Relâcher les tensions de tout le corps</span>
+          </div>
+        </div>
+        <div id="img-peau" class="mod-img-panel">
+          <img src="https://pure-sante-cdn.pubfac.io/uploads/PURST/vie/peauorange.png" alt="Peau d'orange" loading="lazy" decoding="async">
+        </div>
+        <div id="img-rides" class="mod-img-panel">
+          <img src="https://pure-sante-cdn.pubfac.io/uploads/PURST/vie/rideseteclat.png" alt="Rides et éclat de la peau" loading="lazy" decoding="async">
         </div>
         <div id="img-confiance" class="mod-img-panel">
           <img src="https://pure-sante-cdn.pubfac.io/uploads/PURST/vie/confianceensoi.png" alt="Confiance en soi" loading="lazy" decoding="async">
@@ -1768,7 +1780,7 @@
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
           </div>
-          <blockquote>«&nbsp;C'est addictif, tes musiques ! Depuis que je les écoute, il y a du changement : une belle amélioration au niveau de mes jambes, beaucoup moins douloureuses et moins gonflées. J'ai la sensation d'un mieux général. C'est vraiment génial ce que tu fais — j'ai hâte d'écouter les prochaines.&nbsp;»</blockquote>
+          <blockquote>«&nbsp;C'est addictif, tes musiques ! Depuis que je les écoute, il y a du changement : une belle amélioration au niveau de mes jambes, beaucoup moins douloureuses et moins gonflées. J'ai la sensation d'un mieux général. C'est vraiment génial ce que tu fais. J'ai hâte d'écouter les prochaines.&nbsp;»</blockquote>
           <div class="testi-foot">
             <span class="testi-avatar" aria-hidden="true">MD</span>
             <div>
@@ -1785,7 +1797,7 @@
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
           </div>
-          <blockquote>«&nbsp;Hier soir, j'ai écouté le son deux fois pendant 30 minutes. Résultat : une super nuit, avec un score de sommeil de 99&nbsp;% sur ma montre connectée — ce qui ne m'était jamais arrivé. Et au-delà des chiffres, l'écoute en elle-même est très prenante. Je vais continuer dans les jours à venir !&nbsp;»</blockquote>
+          <blockquote>«&nbsp;Hier soir, j'ai écouté le son deux fois pendant 30 minutes. Résultat : une super nuit, avec un score de sommeil de 99&nbsp;% sur ma montre connectée, ce qui ne m'était jamais arrivé. Et au-delà des chiffres, l'écoute en elle-même est très prenante. Je vais continuer dans les jours à venir !&nbsp;»</blockquote>
           <div class="testi-foot">
             <span class="testi-avatar" aria-hidden="true">CD</span>
             <div>
@@ -1802,7 +1814,7 @@
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
           </div>
-          <blockquote>«&nbsp;Depuis 15 ans, je souffrais d'un sommeil erratique : 3 à 4 heures par nuit. Dès la première écoute, j'ai dormi de 23&nbsp;h à 5&nbsp;h d'un sommeil profond et réparateur — et c'est le même scénario depuis. Je n'aurais jamais cru qu'une simple piste audio transforme à ce point mon quotidien. Une vraie révélation.&nbsp;»</blockquote>
+          <blockquote>«&nbsp;Depuis 15 ans, je souffrais d'un sommeil erratique : 3 à 4 heures par nuit. Dès la première écoute, j'ai dormi de 23&nbsp;h à 5&nbsp;h d'un sommeil profond et réparateur, et c'est le même scénario depuis. Je n'aurais jamais cru qu'une simple piste audio transforme à ce point mon quotidien. Une vraie révélation.&nbsp;»</blockquote>
           <div class="testi-foot">
             <span class="testi-avatar" aria-hidden="true">PK</span>
             <div>
@@ -1882,7 +1894,7 @@
         </p>
         <h2>Rejoignez la communauté Oriondes
         </h2>
-        <p class="section-sub">Un voyage sonore, ça se partage. Derrière chaque piste, des milliers d'auditeurs — et Georges, à votre écoute.
+        <p class="section-sub">Un voyage sonore, ça se partage. Derrière chaque piste, des milliers d'auditeurs, et Georges, à votre écoute.
         </p>
       </div>
       <div class="community-grid reveal">
@@ -1891,7 +1903,7 @@
           </p>
           <h3>Georges Vieilledent vous répond
           </h3>
-          <p>La moindre question sur une piste, un protocole d'écoute, une sensation que vous ne saisissez pas ? Vous lui écrivez un message, il vous répond. C'est rare — et c'est précisément ce qui fait la différence d'Oriondes.
+          <p>La moindre question sur une piste, un protocole d'écoute, une sensation que vous ne saisissez pas ? Vous lui écrivez un message, il vous répond. C'est rare, et c'est précisément ce qui fait la différence d'Oriondes.
           </p>
           <p class="community-close">Vous n'achetez pas seulement des pistes. Vous rejoignez les gens qui les écoutent… et celui qui les compose.
           </p>
@@ -1983,7 +1995,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg>
           <div>
             <strong>Compatible tout appareil</strong>
-            <small>N'importe quelle paire d'écouteurs — 15 min par séance</small>
+            <small>N'importe quelle paire d'écouteurs, 15 min par séance</small>
           </div>
         </div>
         <div class="pdetail">
@@ -2102,7 +2114,7 @@
       <div class="why-args reveal">
         <div class="why-arg">
           <span class="why-num">01</span>
-          <p>Des pistes audio composées comme de la musique — pas des bruits blancs — avec des
+          <p>De vraies compositions musicales, porteuses de
             <strong>fréquences thérapeutiques cachées en sous-couches</strong>
           </p>
         </div>
@@ -2115,22 +2127,22 @@
         <div class="why-arg">
           <span class="why-num">03</span>
           <p>Le procédé breveté de Georges qui
-            <strong>bluffe le cerveau en 3D sonore</strong> — la même technologie qui a conquis Hollywood et Spielberg
+            <strong>bluffe le cerveau en 3D sonore</strong>, la même technologie qui a conquis Hollywood et Spielberg
           </p>
         </div>
         <div class="why-arg">
           <span class="why-num">04</span>
           <p>Aucun effort :
-            <strong>mettez vos écouteurs, lancez la piste, 15 minutes</strong> — les fréquences agissent pendant que vous voyagez
+            <strong>mettez vos écouteurs, lancez la piste, 15 minutes</strong>. Les fréquences agissent pendant que vous voyagez
           </p>
         </div>
       </div>
       <div class="why-cards reveal">
         <div class="why-card">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-          <h3>Un voyage, pas un traitement
+          <h3>Le plaisir d'écouter avant tout
           </h3>
-          <p>Les sons de Georges sont des compositions musicales immersives. Vous prenez du plaisir, vous voyagez — et les fréquences agissent en profondeur sans que vous ne remarquiez quoi que ce soit.
+          <p>Les sons de Georges sont des compositions musicales immersives. Vous prenez du plaisir, vous voyagez, et les fréquences agissent en profondeur sans que vous ne remarquiez quoi que ce soit.
           </p>
         </div>
         <div class="why-card">
@@ -2157,10 +2169,10 @@
         </p>
         <h2>Qui est Georges Vieilledent ?
         </h2>
-        <p class="about-lead">Compositeur, ingénieur du son et chercheur — l'homme qui a fait du son un outil de transformation.
+        <p class="about-lead">Compositeur, ingénieur du son et chercheur, l'homme qui a fait du son un outil de transformation.
         </p>
         <p>Pendant
-          <strong>plus de 40 ans</strong>, Georges Vieilledent développe des environnements sonores immersifs — sons binauraux, spatialisation 8D, micro-courants, fréquences spécifiques. Son expertise l'amène jusqu'à
+          <strong>plus de 40 ans</strong>, Georges Vieilledent développe des environnements sonores immersifs : sons binauraux, spatialisation 8D, micro-courants, fréquences spécifiques. Son expertise l'amène jusqu'à
           <strong>Hollywood</strong>, où il conçoit des expériences sonores pour le cinéma.
         </p>
         <p>Il coopère ensuite avec le
@@ -2190,14 +2202,14 @@
       <div class="faq-item">
         <button class="faq-question">La piste «&nbsp;Douleurs articulaires&nbsp;» est-elle déjà disponible ?</button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Oui — elle vient d'être ajoutée à la plateforme Oriondes, aux côtés de la piste «&nbsp;Sommeil profond&nbsp;». Le webinaire avec Georges Vieilledent vous la fera découvrir en profondeur. Toutes les nouvelles pistes sont incluses dans votre accès, sans supplément.
+          <div class="faq-answer-inner">Oui, elle vient d'être ajoutée à la plateforme Oriondes, aux côtés de la piste «&nbsp;Sommeil profond&nbsp;». Le webinaire avec Georges Vieilledent vous la fera découvrir en profondeur. Toutes les nouvelles pistes sont incluses dans votre accès, sans supplément.
           </div>
         </div>
       </div>
       <div class="faq-item">
         <button class="faq-question">Comment le son pourrait-il agir sur les articulations ?</button>
         <div class="faq-answer">
-          <div class="faq-answer-inner">Chaque piste superpose des dizaines de couches sonores. Certaines créent le voyage musical, d'autres vibrent à des fréquences de résonance précises, ciblées sur les zones articulaires. Selon l'approche développée par Georges Vieilledent, cette mise en vibration pourrait favoriser le relâchement des tensions — les sensations observées varient d'une personne à l'autre.
+          <div class="faq-answer-inner">Chaque piste superpose des dizaines de couches sonores. Certaines créent le voyage musical, d'autres vibrent à des fréquences de résonance précises, ciblées sur les zones articulaires. Selon l'approche développée par Georges Vieilledent, cette mise en vibration pourrait favoriser le relâchement des tensions. Les sensations observées varient d'une personne à l'autre.
           </div>
         </div>
       </div>
@@ -2463,27 +2475,40 @@
         }
         for(var j=0;j<caps.length;j++)caps[j].classList.toggle('is-active',j===s);
         for(var d2=0;d2<dots.length;d2++)dots[d2].classList.toggle('is-active',d2===s);
-        if(prevBtn)prevBtn.disabled=(s===0);
-        if(nextBtn)nextBtn.disabled=(s===3);
         if(stage)stage.style.boxShadow=(s===3)?'0 24px 70px rgba(0,0,0,.10)':'none';
       }
-      if(prevBtn)prevBtn.addEventListener('click',function(){
-        goTo(step-1);
-      });
-      if(nextBtn)nextBtn.addEventListener('click',function(){
-        goTo(step+1);
-      });
+      var sTimer=null,sVisible=false,sHold=false;
+      function sStop(){if(sTimer){clearInterval(sTimer);sTimer=null;}}
+      function sPlay(){if(motionOK&&sVisible&&!sHold&&!sTimer)sTimer=setInterval(function(){goTo(step>=3?0:step+1);},2900);}
+      function sBump(){sStop();sPlay();}
+      if(prevBtn)prevBtn.addEventListener('click',function(){goTo(step<=0?3:step-1);sBump();});
+      if(nextBtn)nextBtn.addEventListener('click',function(){goTo(step>=3?0:step+1);sBump();});
       dots.forEach(function(d,i){
-        d.addEventListener('click',function(){
-          goTo(i);
-        });
+        d.addEventListener('click',function(){goTo(i);sBump();});
       });
+      var sControls=story.querySelector('.story-controls');
+      if(sControls){
+        sControls.addEventListener('mouseenter',function(){sHold=true;sStop();});
+        sControls.addEventListener('mouseleave',function(){sHold=false;sPlay();});
+        sControls.addEventListener('focusin',function(){sHold=true;sStop();});
+        sControls.addEventListener('focusout',function(){sHold=false;sPlay();});
+      }
       window.addEventListener('resize',function(){
         var s=step;
         step=-1;
         goTo(s<0?0:s);
       });
       goTo(0);
+      if('IntersectionObserver' in window){
+        new IntersectionObserver(function(es){
+          es.forEach(function(x){
+            sVisible=x.isIntersecting;
+            if(sVisible)sPlay();else sStop();
+          });
+        },{threshold:.35}).observe(story);
+      }else{
+        sVisible=true;sPlay();
+      }
     }
     /* ── Carrousel témoignages (défilement auto lent + boucle) ── */
     var tTrack=document.getElementById('testiTrack');
