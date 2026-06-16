@@ -1941,7 +1941,7 @@
             <span class="net-pulse p2"></span>
             <span class="net-pulse p3"></span>
             <div class="net-georges">
-              <img src="https://pure-sante-cdn.pubfac.io/uploads/jgirebberygh.png" alt="" loading="lazy" decoding="async">
+              <img src="https://pure-sante-cdn.pubfac.io/uploads/georgesvie2.png" alt="" loading="lazy" decoding="async">
             </div>
             <span class="net-georges-label">Georges</span>
           </div>
@@ -2031,6 +2031,10 @@
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
               Résiliable à tout moment
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Satisfait ou remboursé 15 jours
             </li>
           </ul>
           <button class="btn-order-form-button btn btn-primary buttonCheck block-1c_sepa-or-1c_cc btn-order btn-order-outline" data-use-default-offer="true" data-type-link="1c_sepa-or-1c_cc" data-order-form-code="pstevie-99-149-light" data-1c-sepa-id="218270" data-1c-cc-id="218271" style="display:block"><div data-text-code="">Choisir l'abonnement
@@ -2482,37 +2486,57 @@
       });
       goTo(0);
     }
-    /* ── Carrousel témoignages ── */
+    /* ── Carrousel témoignages (défilement auto lent + boucle) ── */
     var tTrack=document.getElementById('testiTrack');
     if(tTrack){
       var tPrev=document.getElementById('testiPrev'),
-          tNext=document.getElementById('testiNext');
+          tNext=document.getElementById('testiNext'),
+          tTimer=null,tVisible=false,tHold=false,tDelay=5500;
+      if(tPrev)tPrev.disabled=false;
       function tStep(){
         var card=tTrack.querySelector('.testi-card');
         return card?card.offsetWidth+20:tTrack.clientWidth;
       }
-      function tUpdate(){
-        if(tPrev)tPrev.disabled=tTrack.scrollLeft<=2;
-        if(tNext)tNext.disabled=tTrack.scrollLeft+tTrack.clientWidth>=tTrack.scrollWidth-2;
+      function tAtEnd(){
+        return tTrack.scrollLeft+tTrack.clientWidth>=tTrack.scrollWidth-4;
       }
-      if(tNext)tNext.addEventListener('click',function(){
-        tTrack.scrollBy({left:tStep(),behavior:'smooth'});
-      });
-      if(tPrev)tPrev.addEventListener('click',function(){
-        tTrack.scrollBy({left:-tStep(),behavior:'smooth'});
-      });
-      var tRaf=false;
-      tTrack.addEventListener('scroll',function(){
-        if(!tRaf){
-          tRaf=true;
-          requestAnimationFrame(function(){
-            tRaf=false;
-            tUpdate();
-          });
-        }
+      function tFwd(){
+        if(tAtEnd())tTrack.scrollTo({left:0,behavior:'smooth'});
+        else tTrack.scrollBy({left:tStep(),behavior:'smooth'});
+      }
+      function tBack(){
+        if(tTrack.scrollLeft<=4)tTrack.scrollTo({left:tTrack.scrollWidth,behavior:'smooth'});
+        else tTrack.scrollBy({left:-tStep(),behavior:'smooth'});
+      }
+      function tStop(){
+        if(tTimer){clearInterval(tTimer);tTimer=null;}
+      }
+      function tPlay(){
+        if(motionOK&&tVisible&&!tHold&&!tTimer)tTimer=setInterval(tFwd,tDelay);
+      }
+      function tBump(){
+        tStop();tPlay();
+      }
+      if(tNext)tNext.addEventListener('click',function(){tFwd();tBump();});
+      if(tPrev)tPrev.addEventListener('click',function(){tBack();tBump();});
+      tTrack.addEventListener('mouseenter',function(){tHold=true;tStop();});
+      tTrack.addEventListener('mouseleave',function(){tHold=false;tPlay();});
+      tTrack.addEventListener('focusin',function(){tHold=true;tStop();});
+      tTrack.addEventListener('focusout',function(){tHold=false;tPlay();});
+      tTrack.addEventListener('touchstart',function(){tHold=true;tStop();},{passive:true});
+      tTrack.addEventListener('touchend',function(){
+        setTimeout(function(){tHold=false;tPlay();},7000);
       },{passive:true});
-      window.addEventListener('resize',tUpdate);
-      tUpdate();
+      if('IntersectionObserver' in window){
+        new IntersectionObserver(function(es){
+          es.forEach(function(x){
+            tVisible=x.isIntersecting;
+            if(tVisible)tPlay();else tStop();
+          });
+        },{threshold:.3}).observe(tTrack);
+      }else{
+        tVisible=true;tPlay();
+      }
     }
     /* premier calcul au chargement */
     runTicks();
