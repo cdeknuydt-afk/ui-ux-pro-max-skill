@@ -2722,7 +2722,7 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M5 3 2 6"/><path d="m22 6-3-3"/></svg>
   </span>
   <div class="dl-body">
-    <div class="dl-title" id="dlTitle">Offre de lancement</div>
+    <div class="dl-title" id="dlTitle">Offre à durée limitée</div>
     <div class="dl-sub" id="dlSub">Se termine dans</div>
     <div class="dl-timer" id="dlTimer" aria-hidden="true">
       <span class="dl-seg"><b id="dlD">00</b><i>Jours</i></span>
@@ -2761,12 +2761,12 @@
     }
     tick();timer=setInterval(tick,1000);
     function show(){if(!dismissed)toast.classList.add('show');}
-    var pricing=document.getElementById('pricing');
-    if(pricing&&'IntersectionObserver' in window){
+    var trigger=document.getElementById('temoignages');
+    if(trigger&&'IntersectionObserver' in window){
       var io=new IntersectionObserver(function(es){
         es.forEach(function(x){if(x.isIntersecting){show();io.disconnect();}});
-      },{rootMargin:'0px 0px -45% 0px'});
-      io.observe(pricing);
+      },{rootMargin:'0px 0px -35% 0px'});
+      io.observe(trigger);
     }else{
       window.addEventListener('scroll',function f(){
         if(window.scrollY>document.body.scrollHeight*0.5){show();window.removeEventListener('scroll',f);}
