@@ -2755,27 +2755,38 @@
   </div>
 </div>
 <script>
-  /* ═══ Notification deadline : apparaît vers l'offre, expire le 25 juin 2026 à 23h59 (Paris) ═══ */
+  /* ═══ Notification deadline : 2 phases — phase 1 jusqu'à ce soir 23h59:59, puis
+     "Réouverture exceptionnelle" jusqu'à dimanche 23h59 (heure de Paris).
+     Modifier P1 / P2 ci-dessous pour changer les échéances. ═══ */
   (function(){
     var toast=document.getElementById('deadlineToast');
     if(!toast)return;
-    var TARGET=new Date('2026-06-25T23:59:00+02:00').getTime();
+    var P1=new Date('2026-06-22T23:59:59+02:00').getTime(); /* fin phase 1 : ce soir */
+    var P2=new Date('2026-06-28T23:59:59+02:00').getTime(); /* fin phase 2 : dimanche */
     var dD=document.getElementById('dlD'),dH=document.getElementById('dlH'),
         dM=document.getElementById('dlM'),dS=document.getElementById('dlS'),
+        titleEl=document.getElementById('dlTitle'),subEl=document.getElementById('dlSub'),
+        timerEl=document.getElementById('dlTimer'),
         timer=null,dismissed=false;
     try{dismissed=sessionStorage.getItem('dlDismiss')==='1';}catch(e){}
     function pad(n){return (n<10?'0':'')+n;}
+    function setText(el,txt){if(el&&el.textContent!==txt)el.textContent=txt;}
     function tick(){
-      var diff=TARGET-Date.now();
-      if(diff<=0){
+      var now=Date.now(),target,title;
+      if(now<P1){target=P1;title='Offre à durée limitée';}
+      else if(now<P2){target=P2;title='Réouverture exceptionnelle';}
+      else{
         if(timer)clearInterval(timer);
         dD.textContent=dH.textContent=dM.textContent=dS.textContent='00';
-        document.getElementById('dlTitle').textContent='Offre terminée';
-        document.getElementById('dlSub').textContent="Le tarif de lancement n'est plus disponible.";
-        var tm=document.getElementById('dlTimer');if(tm)tm.style.display='none';
+        setText(titleEl,'Offre terminée');
+        setText(subEl,"Le tarif de lancement n'est plus disponible.");
+        if(timerEl)timerEl.style.display='none';
         return;
       }
-      var t=Math.floor(diff/1000);
+      setText(titleEl,title);
+      setText(subEl,'Se termine dans');
+      if(timerEl)timerEl.style.display='';
+      var t=Math.floor((target-now)/1000);
       dD.textContent=pad(Math.floor(t/86400));
       dH.textContent=pad(Math.floor((t%86400)/3600));
       dM.textContent=pad(Math.floor((t%3600)/60));
