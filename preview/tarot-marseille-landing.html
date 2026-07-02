@@ -1,0 +1,2689 @@
+<!DOCTYPE html>
+<html class="js no-mobile desktop no-ie chrome falcon-section" id="preview-page" lang="fr">
+<head>
+<title>Le Tarot de Marseille avec Marianne Costa | PureSanté</title>
+<meta content="Le Tarot de Marseille avec Marianne Costa | PureSanté" property="og:title">
+<link rel="icon" href="https://pure-sante-cdn.pubfac.io/uploads/pst_favicon.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="NOINDEX, NOFOLLOW">
+<meta name="theme-color" content="#faf8f4">
+<link href="https://cdn-common.pubfac.com/falcon/grapesjs-preset-webpage.front.css" rel="stylesheet">
+<script defer="" src="https://cdn-common.pubfac.com/falcon/boot.js" data-app="front"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<script type="text/javascript">
+  window.pageUid='VOTRE_PAGE_UID';
+  window.pageType='falcon_landing';
+  window.pageId='VOTRE_PAGE_ID';
+</script>
+<style>
+  /* ═══════════════════════════════════════════════════════════
+     TAROT DE MARSEILLE — Design premium clair (esprit Oriondes)
+     Ivoire chaud · encre brune · accent or · Playfair + Inter
+     ═══════════════════════════════════════════════════════════ */
+  *,*::before,*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box}
+  :root{
+    --ink:#1c1917;
+    --ink-soft:#44403c;
+    --muted:#6d675f;
+    --muted-2:#6f6960;
+    --line:rgba(28,25,23,.12);
+    --line-soft:rgba(28,25,23,.07);
+    --bg:#faf8f4;
+    --surface:#f2eee6;
+    --gold:#8f5509;
+    --gold-deep:#7c4a06;
+    --gold-soft:#e9c46a;
+    --gold-pale:rgba(161,98,7,.09);
+    --r-lg:28px;
+    --r:20px;
+    --r-md:16px;
+    --r-sm:14px;
+    --shadow-card:0 1px 2px rgba(28,25,23,.04),0 10px 30px rgba(28,25,23,.06);
+    --shadow-hover:0 14px 36px rgba(28,25,23,.08);
+    --shadow-float:0 30px 80px rgba(28,25,23,.16);
+    --f:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    --f-display:'Playfair Display',Georgia,'Times New Roman',serif;
+  }
+  html{
+    scroll-behavior:smooth;
+    scroll-padding-top:84px}
+  body{
+    font-family:var(--f);
+    background:var(--bg);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.6;
+    font-size:16px}
+  img{
+    max-width:100%;
+    height:auto;
+    display:block}
+  a{
+    color:var(--ink);
+    text-decoration:none}
+  button{
+    font-family:inherit;
+    touch-action:manipulation}
+  a:focus-visible,button:focus-visible{
+    outline:2px solid var(--ink);
+    outline-offset:3px;
+    border-radius:4px}
+  .container{
+    max-width:1160px;
+    margin:0 auto;
+    padding:0 1.5rem}
+  .sr-only{
+    position:absolute;
+    left:0;
+    top:0;
+    width:1px;
+    height:1px;
+    padding:0;
+    margin:-1px;
+    overflow:hidden;
+    clip:rect(0,0,0,0);
+    white-space:nowrap;
+    border:0}
+  /* ── BOUTONS PILL ── */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:.55rem;
+    font-weight:600;
+    font-size:.95rem;
+    line-height:1.25;
+    padding:1rem 1.9rem;
+    min-height:48px;
+    border-radius:999px;
+    border:1px solid transparent;
+    cursor:pointer;
+    transition:background-color .2s ease,color .2s ease,border-color .2s ease,transform .2s ease;
+    white-space:nowrap}
+  .btn svg{
+    flex:none}
+  .btn-dark{
+    background:var(--ink);
+    color:#fff}
+  .btn-dark:hover{
+    background:#332f2a;
+    transform:translateY(-1px)}
+  .btn-light{
+    background:#fff;
+    color:var(--ink)}
+  .btn-light:hover{
+    background:#efe9dd;
+    transform:translateY(-1px)}
+  .btn-ghost{
+    background:transparent;
+    color:var(--ink);
+    border-color:rgba(28,25,23,.2)}
+  .btn-ghost:hover{
+    border-color:var(--ink);
+    background:rgba(28,25,23,.03)}
+  .btn-sm{
+    padding:.7rem 1.4rem;
+    min-height:44px;
+    font-size:.85rem}
+  /* ── NAV ── */
+  .top-nav{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:50;
+    height:64px;
+    background:rgba(250,248,244,.86);
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+    border-bottom:1px solid var(--line-soft)}
+  .top-nav .container{
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1rem}
+  .top-nav-logo{
+    display:flex;
+    align-items:center;
+    gap:.75rem}
+  .top-nav-logo img{
+    height:22px;
+    width:auto;
+    filter:brightness(0)}
+  .top-nav-logo-sep{
+    width:1px;
+    height:18px;
+    background:var(--line)}
+  .top-nav-logo-word{
+    font-family:var(--f-display);
+    font-size:.98rem;
+    font-weight:600;
+    letter-spacing:.02em;
+    white-space:nowrap;
+    color:var(--ink)}
+  .top-nav-right{
+    display:flex;
+    align-items:center;
+    gap:1.6rem}
+  .top-nav-link{
+    font-size:.88rem;
+    font-weight:500;
+    color:var(--ink-soft)}
+  .top-nav-link:hover{
+    color:var(--ink);
+    text-decoration:underline;
+    text-underline-offset:4px}
+  /* ── SECTIONS ── */
+  section{
+    padding:6.5rem 0}
+  .section-head{
+    text-align:center;
+    max-width:720px;
+    margin:0 auto 3.5rem}
+  .overline{
+    font-size:.72rem;
+    font-weight:600;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:1rem}
+  h1,h2,h3{
+    letter-spacing:-.01em;
+    line-height:1.14;
+    font-weight:600;
+    color:var(--ink)}
+  h1,h2,.display{
+    font-family:var(--f-display)}
+  .section-head h2{
+    font-size:clamp(1.9rem,3.6vw,2.8rem);
+    margin-bottom:1rem}
+  .section-sub{
+    font-size:1.05rem;
+    color:var(--muted);
+    line-height:1.7}
+  .section-sub .ref-mark a,
+  p .ref-mark a{
+    color:inherit}
+  .ornament{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:.7rem;
+    margin:0 auto 1.2rem;
+    color:var(--gold)}
+  .ornament::before,.ornament::after{
+    content:'';
+    width:44px;
+    height:1px;
+    background:linear-gradient(90deg,transparent,rgba(143,85,9,.5));
+  }
+  .ornament::after{
+    background:linear-gradient(90deg,rgba(143,85,9,.5),transparent)}
+  .ornament svg{
+    width:12px;
+    height:12px}
+  .ref-mark{
+    font-size:.62em;
+    font-weight:600;
+    vertical-align:super;
+    line-height:0}
+  /* ── HERO ── */
+  .hero{
+    min-height:100vh;
+    min-height:100dvh;
+    padding:6.5rem 0 2rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    text-align:center;
+    background:
+      radial-gradient(1100px 480px at 50% -160px,rgba(161,98,7,.10),transparent 70%),
+      var(--bg)}
+  .hero-inner{
+    max-width:860px;
+    margin:0 auto}
+  .hero h1{
+    font-size:clamp(2rem,4.4vw,3.3rem);
+    letter-spacing:-.015em;
+    line-height:1.1;
+    margin-bottom:1.2rem}
+  .hero h1 em{
+    font-style:italic;
+    color:var(--gold-deep)}
+  .hero-sub{
+    font-size:1.08rem;
+    color:var(--muted);
+    line-height:1.7;
+    max-width:640px;
+    margin:0 auto}
+  .hero-actions{
+    display:flex;
+    gap:.8rem;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:1.9rem}
+  .hero-meta{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:.6rem 1.8rem;
+    margin-top:1.6rem;
+    font-size:.83rem;
+    color:var(--muted)}
+  .hero-meta span{
+    display:inline-flex;
+    align-items:center;
+    gap:.45rem}
+  .hero-meta svg{
+    width:15px;
+    height:15px;
+    color:var(--gold)}
+  .media-wrap{
+    width:min(100%,1000px);
+    margin:2.2rem auto 0;
+    border-radius:var(--r-lg);
+    overflow:hidden;
+    background:var(--surface);
+    box-shadow:var(--shadow-float)}
+  .media-wrap img{
+    width:100%;
+    aspect-ratio:21/10;
+    object-fit:cover;
+    object-position:center}
+  @media(min-width:768px){
+    .media-wrap{
+      width:min(100%,1000px,calc((100vh - 34rem)*2.1));
+      width:min(100%,1000px,calc((100dvh - 34rem)*2.1))}
+  }
+  /* ── BANDEAU STATS ── */
+  .stats-section{
+    padding:4.5rem 0}
+  .stats-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    max-width:880px;
+    margin:0 auto}
+  .stat{
+    text-align:center;
+    padding:.6rem 1.2rem;
+    border-left:1px solid var(--line-soft)}
+  .stat:first-child{
+    border-left:0}
+  .stat-num{
+    display:block;
+    font-family:var(--f-display);
+    font-size:clamp(2.3rem,4.2vw,3.3rem);
+    font-weight:600;
+    letter-spacing:-.02em;
+    line-height:1.15;
+    color:var(--ink);
+    font-variant-numeric:tabular-nums}
+  .stat-label{
+    font-size:.9rem;
+    color:var(--muted)}
+  /* ── CONSTAT : L'INCONSCIENT DÉCIDE ── */
+  .constat-section{
+    background:var(--surface)}
+  .why-cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1.25rem;
+    max-width:1000px;
+    margin:0 auto 3rem}
+  .why-card{
+    background:#fff;
+    border-radius:var(--r);
+    padding:2.1rem 1.9rem;
+    text-align:left}
+  .why-card svg{
+    width:24px;
+    height:24px;
+    color:var(--gold);
+    margin-bottom:1rem}
+  .why-card h3{
+    font-size:1.05rem;
+    margin-bottom:.55rem;
+    letter-spacing:-.01em}
+  .why-card p{
+    font-size:.93rem;
+    color:var(--muted);
+    line-height:1.65}
+  .why-card p strong{
+    color:var(--ink);
+    font-weight:600}
+  .constat-verdict{
+    max-width:720px;
+    margin:0 auto 3.2rem;
+    text-align:center;
+    font-size:1.14rem;
+    color:var(--ink-soft);
+    line-height:1.7}
+  .constat-verdict strong{
+    color:var(--ink);
+    font-weight:600}
+  .laws{
+    max-width:760px;
+    margin:0 auto;
+    border-top:1px solid var(--line)}
+  .law{
+    display:grid;
+    grid-template-columns:64px 1fr;
+    gap:1rem;
+    align-items:start;
+    padding:1.4rem .2rem;
+    border-bottom:1px solid var(--line)}
+  .law-num{
+    font-size:.85rem;
+    font-weight:600;
+    letter-spacing:.08em;
+    color:var(--gold);
+    padding-top:.35rem;
+    font-variant-numeric:tabular-nums}
+  .law p{
+    font-family:var(--f-display);
+    font-style:italic;
+    font-size:1.22rem;
+    color:var(--ink);
+    line-height:1.5}
+  .law small{
+    display:block;
+    font-family:var(--f);
+    font-style:normal;
+    font-size:.88rem;
+    color:var(--muted);
+    margin-top:.3rem}
+  .laws-close{
+    text-align:center;
+    max-width:640px;
+    margin:2.4rem auto 0;
+    font-size:1.02rem;
+    color:var(--muted);
+    line-height:1.7}
+  .laws-close strong{
+    color:var(--ink);
+    font-weight:600}
+  /* ── BANNER PLEIN ÉCRAN ── */
+  .banner{
+    position:relative;
+    min-height:520px;
+    height:74vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    overflow:hidden;
+    background:var(--ink)}
+  .banner-bg{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    will-change:transform}
+  .banner::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg,rgba(12,10,9,.48) 0%,rgba(12,10,9,.66) 100%)}
+  .banner-content{
+    position:relative;
+    z-index:2;
+    color:#fff;
+    padding:0 1.5rem;
+    max-width:800px}
+  .banner-content .overline{
+    color:var(--gold-soft)}
+  .banner-quote{
+    font-family:var(--f-display);
+    font-size:clamp(1.9rem,4.4vw,3.3rem);
+    font-weight:600;
+    letter-spacing:-.015em;
+    line-height:1.16;
+    color:#fff;
+    margin-bottom:1.1rem}
+  .banner-quote em{
+    font-style:italic;
+    color:var(--gold-soft)}
+  .banner-sub{
+    font-size:1.05rem;
+    color:rgba(255,255,255,.8);
+    margin-bottom:2.2rem}
+  .banner-content a:focus-visible{
+    outline-color:#fff}
+  /* ── MÉTHODE / PLAT-GRID ── */
+  .plat-grid{
+    display:grid;
+    grid-template-columns:1fr 1.05fr;
+    gap:4.5rem;
+    align-items:center}
+  .plat-media{
+    background:var(--surface);
+    border-radius:var(--r-lg);
+    overflow:hidden}
+  .plat-media img{
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover}
+  .plat-media.plat-media-wide img{
+    aspect-ratio:4/3}
+  .plat-copy h2{
+    font-size:clamp(1.9rem,3.2vw,2.5rem);
+    margin-bottom:1rem;
+    text-align:left}
+  .plat-copy h3.display{
+    font-size:clamp(1.5rem,2.5vw,1.85rem);
+    letter-spacing:-.01em;
+    margin-bottom:1rem;
+    text-align:left}
+  .plat-copy .overline{
+    text-align:left}
+  .plat-lead{
+    font-size:1.05rem;
+    color:var(--muted);
+    line-height:1.7;
+    margin-bottom:1.6rem}
+  .plat-copy>p{
+    font-size:1rem;
+    color:var(--ink-soft);
+    line-height:1.7;
+    margin-bottom:1.1rem}
+  .plat-copy>p strong{
+    color:var(--ink);
+    font-weight:600}
+  .feat-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1rem 1.6rem;
+    margin:1.8rem 0 2.2rem}
+  .feat{
+    display:flex;
+    align-items:flex-start;
+    gap:.7rem;
+    font-size:.92rem;
+    color:var(--ink-soft);
+    line-height:1.5}
+  .feat svg{
+    width:20px;
+    height:20px;
+    flex:none;
+    margin-top:1px;
+    color:var(--gold)}
+  .feat strong{
+    color:var(--ink);
+    font-weight:600}
+  /* ── DANGER ── */
+  .danger-panel{
+    max-width:880px;
+    margin:4.5rem auto 0;
+    background:var(--surface);
+    border-radius:var(--r-lg);
+    padding:3rem 2.6rem;
+    text-align:center}
+  .danger-panel h3{
+    font-family:var(--f-display);
+    font-size:clamp(1.5rem,2.6vw,2rem);
+    margin-bottom:1rem}
+  .danger-panel>p{
+    font-size:1rem;
+    color:var(--muted);
+    line-height:1.7;
+    max-width:640px;
+    margin:0 auto 1.6rem}
+  .danger-panel>p strong{
+    color:var(--ink);
+    font-weight:600}
+  .danger-list{
+    list-style:none;
+    max-width:560px;
+    margin:0 auto 1.8rem;
+    text-align:left}
+  .danger-list li{
+    display:flex;
+    align-items:flex-start;
+    gap:.7rem;
+    padding:.7rem 0;
+    border-bottom:1px solid var(--line-soft);
+    font-size:.97rem;
+    color:var(--ink-soft);
+    line-height:1.55}
+  .danger-list li:last-child{
+    border-bottom:0}
+  .danger-list svg{
+    width:18px;
+    height:18px;
+    flex:none;
+    margin-top:3px;
+    color:#b3261e}
+  /* ── ABOUT MARIANNE ── */
+  .about-grid{
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:4rem;
+    align-items:center}
+  .about-img{
+    background:var(--surface);
+    border-radius:var(--r-lg);
+    overflow:hidden;
+    position:relative}
+  .about-img img{
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    object-position:center top}
+  .about-badge{
+    position:absolute;
+    left:1.1rem;
+    bottom:1.1rem;
+    background:rgba(28,25,23,.85);
+    color:#fff;
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+    font-size:.78rem;
+    font-weight:600;
+    letter-spacing:.02em;
+    padding:.55rem 1.05rem;
+    border-radius:999px}
+  .about-text h2{
+    font-size:clamp(1.9rem,3.2vw,2.5rem);
+    margin-bottom:.7rem}
+  .about-lead{
+    font-size:1.02rem;
+    color:var(--muted);
+    margin-bottom:1.8rem}
+  .about-text p{
+    font-size:1.02rem;
+    color:var(--ink-soft);
+    line-height:1.7;
+    margin-bottom:1.1rem}
+  .about-text p strong{
+    color:var(--ink);
+    font-weight:600}
+  .about-books{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1rem;
+    margin:1.8rem 0 2rem}
+  .about-book{
+    background:var(--surface);
+    border-radius:var(--r-sm);
+    padding:1.1rem 1.2rem}
+  .about-book strong{
+    display:block;
+    font-size:.93rem;
+    font-weight:600;
+    color:var(--ink);
+    margin-bottom:.2rem}
+  .about-book small{
+    font-size:.82rem;
+    color:var(--muted);
+    line-height:1.5}
+  /* ── PROGRAMME : 3 ÉTAPES ── */
+  .prog-section{
+    background:var(--surface)}
+  .prog-step{
+    max-width:980px;
+    margin:0 auto 3.2rem;
+    background:#fff;
+    border-radius:var(--r-lg);
+    padding:2.9rem 2.7rem;
+    box-shadow:var(--shadow-card)}
+  .prog-step:last-of-type{
+    margin-bottom:0}
+  .prog-step-head{
+    display:flex;
+    align-items:flex-start;
+    gap:1.3rem;
+    margin-bottom:1.2rem}
+  .prog-step-num{
+    flex:none;
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    background:var(--ink);
+    color:var(--gold-soft);
+    font-family:var(--f-display);
+    font-size:1.25rem;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    justify-content:center}
+  .prog-step-head h3{
+    font-family:var(--f-display);
+    font-size:clamp(1.35rem,2.4vw,1.8rem);
+    letter-spacing:-.01em;
+    padding-top:.35rem}
+  .prog-step-head small{
+    display:block;
+    font-family:var(--f);
+    font-size:.82rem;
+    font-weight:600;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:.25rem}
+  .prog-step>p{
+    font-size:.99rem;
+    color:var(--muted);
+    line-height:1.7;
+    margin-bottom:1.6rem;
+    max-width:760px}
+  .prog-step>p strong{
+    color:var(--ink);
+    font-weight:600}
+  .prog-items{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1rem}
+  .prog-item{
+    background:var(--bg);
+    border:1px solid var(--line-soft);
+    border-radius:var(--r-md);
+    padding:1.3rem 1.4rem}
+  .prog-item-tag{
+    display:inline-block;
+    font-size:.66rem;
+    font-weight:600;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:.4rem}
+  .prog-item strong{
+    display:block;
+    font-size:1rem;
+    font-weight:600;
+    color:var(--ink);
+    letter-spacing:-.01em;
+    margin-bottom:.3rem}
+  .prog-item p{
+    font-size:.89rem;
+    color:var(--muted);
+    line-height:1.55}
+  .suit-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.7rem;
+    margin-top:1.4rem}
+  .suit-chip{
+    display:inline-flex;
+    align-items:center;
+    gap:.5rem;
+    background:var(--bg);
+    border:1px solid var(--line-soft);
+    border-radius:999px;
+    padding:.55rem 1.1rem;
+    font-size:.86rem;
+    font-weight:500;
+    color:var(--ink)}
+  .suit-chip svg{
+    width:15px;
+    height:15px;
+    flex:none;
+    color:var(--gold)}
+  /* Tirages (étape 3) */
+  .tirages-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1rem}
+  .tirage{
+    background:var(--bg);
+    border:1px solid var(--line-soft);
+    border-radius:var(--r-md);
+    padding:1.4rem 1.5rem;
+    display:flex;
+    flex-direction:column;
+    gap:.4rem}
+  .tirage-num{
+    font-size:.66rem;
+    font-weight:600;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+    color:var(--muted)}
+  .tirage strong{
+    font-size:1.05rem;
+    font-weight:600;
+    letter-spacing:-.01em;
+    color:var(--ink)}
+  .tirage p{
+    font-size:.9rem;
+    color:var(--muted);
+    line-height:1.55}
+  .tirage p em{
+    color:var(--ink-soft)}
+  .prog-brief{
+    max-width:980px;
+    margin:3.2rem auto 0;
+    background:var(--ink);
+    color:#fff;
+    border-radius:var(--r-lg);
+    padding:2.7rem 2.7rem}
+  .prog-brief h3{
+    font-family:var(--f-display);
+    color:#fff;
+    font-size:1.4rem;
+    margin-bottom:1.4rem;
+    text-align:center}
+  .brief-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:.9rem 2rem;
+    margin-bottom:1.8rem}
+  .brief-grid .feat{
+    color:rgba(255,255,255,.82)}
+  .brief-grid .feat svg{
+    color:var(--gold-soft)}
+  .brief-grid .feat strong{
+    color:#fff}
+  .prog-brief-close{
+    text-align:center;
+    font-family:var(--f-display);
+    font-style:italic;
+    font-size:1.12rem;
+    color:var(--gold-soft)}
+  .prog-cta{
+    display:flex;
+    justify-content:center;
+    margin-top:2.6rem}
+  /* ── CARTES : DÉTAILS CACHÉS ── */
+  .cards-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:1rem;
+    max-width:1080px;
+    margin:0 auto}
+  .card-secret{
+    background:#fff;
+    border:1px solid var(--line-soft);
+    border-radius:var(--r-md);
+    padding:1rem 1rem 1.3rem;
+    text-align:left;
+    transition:transform .25s ease,box-shadow .25s ease}
+  .card-secret:hover{
+    transform:translateY(-3px);
+    box-shadow:var(--shadow-hover)}
+  .card-secret img{
+    width:100%;
+    aspect-ratio:10/17;
+    object-fit:cover;
+    border-radius:10px;
+    background:var(--surface);
+    margin-bottom:.9rem}
+  .card-secret strong{
+    display:block;
+    font-family:var(--f-display);
+    font-size:1.02rem;
+    letter-spacing:-.01em;
+    color:var(--ink);
+    margin-bottom:.35rem}
+  .card-secret p{
+    font-size:.84rem;
+    color:var(--muted);
+    line-height:1.55}
+  .cards-note{
+    text-align:center;
+    font-size:.9rem;
+    color:var(--muted);
+    max-width:560px;
+    margin:2.2rem auto 0}
+  .cards-note strong{
+    color:var(--ink);
+    font-weight:600}
+  /* ── COFFRET ── */
+  .coffret-section{
+    background:var(--surface)}
+  .coffret-note{
+    margin-top:1.4rem;
+    background:var(--gold-pale);
+    border:1px solid rgba(161,98,7,.22);
+    border-radius:var(--r-sm);
+    padding:1rem 1.2rem;
+    font-size:.9rem;
+    color:var(--ink-soft);
+    line-height:1.6}
+  .coffret-note strong{
+    color:var(--gold-deep);
+    font-weight:600}
+  /* ── PRICING ── */
+  .stock-chip{
+    display:flex;
+    align-items:center;
+    gap:.55rem;
+    width:max-content;
+    max-width:100%;
+    margin:0 auto 3rem;
+    background:var(--gold-pale);
+    border:1px solid rgba(143,85,9,.25);
+    color:var(--gold-deep);
+    font-size:.78rem;
+    font-weight:600;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    padding:.55rem 1.3rem;
+    border-radius:999px}
+  .stock-chip-dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:var(--gold);
+    flex:none;
+    animation:chipPulse 2s ease-out infinite}
+  @keyframes chipPulse{
+    0%{box-shadow:0 0 0 0 rgba(143,85,9,.4)}
+    70%{box-shadow:0 0 0 8px rgba(143,85,9,0)}
+    100%{box-shadow:0 0 0 0 rgba(143,85,9,0)}
+  }
+  @keyframes stockPulse{
+    0%{box-shadow:0 0 0 0 rgba(233,196,106,.55)}
+    70%{box-shadow:0 0 0 9px rgba(233,196,106,0)}
+    100%{box-shadow:0 0 0 0 rgba(233,196,106,0)}
+  }
+  .pricing-details{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1.5rem 3rem;
+    max-width:800px;
+    margin:0 auto 4rem;
+    text-align:left}
+  .pdetail{
+    display:flex;
+    align-items:flex-start;
+    gap:.9rem}
+  .pdetail svg{
+    width:22px;
+    height:22px;
+    flex:none;
+    margin-top:2px;
+    color:var(--gold)}
+  .pdetail strong{
+    display:block;
+    font-size:.95rem;
+    font-weight:600;
+    color:var(--ink);
+    margin-bottom:.15rem}
+  .pdetail small{
+    font-size:.86rem;
+    color:var(--muted);
+    line-height:1.5}
+  .pricing-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1.25rem;
+    max-width:920px;
+    margin:0 auto}
+  .pricing-card{
+    background:var(--surface);
+    border-radius:var(--r-lg);
+    padding:2.9rem 2.3rem 2.3rem;
+    text-align:center;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    transition:transform .25s ease,box-shadow .25s ease}
+  .pricing-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 18px 50px rgba(28,25,23,.08)}
+  .pricing-card.featured{
+    background:
+      radial-gradient(560px 320px at 50% -80px,rgba(233,196,106,.14),transparent 70%),
+      var(--ink);
+    color:#fff;
+    border:1px solid rgba(233,196,106,.28)}
+  .pricing-card.featured :focus-visible{
+    outline-color:#fff}
+  .pricing-badge{
+    position:absolute;
+    top:-15px;
+    left:50%;
+    transform:translateX(-50%);
+    background:var(--gold-soft);
+    color:var(--ink);
+    border:1px solid rgba(28,25,23,.08);
+    box-shadow:0 4px 16px rgba(28,25,23,.16);
+    font-size:.66rem;
+    font-weight:600;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+    padding:.45rem 1.1rem;
+    border-radius:999px;
+    white-space:nowrap}
+  .plan-name{
+    font-family:var(--f-display);
+    font-size:1.35rem;
+    font-weight:600;
+    letter-spacing:-.015em}
+  .pricing-card.featured .plan-name{
+    color:#fff}
+  .plan-detail{
+    font-size:.88rem;
+    color:var(--muted)}
+  .pricing-card.featured .plan-detail{
+    color:rgba(255,255,255,.62)}
+  .plan-desc{
+    font-size:.92rem;
+    color:var(--muted);
+    margin:.35rem 0 1.8rem}
+  .pricing-card.featured .plan-desc{
+    color:rgba(255,255,255,.62)}
+  .price{
+    font-size:3.4rem;
+    font-weight:600;
+    letter-spacing:-.04em;
+    line-height:1;
+    color:var(--ink);
+    font-variant-numeric:tabular-nums}
+  .pricing-card.featured .price{
+    color:#fff}
+  .price .currency{
+    font-size:1.7rem;
+    font-weight:600}
+  .price-period{
+    font-size:.85rem;
+    color:var(--muted);
+    margin:.55rem 0 1.9rem}
+  .pricing-card.featured .price-period{
+    color:rgba(255,255,255,.62)}
+  .features-list{
+    list-style:none;
+    text-align:left;
+    margin-bottom:2rem}
+  .features-list li{
+    display:flex;
+    align-items:flex-start;
+    gap:.6rem;
+    padding:.62rem 0;
+    border-bottom:1px solid var(--line-soft);
+    font-size:.92rem;
+    color:var(--ink-soft);
+    line-height:1.5}
+  .features-list li svg{
+    width:17px;
+    height:17px;
+    flex:none;
+    margin-top:3px;
+    color:var(--gold)}
+  .features-list li.feature-muted{
+    color:var(--muted)}
+  .features-list li.feature-muted svg{
+    color:var(--muted-2)}
+  .pricing-card.featured .features-list li{
+    color:rgba(255,255,255,.82);
+    border-bottom-color:rgba(255,255,255,.12)}
+  .pricing-card.featured .features-list li svg{
+    color:var(--gold-soft)}
+  .features-list li strong{
+    font-weight:600;
+    color:inherit}
+  /* Boutons de commande (classes plateforme conservées) */
+  .btn-order{
+    display:block;
+    width:100%;
+    margin-top:auto;
+    padding:1.05rem 1.5rem;
+    min-height:50px;
+    border:1.5px solid transparent;
+    border-radius:999px;
+    font-family:var(--f);
+    font-weight:600;
+    font-size:.95rem;
+    letter-spacing:.01em;
+    text-transform:none;
+    cursor:pointer;
+    transition:background-color .2s ease,color .2s ease,border-color .2s ease,transform .2s ease}
+  .btn-order:hover{
+    transform:translateY(-1px)}
+  .btn-order-outline{
+    background:transparent;
+    border-color:var(--ink);
+    color:var(--ink)}
+  .btn-order-outline:hover{
+    background:var(--ink);
+    color:#fff}
+  .btn-order-gold{
+    background:var(--gold-soft);
+    border-color:var(--gold-soft);
+    color:var(--ink)}
+  .btn-order-gold:hover{
+    background:#f0d086;
+    border-color:#f0d086}
+  .guarantee{
+    display:flex;
+    justify-content:center;
+    gap:2.2rem;
+    flex-wrap:wrap;
+    margin-top:2.4rem;
+    font-size:.88rem;
+    color:var(--muted)}
+  .guarantee span{
+    display:inline-flex;
+    align-items:center;
+    gap:.5rem}
+  .guarantee svg{
+    width:17px;
+    height:17px;
+    color:var(--gold)}
+  .pricing-terms{
+    max-width:760px;
+    margin:2.6rem auto 0}
+  .pricing-terms-trigger{
+    width:100%;
+    background:#fff;
+    border:1px solid var(--line-soft);
+    border-radius:var(--r-md);
+    padding:1.05rem 1.5rem;
+    cursor:pointer;
+    font-size:.88rem;
+    font-weight:600;
+    color:var(--ink-soft);
+    text-align:left;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition:border-color .2s ease,background-color .2s ease}
+  .pricing-terms-trigger:hover{
+    border-color:rgba(28,25,23,.16)}
+  .pricing-terms-trigger::after{
+    content:'+';
+    font-size:1.4rem;
+    font-weight:300;
+    line-height:1;
+    transition:transform .3s ease}
+  .pricing-terms-trigger.open::after{
+    transform:rotate(45deg)}
+  .pricing-terms-panel{
+    overflow:hidden;
+    transition:max-height .4s ease}
+  .js-anim .pricing-terms-panel{
+    max-height:0}
+  .pricing-terms-inner{
+    padding:1.3rem .4rem .4rem;
+    font-size:.8rem;
+    color:var(--muted-2);
+    line-height:1.6}
+  .pricing-terms-inner p{
+    margin-bottom:.8rem}
+  /* ── TÉMOIGNAGES ── */
+  .testi-carousel{
+    position:relative;
+    max-width:1100px;
+    margin:0 auto}
+  .testi-track{
+    display:flex;
+    gap:1.25rem;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    scroll-behavior:smooth;
+    padding:.5rem .2rem 1.4rem;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none}
+  .testi-track::-webkit-scrollbar{
+    display:none}
+  .testi-card{
+    flex:0 0 calc((100% - 2.5rem)/3);
+    scroll-snap-align:start;
+    background:var(--surface);
+    border-radius:var(--r);
+    padding:2rem 1.8rem;
+    text-align:left;
+    display:flex;
+    flex-direction:column;
+    transition:transform .25s ease,box-shadow .25s ease}
+  .testi-card:hover{
+    transform:translateY(-3px);
+    box-shadow:var(--shadow-hover)}
+  .testi-stars{
+    display:flex;
+    gap:.2rem;
+    margin-bottom:1.1rem}
+  .testi-stars svg{
+    width:15px;
+    height:15px;
+    color:var(--gold)}
+  .testi-card blockquote{
+    font-size:.95rem;
+    color:var(--ink-soft);
+    line-height:1.7;
+    border-left:0;
+    padding:0;
+    margin:0 0 1.6rem}
+  .testi-foot{
+    display:flex;
+    align-items:center;
+    gap:.8rem;
+    margin-top:auto}
+  .testi-avatar{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:var(--ink);
+    color:var(--gold-soft);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:.85rem;
+    font-weight:600;
+    letter-spacing:.04em;
+    flex:none}
+  .testi-foot strong{
+    display:block;
+    font-size:.9rem;
+    font-weight:600;
+    color:var(--ink);
+    line-height:1.3}
+  .testi-foot small{
+    font-size:.78rem;
+    color:var(--muted)}
+  .testi-controls{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:1rem;
+    margin-top:1.4rem}
+  .testi-arrow{
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    border:1px solid var(--line);
+    background:#fff;
+    color:var(--ink);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:background-color .2s ease,color .2s ease,border-color .2s ease,opacity .2s ease}
+  .testi-arrow:hover{
+    background:var(--ink);
+    border-color:var(--ink);
+    color:#fff}
+  .testi-note{
+    text-align:center;
+    font-size:.78rem;
+    color:var(--muted-2);
+    margin-top:1.8rem}
+  /* ── FAQ ── */
+  .faq-list{
+    max-width:760px;
+    margin:0 auto}
+  .faq-item{
+    border-bottom:1px solid var(--line)}
+  .faq-question{
+    width:100%;
+    background:none;
+    border:none;
+    color:var(--ink);
+    font-size:1.02rem;
+    font-weight:600;
+    letter-spacing:-.01em;
+    text-align:left;
+    padding:1.45rem .2rem;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:1rem}
+  .faq-question::after{
+    content:'+';
+    font-size:1.45rem;
+    font-weight:300;
+    line-height:1;
+    flex-shrink:0;
+    transition:transform .3s ease}
+  .faq-question.open::after{
+    transform:rotate(45deg)}
+  .faq-answer{
+    overflow:hidden;
+    transition:max-height .35s ease}
+  .js-anim .faq-answer{
+    max-height:0}
+  .faq-answer-inner{
+    padding:0 .2rem 1.5rem;
+    font-size:.97rem;
+    color:var(--muted);
+    line-height:1.7}
+  .faq-answer-inner a{
+    font-weight:600;
+    text-decoration:underline;
+    text-underline-offset:3px}
+  /* ── FOOTER ── */
+  footer{
+    border-top:1px solid var(--line-soft);
+    padding:3.5rem 1.5rem 3rem;
+    text-align:center}
+  footer .footer-logo{
+    height:20px;
+    width:auto;
+    margin:0 auto 1rem;
+    filter:brightness(0);
+    opacity:.85}
+  .footer-links{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:.6rem 1.8rem;
+    margin-bottom:1.6rem;
+    font-size:.85rem}
+  .footer-links a{
+    color:var(--muted);
+    text-decoration:underline;
+    text-underline-offset:3px}
+  .footer-links a:hover{
+    color:var(--ink)}
+  footer p{
+    font-size:.85rem;
+    color:var(--muted-2)}
+  .sources{
+    max-width:760px;
+    margin:0 auto 2rem;
+    text-align:left}
+  .sources-trigger{
+    width:100%;
+    background:none;
+    border:none;
+    color:var(--muted-2);
+    font-size:.8rem;
+    font-weight:600;
+    text-align:center;
+    padding:.6rem;
+    cursor:pointer;
+    text-decoration:underline;
+    text-underline-offset:3px}
+  .sources-panel{
+    overflow:hidden;
+    transition:max-height .4s ease}
+  .js-anim .sources-panel{
+    max-height:0}
+  .sources-panel ol{
+    padding:1rem 0 .5rem 1.2rem;
+    font-size:.74rem;
+    color:var(--muted-2);
+    line-height:1.7}
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp{
+    from{
+      opacity:0;
+      transform:translateY(16px)}
+    to{
+      opacity:1;
+      transform:translateY(0)}
+  }
+  .fade-up{
+    opacity:0;
+    animation:fadeUp .7s cubic-bezier(.2,.6,.2,1) forwards}
+  .d1{
+    animation-delay:.05s}
+  .d2{
+    animation-delay:.15s}
+  .d3{
+    animation-delay:.25s}
+  .d4{
+    animation-delay:.35s}
+  .d5{
+    animation-delay:.45s}
+  .fade-in{
+    opacity:0;
+    animation:fadeInOnly .9s ease .35s forwards}
+  @keyframes fadeInOnly{
+    to{
+      opacity:1}
+  }
+  /* États masqués appliqués seulement si le JS a posé .js-anim sur <html> :
+     sans JS, tout le contenu reste visible et les accordéons sont dépliés */
+  .js-anim .reveal{
+    opacity:0;
+    transform:translateY(26px);
+    transition:opacity .7s ease,transform .7s ease}
+  .js-anim .reveal.visible{
+    opacity:1;
+    transform:none}
+  /* ── TEXTE QUI S'ALLUME AU SCROLL ── */
+  .scroll-words{
+    font-size:1.22rem;
+    font-weight:500;
+    line-height:1.65;
+    color:var(--ink)}
+  .scroll-words .w{
+    color:rgba(28,25,23,.18);
+    transition:color .22s linear}
+  .scroll-words .w.lit{
+    color:inherit}
+  /* ── NOTIFICATION COFFRET (urgence honnête, sans compte à rebours) ── */
+  .stock-toast{
+    position:fixed;
+    top:78px;
+    right:1.4rem;
+    z-index:60;
+    width:332px;
+    max-width:calc(100vw - 2rem);
+    display:flex;
+    align-items:center;
+    gap:.9rem;
+    padding:1rem 1.1rem;
+    color:#fff;
+    background:linear-gradient(135deg,#292420 0%,#14110f 100%);
+    border:1px solid rgba(233,196,106,.35);
+    border-radius:20px;
+    box-shadow:0 16px 40px rgba(20,17,15,.45);
+    opacity:0;
+    transform:translateY(-18px) scale(.96);
+    transition:opacity .5s cubic-bezier(.2,.7,.2,1),transform .5s cubic-bezier(.2,.7,.2,1);
+    pointer-events:none}
+  .stock-toast.show{
+    opacity:1;
+    transform:none;
+    pointer-events:auto}
+  .st-icon{
+    flex:none;
+    width:46px;
+    height:46px;
+    border-radius:13px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--gold-soft);
+    background:rgba(233,196,106,.12);
+    box-shadow:inset 0 0 0 1px rgba(233,196,106,.3)}
+  .st-icon svg{
+    width:24px;
+    height:24px}
+  .st-body{
+    flex:1;
+    min-width:0;
+    background:none;
+    border:0;
+    padding:0;
+    font:inherit;
+    color:inherit;
+    text-align:left;
+    cursor:pointer}
+  .st-body:focus-visible,.st-close:focus-visible{
+    outline-color:#fff}
+  .st-title{
+    display:flex;
+    align-items:center;
+    gap:.45rem;
+    font-size:.9rem;
+    font-weight:700;
+    letter-spacing:-.01em;
+    color:#fff;
+    line-height:1.25}
+  .st-title::before{
+    content:'';
+    flex:none;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:var(--gold-soft);
+    animation:stockPulse 1.8s ease-out infinite}
+  .st-sub{
+    display:block;
+    font-size:.76rem;
+    color:rgba(255,255,255,.75);
+    margin-top:.18rem;
+    line-height:1.45}
+  .st-close{
+    position:absolute;
+    top:.55rem;
+    right:.6rem;
+    width:22px;
+    height:22px;
+    border:none;
+    background:transparent;
+    color:rgba(255,255,255,.75);
+    font-size:1.1rem;
+    line-height:1;
+    cursor:pointer;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:background-color .2s ease,color .2s ease}
+  .st-close:hover{
+    background:rgba(255,255,255,.16);
+    color:#fff}
+  /* ── REDUCED MOTION ── */
+  @media (prefers-reduced-motion:reduce){
+    html{
+      scroll-behavior:auto}
+    *,*::before,*::after{
+      animation-duration:.01ms !important;
+      animation-iteration-count:1 !important;
+      transition-duration:.01ms !important}
+    .fade-up,.fade-in,.reveal,.js-anim .reveal{
+      opacity:1 !important;
+      transform:none !important}
+    .testi-track{
+      scroll-behavior:auto}
+  }
+  /* ── RESPONSIVE ── */
+  @media(max-width:1024px){
+    .plat-grid{
+      grid-template-columns:1fr;
+      gap:2.5rem}
+    .about-grid{
+      grid-template-columns:1fr;
+      gap:2.5rem}
+    .about-img{
+      max-width:420px}
+    .cards-grid{
+      grid-template-columns:repeat(3,1fr)}
+  }
+  @media(max-width:900px){
+    .testi-card{
+      flex:0 0 84%}
+  }
+  @media(max-width:768px){
+    section{
+      padding:4.5rem 0}
+    .why-cards{
+      grid-template-columns:1fr}
+    .pricing-grid{
+      grid-template-columns:1fr;
+      max-width:440px}
+    .pricing-details{
+      grid-template-columns:1fr;
+      gap:1.3rem}
+    .feat-grid,.brief-grid{
+      grid-template-columns:1fr}
+    .prog-items,.tirages-grid{
+      grid-template-columns:1fr}
+    .prog-step{
+      padding:2.1rem 1.5rem}
+    .prog-brief{
+      padding:2.1rem 1.5rem}
+    .cards-grid{
+      grid-template-columns:repeat(2,1fr)}
+    .about-books{
+      grid-template-columns:1fr}
+    .stats-grid{
+      grid-template-columns:1fr 1fr;
+      gap:2rem 0}
+    .stat:nth-child(3){
+      border-left:0;
+      grid-column:1/-1}
+    .law{
+      grid-template-columns:44px 1fr}
+    .banner{
+      height:62vh;
+      min-height:440px}
+    .top-nav-link{
+      display:none}
+    .top-nav-logo-word{
+      font-size:.88rem}
+    .danger-panel{
+      padding:2.2rem 1.5rem}
+  }
+  .btn-label-short{
+    display:none}
+  @media(max-width:600px){
+    .top-nav-logo-word,.top-nav-logo-sep{
+      display:none}
+    .top-nav .btn-sm{
+      padding:.65rem 1.2rem;
+      font-size:.82rem}
+    .btn-label-full{
+      display:none}
+    .btn-label-short{
+      display:inline}
+  }
+  @media(max-width:560px){
+    .testi-card{
+      flex:0 0 100%}
+    .stock-toast{
+      top:72px;
+      right:.7rem;
+      left:.7rem;
+      width:auto}
+  }
+  @media(max-width:480px){
+    .hero h1{
+      font-size:clamp(1.75rem,8vw,2.2rem)}
+    .pricing-card{
+      padding:2.2rem 1.5rem 1.8rem}
+    .price{
+      font-size:3rem}
+    .cards-grid{
+      grid-template-columns:1fr 1fr;
+      gap:.7rem}
+    .card-secret{
+      padding:.7rem .7rem 1rem}
+  }
+</style>
+</head>
+<body class="fr-view">
+<script>document.documentElement.className+=' js-anim';</script>
+<nav class="top-nav">
+  <div class="container">
+    <a href="#" class="top-nav-logo" aria-label="PureSanté — Le Tarot de Marseille">
+      <img src="https://pure-sante-cdn.pubfac.io/uploads/logo_PURST_blanc-01_new.png" alt="PureSanté" width="128" height="22">
+      <span class="top-nav-logo-sep" aria-hidden="true"></span>
+      <span class="top-nav-logo-word">Tarot de Marseille</span>
+    </a>
+    <div class="top-nav-right">
+      <a href="#methode" class="top-nav-link">La méthode</a>
+      <a href="#programme" class="top-nav-link">Le programme</a>
+      <a href="#offre" class="btn btn-dark btn-sm"><span class="btn-label-full">Rejoindre le programme</span><span class="btn-label-short">Rejoindre</span></a>
+    </div>
+  </div>
+</nav>
+<!-- ══════════ HERO ══════════ -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <p class="overline fade-up d1">PureSanté présente · avec Marianne Costa
+      </p>
+      <h1 class="fade-up d2">80 à 95&nbsp;% de vos décisions sont prises par <em>votre inconscient</em>.<sup class="ref-mark"><a href="#ref-3" aria-label="Source 3">3</a></sup>
+      </h1>
+      <p class="hero-sub fade-up d3">Regrets à répétition, manque de confiance, relations qui tournent en boucle… Le Tarot de Marseille est un langage vieux de 500 ans pour lire ce qui décide à votre place — et enfin reprendre la main.
+      </p>
+      <div class="hero-actions fade-up d4">
+        <a href="#offre" class="btn btn-dark">Découvrir le programme</a>
+        <a href="#constat" class="btn btn-ghost">Comment ça marche
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+        </a>
+      </div>
+      <div class="hero-meta fade-up d5">
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.8a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3z"/></svg>
+          Par la spécialiste mondiale du Tarot
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+          Satisfait ou remboursé 15 jours
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Accès à vie, à votre rythme
+        </span>
+      </div>
+    </div>
+    <div class="media-wrap fade-in" id="heroMedia">
+      <img src="https://pure-sante-cdn.pubfac.io/uploads/tarot-bg.jpg" alt="Cartes du Tarot de Marseille disposées pour un tirage" fetchpriority="high" decoding="async">
+    </div>
+  </div>
+</header>
+<!-- ══════════ STATS ══════════ -->
+<section class="stats-section" aria-label="Chiffres clés">
+  <div class="container">
+    <div class="stats-grid reveal">
+      <div class="stat">
+        <span class="stat-num" data-count="95" data-prefix="80–" data-suffix="&nbsp;%">80–95&nbsp;%</span>
+        <span class="stat-label">de vos décisions quotidiennes sont inconscientes<sup class="ref-mark"><a href="#ref-3" aria-label="Source 3">3</a></sup></span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-count="500" data-suffix="&nbsp;ans">500&nbsp;ans</span>
+        <span class="stat-label">de savoir symbolique dans un jeu de cartes</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-count="22" data-suffix="&nbsp;vidéos">22&nbsp;vidéos</span>
+        <span class="stat-label">pour apprendre pas à pas avec Marianne Costa</span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ══════════ CONSTAT : L'INCONSCIENT DÉCIDE ══════════ -->
+<section class="constat-section" id="constat">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="overline">Le constat</p>
+      <h2>Votre conscient propose.<br>Votre inconscient dispose.</h2>
+      <p class="section-sub">Vous croyez décider ? En réalité, vous <strong>soumettez</strong> des décisions.<sup class="ref-mark"><a href="#ref-4" aria-label="Source 4">4</a></sup> Votre conscient prépare le dossier, coche les cases, aligne les bons arguments… et au bout du compte, c'est l'inconscient qui valide. La preuve par trois décisions parfaitement logiques&nbsp;:
+      </p>
+    </div>
+    <div class="why-cards reveal">
+      <div class="why-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 6.5h11"/><path d="M6.5 17.5h11"/><rect x="2" y="9" width="4" height="6" rx="1"/><rect x="18" y="9" width="4" height="6" rx="1"/><path d="M8 12h8"/></svg>
+        <h3>Faire du sport</h3>
+        <p>Meilleure santé, plus d'énergie, meilleur sommeil. Tout est rationnel, incontestable… <strong>et pourtant, vous n'arrivez pas à vous y tenir.</strong></p>
+      </div>
+      <div class="why-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h13a3 3 0 0 1 3 3v1"/><path d="M2 9v6"/><path d="M21.5 2.5c-1.5 1.5-1 3-2.5 4.5"/><path d="m2 2 20 20"/></svg>
+        <h3>Arrêter de fumer</h3>
+        <p>Vous connaissez les dangers, les économies, la liberté retrouvée.<sup class="ref-mark"><a href="#ref-5" aria-label="Source 5">5</a></sup> C'est une évidence… <strong>et pourtant, la cigarette finit toujours par gagner.</strong></p>
+      </div>
+      <div class="why-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 13V7a5 5 0 0 1 9.9-1"/><path d="M14 9.5V4.5a2.5 2.5 0 0 1 5 0V13a7 7 0 0 1-7 7h-1c-2.8 0-4.5-1.1-6.3-3.4L3 14.3a2 2 0 0 1 2.9-2.7L7 13"/></svg>
+        <h3>Dire «&nbsp;non&nbsp;»</h3>
+        <p>Moins de stress, du temps préservé, des relations plus saines. C'est du bon sens… <strong>et pourtant, vous continuez à dire oui.</strong></p>
+      </div>
+    </div>
+    <p class="constat-verdict reveal">Ce n'est ni un manque de volonté, ni un manque de logique. <strong>Ce n'est simplement pas vous qui prenez la décision finale.</strong> Depuis toujours, votre inconscient enregistre tout — une remarque blessante, un compliment, un silence<sup class="ref-mark"><a href="#ref-1" aria-label="Source 1">1</a></sup><sup class="ref-mark"><a href="#ref-2" aria-label="Source 2">2</a></sup> — puis il en tire ses propres lois&nbsp;:
+    </p>
+    <div class="laws reveal">
+      <div class="law">
+        <span class="law-num">Loi 01</span>
+        <p>«&nbsp;Si quelqu'un hausse le ton, je me tais.&nbsp;»</p>
+      </div>
+      <div class="law">
+        <span class="law-num">Loi 02</span>
+        <p>«&nbsp;Si je suis trop visible, je vais me faire rejeter.&nbsp;»</p>
+      </div>
+      <div class="law">
+        <span class="law-num">Loi 03</span>
+        <p>«&nbsp;Si je demande de l'aide, je passe pour quelqu'un de faible.&nbsp;»
+          <small>Une fois ces règles installées, il vous les ressert toute votre vie.</small>
+        </p>
+      </div>
+    </div>
+    <p class="laws-close reveal">Comme un cadenas à code&nbsp;: tant que vous ignorez la combinaison, vous forcez, vous insistez… rien ne s'ouvre. <strong>Dès que vous l'identifiez, vous pouvez la remplacer par une combinaison choisie par vous.</strong> Encore faut-il savoir demander la combinaison à votre inconscient…
+    </p>
+  </div>
+</section>
+<!-- ══════════ BANNER 1 : IL PARLE EN IMAGES ══════════ -->
+<div class="banner">
+  <img class="banner-bg" src="https://pure-sante-cdn.pubfac.io/uploads/pubfac_A_cinematic_realistic_photo_of_a_person_drawing_a_Taro_3cea2287-df0c-4aa6-a332-41453b411d30_1.png" alt="" loading="lazy" decoding="async" aria-hidden="true">
+  <div class="banner-content reveal">
+    <p class="overline">La découverte de Rorschach, 1921<sup class="ref-mark"><a href="#ref-6" aria-label="Source 6">6</a></sup>
+    </p>
+    <p class="banner-quote">Votre inconscient parle.<br>Et il parle <em>en images</em>.
+    </p>
+    <p class="banner-sub">Montrez une image à votre esprit&nbsp;: il y projette un sens. Et ce que vous y voyez en dit plus long sur vous que sur l'image.
+    </p>
+    <a href="#methode" class="btn btn-light">Découvrir le langage du Tarot</a>
+  </div>
+</div>
+<!-- ══════════ MÉTHODE : LE TEST PROJECTIF ══════════ -->
+<section id="methode">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="ornament" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg>
+      </div>
+      <p class="overline">La méthode</p>
+      <h2>Le Tarot de Marseille&nbsp;: un traducteur d'inconscient vieux de 500&nbsp;ans</h2>
+      <p class="section-sub">C'est un test projectif — comme les taches d'encre de Rorschach — mais sans jargon, accessible à tous, partout, tout le temps. À une condition&nbsp;: en connaître les codes.
+      </p>
+    </div>
+    <div class="plat-grid reveal">
+      <div class="plat-media">
+        <img src="https://image.mail1.puresante.info/lib/fe4411707564057d751170/m/1/9e3d8b3d-0e5e-429f-b048-3d7a6994c449.png" alt="Le Tarot de Marseille et l'art des bâtisseurs de cathédrales" loading="lazy" decoding="async">
+      </div>
+      <div class="plat-copy">
+        <p class="overline">L'origine</p>
+        <h3 class="display">Créé par les bâtisseurs de cathédrales</h3>
+        <p class="plat-lead scroll-words" id="methodeLead">À une époque où presque personne ne savait lire, les bâtisseurs faisaient passer leurs messages par l'image. Dans le Tarot, ils ont repris les mêmes codes, la même rigueur symbolique — pour raconter le sens même de la vie.
+        </p>
+        <p>Naître. Tomber. Aimer. Perdre. Se relever. Grandir. Se transformer.<sup class="ref-mark"><a href="#ref-7" aria-label="Source 7">7</a></sup><sup class="ref-mark"><a href="#ref-8" aria-label="Source 8">8</a></sup>
+        </p>
+        <div class="feat-grid">
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span><strong>Universel</strong> — valable au XV<sup>e</sup> siècle comme aujourd'hui</span>
+          </div>
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span><strong>Symbolique</strong> — chaque détail est pensé pour parler à l'inconscient</span>
+          </div>
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span><strong>Pour tous</strong> — pour un roi comme pour un ouvrier</span>
+          </div>
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span><strong>Immédiat</strong> — il révèle vos lois dès la première utilisation</span>
+          </div>
+        </div>
+        <p><strong>Une fois qu'on maîtrise son inconscient, on contrôle son présent. Et quand on contrôle son présent… on peut décider de quoi sera fait son futur.</strong> Voilà pourquoi ce jeu a la réputation de «&nbsp;lire l'avenir&nbsp;».
+        </p>
+      </div>
+    </div>
+    <div class="danger-panel reveal">
+      <p class="overline">À manier avec méthode</p>
+      <h3>Puissant… donc à double tranchant</h3>
+      <p>Le Tarot stimule directement votre inconscient. C'est ce qui le rend fascinant — et c'est aussi ce qui le rend risqué. Si vous ignorez les codes des bâtisseurs, c'est la porte ouverte aux faux sens&nbsp;:
+      </p>
+      <ul class="danger-list">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          Vous plaquez vos peurs sur les cartes, et elles prennent toute la place.
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          Vous inventez des significations… et vous vous écartez de la vérité.
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          Vous vous enfermez dans des illusions… au lieu d'avancer.
+        </li>
+      </ul>
+      <p><strong>Bien accompagné, en revanche, chaque tirage devient limpide.</strong> Et pour apprendre le langage des bâtisseurs, il existe une personne idéale…
+      </p>
+      <a href="#marianne" class="btn btn-ghost">Rencontrer Marianne Costa</a>
+    </div>
+  </div>
+</section>
+<!-- ══════════ ABOUT MARIANNE ══════════ -->
+<section id="marianne" class="constat-section">
+  <div class="container">
+    <div class="about-grid reveal">
+      <div class="about-img">
+        <img src="https://pure-sante-cdn.pubfac.io/uploads/MarianneCosta.jpg" alt="Marianne Costa, spécialiste mondiale du Tarot de Marseille" loading="lazy" decoding="async">
+        <span class="about-badge">Marianne Costa</span>
+      </div>
+      <div class="about-text">
+        <p class="overline">Votre guide</p>
+        <h2>La spécialiste mondiale du Tarot de Marseille</h2>
+        <p class="about-lead">Autrice, pédagogue, passeuse — l'auteure la plus lue au monde en matière de Tarot de Marseille.
+        </p>
+        <p>Avant de plonger dans l'univers du Tarot, Marianne Costa a étudié la littérature comparée, écrit de la poésie, joué au théâtre, traduit des œuvres. Cette richesse culturelle donne à son approche une <strong>profondeur unique</strong>.
+        </p>
+        <div class="about-books">
+          <div class="about-book">
+            <strong>La Voie du Tarot</strong>
+            <small>Co-écrit avec Alejandro Jodorowsky. Traduit en 12 langues, vendu à plusieurs centaines de milliers d'exemplaires — considéré comme LA référence du Tarot de Marseille.</small>
+          </div>
+          <div class="about-book">
+            <strong>Le Tarot Pas à Pas</strong>
+            <small>Le best-seller qui a fait franchir le pas à des dizaines de milliers de personnes… sans rien connaître au départ.</small>
+          </div>
+        </div>
+        <p>Depuis <strong>plus de 30&nbsp;ans</strong>, elle étudie, pratique et enseigne le Tarot aux quatre coins du monde&nbsp;: France, Italie, Inde, Mexique… dans des écoles, des centres spirituels, à l'université.
+        </p>
+        <p>Son style&nbsp;? <strong>Clair, exigeant, vivant et profondément humain.</strong> Et dans ce programme, elle livre un contenu resté jusqu'ici confidentiel&nbsp;: ses méthodes personnelles de tirage.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ══════════ BANNER 2 : CITATION MARIANNE ══════════ -->
+<div class="banner">
+  <img class="banner-bg" src="https://pure-sante-cdn.pubfac.io/uploads/pubfac_A_cinematic_realistic_photo_of_two_people_sitting_face_96a060aa-414e-4a8e-a2ed-b218f7de90a6_0.png" alt="" loading="lazy" decoding="async" aria-hidden="true">
+  <div class="banner-content reveal">
+    <p class="overline">La vision de Marianne Costa
+    </p>
+    <p class="banner-quote">«&nbsp;Le tarot ne sert pas à lire l'avenir.<br>Il sert à <em>se lire soi-même</em>.&nbsp;»
+    </p>
+    <p class="banner-sub">Il ne prédit pas ce qui va se passer. Il révèle ce qui est déjà là — mais qu'on n'ose pas toujours regarder.
+    </p>
+    <a href="#programme" class="btn btn-light">Voir le programme complet</a>
+  </div>
+</div>
+<!-- ══════════ PROGRAMME ══════════ -->
+<section class="prog-section" id="programme">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="ornament" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg>
+      </div>
+      <p class="overline">Le programme «&nbsp;Apprendre le Tarot&nbsp;»</p>
+      <h2>Une méthode claire, progressive, en trois étapes</h2>
+      <p class="section-sub">Bonne nouvelle&nbsp;: le Tarot est une langue que votre inconscient parle déjà. Plus de la moitié du chemin est faite — il ne vous manque que les nuances. C'est exactement ce que Marianne Costa enseigne, à travers <strong>22 vidéos</strong>&nbsp;: 17 vidéos de formation et 5 tirages guidés, sans jargon, sans théorie compliquée.
+      </p>
+    </div>
+    <!-- ÉTAPE 1 -->
+    <div class="prog-step reveal">
+      <div class="prog-step-head">
+        <span class="prog-step-num" aria-hidden="true">1</span>
+        <h3><small>Étape 1</small>Vous découvrez</h3>
+      </div>
+      <p>Marianne pose avec vous <strong>toutes les bases</strong> — l'histoire vraie du jeu, sans légendes ni approximations, et la prise en main complète des cartes.
+      </p>
+      <div class="prog-items">
+        <div class="prog-item">
+          <span class="prog-item-tag">Module</span>
+          <strong>L'histoire du Tarot</strong>
+          <p>Des bâtisseurs de cathédrales aux soupçons de racines égyptiennes, en passant par les héritages de la Renaissance et les traditions du Moyen Âge&nbsp;: tout ce que l'on sait vraiment.</p>
+        </div>
+        <div class="prog-item">
+          <span class="prog-item-tag">Module</span>
+          <strong>Prise en main du jeu</strong>
+          <p>Les 4 familles et leurs cartes de 1 à 10, les figures — Roi, Dame, Valet et le mystérieux Cavalier — et les 22 arcanes majeurs, organisés comme un voyage initiatique secret.</p>
+        </div>
+      </div>
+      <div class="suit-row" role="list" aria-label="Les quatre familles du Tarot">
+        <span class="suit-chip" role="listitem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v4a6 6 0 0 1-12 0z"/><path d="M12 13v5"/><path d="M8 21h8"/></svg>
+          Coupes
+        </span>
+        <span class="suit-chip" role="listitem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v14"/><path d="M8 6l4-4 4 4"/><path d="M7 16h10"/><path d="M12 16v6"/></svg>
+          Épées
+        </span>
+        <span class="suit-chip" role="listitem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 21 18 3"/><path d="M15 3h3v3"/><path d="M6 15v6h6"/></svg>
+          Bâtons
+        </span>
+        <span class="suit-chip" role="listitem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5"/></svg>
+          Deniers
+        </span>
+      </div>
+    </div>
+    <!-- ÉTAPE 2 -->
+    <div class="prog-step reveal">
+      <div class="prog-step-head">
+        <span class="prog-step-num" aria-hidden="true">2</span>
+        <h3><small>Étape 2</small>Vous comprenez</h3>
+      </div>
+      <p>On entre dans le vif du sujet&nbsp;: apprendre à lire n'importe quel tirage. <strong>Les arcanes majeurs sont le sujet</strong> (vous, et les grandes étapes que vous traversez), <strong>les mineurs sont le verbe</strong> (ce qui se joue concrètement)… et <strong>la numérologie est le complément</strong> qui change tout&nbsp;: «&nbsp;Paul voyage&nbsp;» ne raconte pas la même histoire que «&nbsp;Paul voyage seul, la nuit, pour fuir son passé&nbsp;».
+      </p>
+      <div class="prog-items">
+        <div class="prog-item">
+          <span class="prog-item-tag">Modules</span>
+          <strong>Les 22 arcanes majeurs</strong>
+          <p>Toutes les grandes étapes de la vie, carte par carte — un véritable mode d'emploi de l'existence, expliqué avec pédagogie et douceur.</p>
+        </div>
+        <div class="prog-item">
+          <span class="prog-item-tag">Focus</span>
+          <strong>Le Mat &amp; Le Monde</strong>
+          <p>Le premier et le dernier arcane ont droit à leurs propres vidéos&nbsp;: dans tout voyage, l'essentiel est de savoir d'où l'on vient… et où l'on va.</p>
+        </div>
+        <div class="prog-item">
+          <span class="prog-item-tag">Module</span>
+          <strong>Les arcanes mineurs</strong>
+          <p>L'erreur classique est de les croire superflus. Ce sont eux qui éclairent 95&nbsp;% de votre vie&nbsp;: le café du matin, une dispute, une facture — rien n'est banal.</p>
+        </div>
+        <div class="prog-item">
+          <span class="prog-item-tag">Modules</span>
+          <strong>La numérologie du Tarot</strong>
+          <p>Un 4, un 8 ou un 9 ne racontent pas la même histoire. La numérologie évite les tirages vagues et révèle en détail les lois de votre inconscient.</p>
+        </div>
+      </div>
+    </div>
+    <!-- ÉTAPE 3 -->
+    <div class="prog-step reveal">
+      <div class="prog-step-head">
+        <span class="prog-step-num" aria-hidden="true">3</span>
+        <h3><small>Étape 3</small>Vous appliquez</h3>
+      </div>
+      <p>Marianne vous prend par la main et déroule <strong>un tirage complet, geste par geste</strong> — du mélange des cartes à la lecture finale. Puis elle vous transmet <strong>les 5 tirages essentiels</strong>&nbsp;: ceux qui, à eux seuls, répondent à 100&nbsp;% des questions que vous pouvez vous poser. Et pour oser vous lancer, sa Technique Spéciale.
+      </p>
+      <div class="tirages-grid">
+        <div class="tirage">
+          <span class="tirage-num">Tirage 01</span>
+          <strong>«&nbsp;Il était une fois&nbsp;»</strong>
+          <p>Met en lumière la cause cachée derrière vos répétitions de vie. <em>Pourquoi attirez-vous toujours le même type de relation&nbsp;?</em></p>
+        </div>
+        <div class="tirage">
+          <span class="tirage-num">Tirage 02</span>
+          <strong>La lecture en 3 cartes</strong>
+          <p>Décode vos blocages immédiats. <em>Pourquoi remettez-vous ce coup de fil important au lendemain&nbsp;?</em></p>
+        </div>
+        <div class="tirage">
+          <span class="tirage-num">Tirage 03</span>
+          <strong>L'Autoportrait</strong>
+          <p>Votre inconscient face à un miroir. <em>Pourquoi vous sentez-vous «&nbsp;petit&nbsp;» alors que vous avez toutes les compétences&nbsp;?</em></p>
+        </div>
+        <div class="tirage">
+          <span class="tirage-num">Tirage 04</span>
+          <strong>La Question au Maître</strong>
+          <p>Confronte vos croyances contradictoires. <em>Aspirer au bonheur… tout en croyant qu'il n'est jamais fait pour durer.</em></p>
+        </div>
+        <div class="tirage">
+          <span class="tirage-num">Tirage 05</span>
+          <strong>Le Tarot du Choix</strong>
+          <p>Le tirage des grands carrefours&nbsp;: quelle loi vous pousse vers l'option A, laquelle vous retient à l'option B — pour décider en toute connaissance de cause.</p>
+        </div>
+        <div class="tirage">
+          <span class="tirage-num">Inclus</span>
+          <strong>La Technique Spéciale de Marianne</strong>
+          <p>Un pas-à-pas pour oser votre premier tirage sans honte ni crainte — et tirer les cartes à vos proches. Il suffit souvent d'un seul tirage pour que toute la famille réclame le sien.</p>
+        </div>
+      </div>
+    </div>
+    <!-- EN BREF -->
+    <div class="prog-brief reveal">
+      <h3>À la fin du programme, vous saurez…</h3>
+      <div class="brief-grid">
+        <div class="feat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Poser un regard nouveau sur vos expériences passées — elles suivent une logique <strong>que vous pouvez désormais décoder</strong></span>
+        </div>
+        <div class="feat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Identifier les étapes de votre chemin de vie qui <strong>bloquent vos relations ou vos choix</strong> — pour les transformer</span>
+        </div>
+        <div class="feat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Voir vos épreuves non plus comme des échecs, mais comme <strong>les étapes normales d'un chemin que vous maîtrisez</strong></span>
+        </div>
+        <div class="feat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Mettre en lumière vos forces cachées et <strong>prendre des décisions avec clarté</strong>, sans peur de vous tromper</span>
+        </div>
+      </div>
+      <p class="prog-brief-close">Autrement dit&nbsp;: vous saurez enfin parler la langue de votre inconscient.</p>
+    </div>
+    <div class="prog-cta reveal">
+      <a href="#offre" class="btn btn-dark">Rejoindre le programme</a>
+    </div>
+  </div>
+</section>
+<!-- ══════════ CARTES : CHAQUE DÉTAIL PARLE ══════════ -->
+<section id="details">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="overline">Un langage caché</p>
+      <h2>Chaque détail a un sens.<br>Même ceux qu'on ne voit pas.</h2>
+      <p class="section-sub">Cinq exemples de ce que Marianne vous apprend à voir — là où la plupart ne regardent jamais.
+      </p>
+    </div>
+    <div class="cards-grid reveal">
+      <div class="card-secret">
+        <img src="https://pure-sante-cdn.pubfac.io/uploads/tarlamoureux.png" alt="Carte du Tarot de Marseille : L'Amoureux" loading="lazy" decoding="async">
+        <strong>L'Amoureux</strong>
+        <p>On croit à une scène romantique. Mais regardez Cupidon&nbsp;: il vise… et personne ne sait sur qui sa flèche va tomber.</p>
+      </div>
+      <div class="card-secret">
+        <img src="https://pure-sante-cdn.pubfac.io/uploads/tarlesoleil.png" alt="Carte du Tarot de Marseille : Le Soleil" loading="lazy" decoding="async">
+        <strong>Le Soleil</strong>
+        <p>Entre les deux personnages, un mur à demi caché. La plupart l'ignorent — c'est pourtant lui qui donne tout son sens à la carte.</p>
+      </div>
+      <div class="card-secret">
+        <img src="https://pure-sante-cdn.pubfac.io/uploads/tarlajustice.png" alt="Carte du Tarot de Marseille : La Justice" loading="lazy" decoding="async">
+        <strong>La Justice</strong>
+        <p>Ses plateaux ne sont pas de la même taille. Une balance équilibrée… ou l'indice que la justice humaine n'est jamais neutre&nbsp;?</p>
+      </div>
+      <div class="card-secret">
+        <img src="https://pure-sante-cdn.pubfac.io/uploads/tarlejugement.png" alt="Carte du Tarot de Marseille : Le Jugement" loading="lazy" decoding="async">
+        <strong>Le Jugement</strong>
+        <p>Le personnage du centre a le même visage que dans L'Amoureux. Comme si, après l'hésitation… venait l'heure du verdict.</p>
+      </div>
+      <div class="card-secret">
+        <img src="https://pure-sante-cdn.pubfac.io/uploads/tarlamort.png" alt="Carte du Tarot de Marseille : L'Arcane sans nom" loading="lazy" decoding="async">
+        <strong>L'Arcane sans nom</strong>
+        <p>Tout le monde l'appelle «&nbsp;La Mort&nbsp;»… à tort. Regardez au sol&nbsp;: de minuscules plantes repoussent déjà.</p>
+      </div>
+    </div>
+    <p class="cards-note reveal"><strong>C'est toute la différence entre subir un tirage… et le lire.</strong> Une fois les codes acquis, ces détails sautent aux yeux — et le message devient limpide.
+    </p>
+  </div>
+</section>
+<!-- ══════════ COFFRET ══════════ -->
+<section class="coffret-section" id="coffret">
+  <div class="container">
+    <div class="plat-grid reveal">
+      <div class="plat-media plat-media-wide">
+        <img src="https://pure-sante-cdn.pubfac.io/uploads/offretarcoffret.png" alt="Le coffret Tarot de Marseille de Marianne Costa : jeu de 78 cartes, livret et pochette satinée" loading="lazy" decoding="async">
+      </div>
+      <div class="plat-copy">
+        <p class="overline">Le coffret — offert avec le programme</p>
+        <h2 class="display">Recevez chez vous le même Tarot que celui de Marianne</h2>
+        <p class="plat-lead">Les tarots du commerce sont souvent «&nbsp;revisités&nbsp;»&nbsp;: du fun, du mignon, du vendeur… et dans cette overdose créative, on a perdu l'essentiel — le sens. Celui-ci est différent.
+        </p>
+        <div class="feat-grid">
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 7h6"/><path d="M9 12h6"/><path d="M9 17h4"/></svg>
+            <span><strong>Un jeu de 78 cartes</strong> de type Madenié — ultra fidèle au dessin des bâtisseurs du XV<sup>e</sup> siècle, celui que Marianne utilise elle-même</span>
+          </div>
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            <span><strong>Un livret de 164 pages</strong> — le résumé illustré de la formation, pour ne jamais vous tromper dans vos tirages</span>
+          </div>
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <span><strong>Une pochette satinée</strong> — pour protéger vos cartes et les emporter partout</span>
+          </div>
+          <div class="feat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+            <span><strong>Valeur 30&nbsp;€</strong> — inclus dans l'offre à 139&nbsp;€, frais de port compris</span>
+          </div>
+        </div>
+        <div class="coffret-note">
+          <strong>Un détail qui compte&nbsp;:</strong> sur la carte du Monde, une femme nue au centre — la marque des tarots les plus anciens retrouvés au complet. Vous comprendrez toute l'importance de ce détail dans le programme…
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ══════════ OFFRE / PRICING ══════════ -->
+<section id="offre">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="ornament" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z"/></svg>
+      </div>
+      <p class="overline">Rejoindre le programme</p>
+      <h2>500&nbsp;ans de savoir.<br>Un accès à vie.</h2>
+      <p class="section-sub">Beaucoup investissent des centaines d'euros pour traiter une conséquence — le stress, une relation qui coince, un manque de confiance. Ce programme agit sur la racine&nbsp;: <strong>votre inconscient</strong>. Et ce savoir, vous le gardez pour toujours.
+      </p>
+    </div>
+    <div class="pricing-details reveal">
+      <div class="pdetail">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        <div>
+          <strong>Accès immédiat</strong>
+          <small>Vos identifiants arrivent par email quelques minutes après la commande, sur une plateforme sécurisée.</small>
+        </div>
+      </div>
+      <div class="pdetail">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+        <div>
+          <strong>Coffret livré chez vous</strong>
+          <small>Avec l'offre complète, le coffret Tarot (valeur 30&nbsp;€) est expédié par la poste sous 4 semaines, frais de port inclus.</small>
+        </div>
+      </div>
+      <div class="pdetail">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+        <div>
+          <strong>15 jours pour essayer</strong>
+          <small>Testez, ressentez… et décidez ensuite. Un simple message au service client et nous vous remboursons intégralement.</small>
+        </div>
+      </div>
+      <div class="pdetail">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div>
+          <strong>Accès à vie</strong>
+          <small>Avancez à votre rythme, sans pression, et revenez aux vidéos chaque fois que vous en ressentez le besoin.</small>
+        </div>
+      </div>
+    </div>
+    <div class="stock-chip reveal"><span class="stock-chip-dot" aria-hidden="true"></span>Coffrets en quantité limitée</div>
+    <div class="pricing-grid reveal">
+      <!-- CARD : Programme seul — 129€ -->
+      <div class="pricing-card">
+        <div class="plan-name">Programme seul
+        </div>
+        <div class="plan-desc">La formation complète en ligne
+        </div>
+        <div class="price">129
+          <span class="currency">€</span>
+        </div>
+        <div class="price-period">paiement unique · accès à vie
+        </div>
+        <ul class="features-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>17 vidéos</strong> pour apprendre le Tarot de Marseille pas à pas</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>5 tirages guidés</strong> pour pratiquer en conditions réelles</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Accès à vie</strong>, pour avancer à votre rythme</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Satisfait ou remboursé 15 jours</span>
+          </li>
+          <li class="feature-muted">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            <span>Sans le coffret physique</span>
+          </li>
+        </ul>
+        <button class="btn-order-form-button btn btn-primary buttonCheck block-1c_sepa-or-1c_cc btn-order btn-order-outline" data-use-default-offer="true" data-type-link="1c_sepa-or-1c_cc" data-order-form-code="pstetar-129-vs-139" data-1c-sepa-id="206632" data-1c-cc-id="206633" style="display:block"><div data-text-code="">Choisir le programme seul
+          </div></button>
+      </div>
+      <!-- CARD : Programme + Coffret — 139€ -->
+      <div class="pricing-card featured">
+        <div class="pricing-badge">Recommandé · Coffret inclus
+        </div>
+        <div class="plan-name">Programme + Coffret Tarot
+        </div>
+        <div class="plan-detail">(frais de port inclus)
+        </div>
+        <div class="plan-desc">La formation complète + le coffret chez vous
+        </div>
+        <div class="price">139
+          <span class="currency">€</span>
+        </div>
+        <div class="price-period">paiement unique · accès à vie
+        </div>
+        <ul class="features-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>17 vidéos</strong> pour apprendre le Tarot de Marseille pas à pas</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>5 tirages guidés</strong> pour pratiquer en conditions réelles</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Le coffret Tarot de Marseille</strong> (valeur 30&nbsp;€, offert)&nbsp;: jeu de 78 cartes fidèle au XV<sup>e</sup> siècle, livret de 164 pages, pochette satinée</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong>Accès à vie</strong>, pour avancer à votre rythme</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Satisfait ou remboursé 15 jours</span>
+          </li>
+        </ul>
+        <button class="btn-order-form-button btn btn-primary buttonCheck block-1c_sepa-or-1c_cc btn-order btn-order-gold" data-use-default-offer="true" data-type-link="1c_sepa-or-1c_cc" data-order-form-code="pstetar-129-vs-139" data-1c-sepa-id="206634" data-1c-cc-id="206635" style="display:block"><div data-text-code="">Rejoindre avec le coffret offert
+          </div></button>
+      </div>
+    </div>
+    <div class="guarantee reveal">
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Paiement 100&nbsp;% sécurisé
+      </span>
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+        Satisfait ou remboursé 15 jours
+      </span>
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Accès à vie
+      </span>
+    </div>
+    <div class="pricing-terms reveal">
+      <button class="pricing-terms-trigger" id="termsTrigger">Conditions d'achat en 1-clic</button>
+      <div class="pricing-terms-panel" id="termsPanel">
+        <div class="pricing-terms-inner">
+          <p><em>Offre à 129&nbsp;€&nbsp;: en cliquant sur le bouton «&nbsp;Choisir le programme seul&nbsp;», vous souscrivez en 1-CLIC au programme «&nbsp;Apprendre le Tarot&nbsp;». Vous recevrez les accès de la plateforme sécurisée comprenant les vidéos de Marianne Costa. Vous serez prélevé d'une cotisation de 129 euros. Vous bénéficiez de votre droit de rétractation pendant 15 jours. Vous pourrez contacter le Service Client pour toute demande.</em>
+          </p>
+          <p><em>Offre à 139&nbsp;€&nbsp;: en cliquant sur le bouton «&nbsp;Rejoindre avec le coffret offert&nbsp;», vous souscrivez en 1-CLIC au programme «&nbsp;Apprendre le Tarot&nbsp;» et recevrez votre coffret de Tarot en plus, expédié par la poste sous 4 semaines. Vous recevrez les accès de la plateforme sécurisée comprenant les vidéos de Marianne Costa. Vous serez prélevé d'une cotisation de 139 euros. Vous bénéficiez de votre droit de rétractation pendant 15 jours. Vous pourrez contacter le Service Client pour toute demande.</em>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ══════════ TÉMOIGNAGES ══════════ -->
+<section id="temoignages" class="constat-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="overline">«&nbsp;L'effet Marianne Costa&nbsp;»</p>
+      <h2>Rigueur et humanité&nbsp;:<br>ce que les lecteurs en disent</h2>
+      <p class="section-sub">30 ans de recherche, de pratique… et surtout de partage. Voici ce qu'en disent les lecteurs de Pure Santé.
+      </p>
+    </div>
+    <div class="testi-carousel reveal">
+      <div class="testi-track" id="testiTrack">
+        <div class="testi-card">
+          <div class="testi-stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+          </div>
+          <span class="sr-only">Note&nbsp;: 5 étoiles sur 5</span>
+          <blockquote>«&nbsp;Très content et très satisfait à tout point de vue&nbsp;: le rapport qualité-prix, le contenu, l'adhésion comme l'annulation. Je recommande sans hésitation.&nbsp;»</blockquote>
+          <div class="testi-foot">
+            <span class="testi-avatar" aria-hidden="true">RÉ</span>
+            <div>
+              <strong>Rémi</strong>
+              <small>Lecteur Pure Santé</small>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+          </div>
+          <span class="sr-only">Note&nbsp;: 5 étoiles sur 5</span>
+          <blockquote>«&nbsp;Les contenus sont vraiment très instructifs. Je vous remercie aussi pour la simplicité d'écriture, qui nous facilite largement l'interprétation.&nbsp;»</blockquote>
+          <div class="testi-foot">
+            <span class="testi-avatar" aria-hidden="true">SY</span>
+            <div>
+              <strong>Syca</strong>
+              <small>Lectrice Pure Santé</small>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+          </div>
+          <span class="sr-only">Note&nbsp;: 5 étoiles sur 5</span>
+          <blockquote>«&nbsp;Un chef-d'œuvre vivant. Vous avez affaire à des gens sympas, performants, compétents, charmants, sans arrêt en recherche… Je ne pourrais pas vivre sans&nbsp;! J'incite tous ceux qui hésitent à faire simplement un essai.&nbsp;»</blockquote>
+          <div class="testi-foot">
+            <span class="testi-avatar" aria-hidden="true">JP</span>
+            <div>
+              <strong>Jean-Pierre B.</strong>
+              <small>Lecteur Pure Santé</small>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+          </div>
+          <span class="sr-only">Note&nbsp;: 5 étoiles sur 5</span>
+          <blockquote>«&nbsp;Des explications, des conseils sur des sujets du quotidien. Merci pour tout.&nbsp;»</blockquote>
+          <div class="testi-foot">
+            <span class="testi-avatar" aria-hidden="true">SR</span>
+            <div>
+              <strong>Sylvie R.</strong>
+              <small>Lectrice Pure Santé</small>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+          </div>
+          <span class="sr-only">Note&nbsp;: 5 étoiles sur 5</span>
+          <blockquote>«&nbsp;Vous avez un panel de contenus d'une qualité rare. Énormément de contenus passionnants, introuvables ailleurs. Des vidéos et des masterclass riches en enseignements.&nbsp;»</blockquote>
+          <div class="testi-foot">
+            <span class="testi-avatar" aria-hidden="true">BR</span>
+            <div>
+              <strong>Benbellil R.</strong>
+              <small>Lecteur Pure Santé</small>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+          </div>
+          <span class="sr-only">Note&nbsp;: 5 étoiles sur 5</span>
+          <blockquote>«&nbsp;Des informations utiles et précises. Elles répondent à mes attentes. Faites plus si possible&nbsp;! Bon courage.&nbsp;»</blockquote>
+          <div class="testi-foot">
+            <span class="testi-avatar" aria-hidden="true">MB</span>
+            <div>
+              <strong>Moussa B.</strong>
+              <small>Lecteur Pure Santé</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-controls">
+        <button class="testi-arrow" id="testiPrev" aria-label="Témoignage précédent">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <button class="testi-arrow" id="testiNext" aria-label="Témoignage suivant">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+      <p class="testi-note">Avis de lecteurs sur les publications et services Pure Santé.</p>
+    </div>
+  </div>
+</section>
+<!-- ══════════ FAQ ══════════ -->
+<section id="faqSection">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Questions fréquentes</h2>
+      <p class="section-sub">Tout ce que vous devez savoir avant de vous lancer.</p>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-question">Faut-il un don, ou des connaissances pour commencer&nbsp;?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Non. Pas besoin d'avoir «&nbsp;un don&nbsp;», ni de croire au Tarot. Il suffit d'avoir envie d'y voir plus clair dans sa vie. La méthode de Marianne Costa est construite pour partir de zéro&nbsp;: vous découvrez, vous comprenez, vous appliquez — pas à pas.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Comment vais-je recevoir mes accès&nbsp;?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Quelques minutes après votre commande, vous recevez un email de confirmation, puis vos accès à la plateforme sécurisée avec un lien et votre code d'accès. Les 22 vidéos sont disponibles immédiatement, en accès à vie.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Que contient exactement le coffret&nbsp;?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Un authentique Tarot de Marseille de 78 cartes, fidèle à celui du XV<sup>e</sup> siècle (celui que Marianne Costa utilise elle-même), un livret illustré de 164 pages qui résume la formation, et une élégante pochette satinée. Il est expédié par la poste sous 4 semaines, frais de port inclus dans l'offre à 139&nbsp;€.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Puis-je tirer les cartes pour mes proches&nbsp;?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Bien sûr&nbsp;! Pour Marianne Costa, le Tarot est avant tout un art qui se partage. Sa «&nbsp;Technique Spéciale&nbsp;» vous permet d'oser vos premiers tirages sans crainte — et elle fonctionne aussi pour tirer les cartes aux autres. Il suffit souvent d'un seul tirage à un proche pour que toute la famille réclame le sien.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Quelles sont mes garanties&nbsp;?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Vous disposez de 15 jours d'essai à compter de votre commande. Si le programme n'est pas à la hauteur de vos attentes, un simple message via notre <a href="https://www.pure-sante.info/contactez-nous/" target="_blank" rel="noopener noreferrer">formulaire de contact</a> suffit&nbsp;: nous vous remboursons intégralement, sans poser de questions.
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">J'ai passé commande, mais je n'ai rien reçu. Que faire&nbsp;?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Consultez d'abord votre dossier «&nbsp;spam&nbsp;» ou «&nbsp;courriers indésirables&nbsp;». Si le problème persiste, contactez-nous via notre <a href="https://www.pure-sante.info/contactez-nous/" target="_blank" rel="noopener noreferrer">formulaire de contact</a>, rubrique «&nbsp;Infos et suivi de commande&nbsp;».
+          </div>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">L'accès est-il limité dans le temps&nbsp;?</button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Non. Votre accès est à vie&nbsp;: vous avancez à votre rythme, sans pression, et vous revenez aux vidéos chaque fois que vous en ressentez le besoin.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ══════════ BANNER FINAL ══════════ -->
+<div class="banner">
+  <img class="banner-bg" src="https://pure-sante-cdn.pubfac.io/uploads/pubfac_A_cinematic_realistic_photo_of_an_ancient_open_book_gl_e7c6e2a3-4a6a-4ff1-9fb9-71e611e8cd8c_0.png" alt="" loading="lazy" decoding="async" aria-hidden="true">
+  <div class="banner-content reveal">
+    <p class="overline">À vous de jouer
+    </p>
+    <p class="banner-quote">Attendre, c'est laisser votre inconscient décider à votre place. <em>Une fois de plus.</em>
+    </p>
+    <p class="banner-sub">Vous avez deux options&nbsp;: refermer cette page et rejouer les mêmes scénarios… ou découvrir enfin les lois invisibles qui gouvernent vos choix — et les réécrire.<br>— Florent Cavaler, Pure Santé
+    </p>
+    <a href="#offre" class="btn btn-light">Rejoindre le programme</a>
+  </div>
+</div>
+<footer>
+  <img class="footer-logo" src="https://pure-sante-cdn.pubfac.io/uploads/logo_PURST_blanc-01_new.png" alt="PureSanté" width="116" height="20">
+  <div class="footer-links">
+    <a href="https://www.pure-sante.info/contactez-nous/" target="_blank" rel="noopener noreferrer">Formulaire de contact</a>
+    <a href="https://www.pure-sante.info/conditions-generales-de-vente/" target="_blank" rel="noopener noreferrer">Conditions générales de vente</a>
+  </div>
+  <div class="sources">
+    <button class="sources-trigger" id="sourcesTrigger">Sources scientifiques et historiques</button>
+    <div class="sources-panel" id="sourcesPanel">
+      <ol>
+        <li id="ref-1">Schacter DL. Implicit memory: History and current status. <em>J Exp Psychol Learn Mem Cogn</em>. 1987;13(3):501-18.</li>
+        <li id="ref-2">Freud S. <em>L'inconscient</em>. Paris: Payot; 1915.</li>
+        <li id="ref-3">Bargh JA, Morsella E. The unconscious mind. <em>Perspect Psychol Sci</em>. 2008;3(1):73-9.</li>
+        <li id="ref-4">Wood W, Rünger D. Psychology of habit. <em>Annu Rev Psychol</em>. 2016;67:289-314.</li>
+        <li id="ref-5">Volkow ND, Koob GF, McLellan AT. Neurobiologic advances from the brain disease model of addiction. <em>N Engl J Med</em>. 2016;374(4):363-71.</li>
+        <li id="ref-6">Rorschach H. <em>Psychodiagnostik</em>. Bern: Bircher; 1921.</li>
+        <li id="ref-7">Panofsky E. <em>Architecture gothique et pensée scolastique</em>. Paris: Minuit; 1967.</li>
+        <li id="ref-8">Dummett M. <em>The Game of Tarot: From Ferrara to Salt Lake City</em>. London: Duckworth; 1980.</li>
+      </ol>
+    </div>
+  </div>
+  <p>PureSanté Éditions © 2026 — Tous droits réservés
+  </p>
+</footer>
+<!-- ═══ NOTIFICATION COFFRET LIMITÉ ═══ -->
+<div class="stock-toast" id="stockToast" role="status" aria-live="polite">
+  <button class="st-close" id="stClose" aria-label="Fermer la notification">&times;</button>
+  <span class="st-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+  </span>
+  <button class="st-body" id="stBody" type="button">
+    <span class="st-title">Coffret offert — quantités limitées</span>
+    <span class="st-sub">Le coffret Tarot (valeur 30&nbsp;€) est inclus tant qu'il reste des exemplaires. Voir l'offre.</span>
+  </button>
+</div>
+<script>
+  (function(){
+    // Scroll reveal
+    var obs=new IntersectionObserver(function(e){
+      e.forEach(function(x){
+        if(x.isIntersecting)x.target.classList.add('visible');
+      });
+    },{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(function(el){
+      obs.observe(el);
+    });
+    /* ── Accordéons : ouverture/fermeture + ARIA + résistance au resize ──
+       (après l'animation, max-height passe à 'none' pour que le contenu
+       re-wrappé au resize ne soit jamais tronqué) */
+    function openPanel(t,p){
+      t.classList.add('open');
+      t.setAttribute('aria-expanded','true');
+      p.removeAttribute('aria-hidden');
+      p.style.maxHeight=p.scrollHeight+'px';
+      p.addEventListener('transitionend',function h(e){
+        if(e.propertyName!=='max-height')return;
+        p.removeEventListener('transitionend',h);
+        if(t.classList.contains('open'))p.style.maxHeight='none';
+      });
+    }
+    function closePanel(t,p){
+      t.classList.remove('open');
+      t.setAttribute('aria-expanded','false');
+      p.setAttribute('aria-hidden','true');
+      if(p.style.maxHeight==='none'){
+        p.style.maxHeight=p.scrollHeight+'px';
+        void p.offsetHeight;
+      }
+      p.style.maxHeight='0';
+    }
+    function initAccordion(t,p,idBase){
+      if(!t||!p)return;
+      if(!p.id)p.id=idBase;
+      t.setAttribute('aria-controls',p.id);
+      t.setAttribute('aria-expanded','false');
+      p.setAttribute('aria-hidden','true');
+    }
+    // FAQ (un seul panneau ouvert à la fois)
+    var faqBtns=document.querySelectorAll('.faq-question');
+    faqBtns.forEach(function(b,i){
+      initAccordion(b,b.nextElementSibling,'faq-a'+(i+1));
+      b.addEventListener('click',function(){
+        var a=b.nextElementSibling,o=b.classList.contains('open');
+        faqBtns.forEach(function(x){
+          if(x.classList.contains('open'))closePanel(x,x.nextElementSibling);
+        });
+        if(!o)openPanel(b,a);
+      });
+    });
+    // Conditions 1-clic + sources
+    function accordion(triggerId,panelId){
+      var t=document.getElementById(triggerId),p=document.getElementById(panelId);
+      if(!t||!p)return;
+      initAccordion(t,p,panelId);
+      t.addEventListener('click',function(){
+        if(t.classList.contains('open'))closePanel(t,p);
+        else openPanel(t,p);
+      });
+    }
+    accordion('termsTrigger','termsPanel');
+    accordion('sourcesTrigger','sourcesPanel');
+    /* ── Renvois de sources : ouvrir le panneau avant de scroller ── */
+    function openSources(){
+      var t=document.getElementById('sourcesTrigger'),p=document.getElementById('sourcesPanel');
+      if(t&&p&&!t.classList.contains('open'))openPanel(t,p);
+    }
+    document.querySelectorAll('a[href^="#ref-"]').forEach(function(a){
+      a.addEventListener('click',openSources);
+    });
+    if(/^#ref-/.test(location.hash))openSources();
+  })();
+</script>
+<script>
+  /* ═══ Interactions : compteurs, texte progressif, parallaxe, carrousel ═══ */
+  (function(){
+    var motionOK=!window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function clamp(v,a,b){
+      return v<a?a:(v>b?b:v);
+    }
+    function smooth(t){
+      return t*t*(3-2*t);
+    }
+    /* ── Moteur scroll : un seul rAF pour tous les effets ── */
+    var ticks=[],raf=false;
+    function runTicks(){
+      raf=false;
+      var vh=window.innerHeight;
+      for(var i=0;i<ticks.length;i++)ticks[i](vh);
+    }
+    function onScroll(){
+      if(!raf){
+        raf=true;
+        requestAnimationFrame(runTicks);
+      }
+    }
+    if(motionOK){
+      window.addEventListener('scroll',onScroll,{passive:true});
+      window.addEventListener('resize',onScroll);
+    }
+    /* ── Compteurs animés (les valeurs réelles restent dans le DOM
+       jusqu'au déclenchement de l'animation) ── */
+    var nums=document.querySelectorAll('.stat-num');
+    if(nums.length&&motionOK){
+      var cObs=new IntersectionObserver(function(es){
+        es.forEach(function(x){
+          if(!x.isIntersecting)return;
+          cObs.unobserve(x.target);
+          var el=x.target,
+              target=parseInt(el.getAttribute('data-count'),10),
+              prefix=el.getAttribute('data-prefix')||'',
+              suffix=el.getAttribute('data-suffix')||'',
+              t0=null;
+          function step(now){
+            if(!t0)t0=now;
+            var p=clamp((now-t0)/1200,0,1),
+                e=1-Math.pow(1-p,3);
+            el.innerHTML=prefix+Math.round(target*e)+suffix;
+            if(p<1)requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+        });
+      },{threshold:.6});
+      nums.forEach(function(el){
+        cObs.observe(el);
+      });
+    }
+    /* ── Texte qui s'allume mot à mot ── */
+    var lead=document.getElementById('methodeLead');
+    if(lead&&motionOK){
+      var words=lead.textContent.trim().split(/\s+/);
+      lead.textContent='';
+      var spans=words.map(function(w,i){
+        var s=document.createElement('span');
+        s.className='w';
+        s.textContent=w;
+        lead.appendChild(s);
+        if(i<words.length-1)lead.appendChild(document.createTextNode(' '));
+        return s;
+      });
+      var lastLit=-1;
+      ticks.push(function(vh){
+        var r=lead.getBoundingClientRect();
+        if(r.bottom<0||r.top>vh)return;
+        var p=clamp((vh*.85-r.top)/(vh*.5),0,1);
+        var n=Math.round(p*spans.length);
+        if(n===lastLit)return;
+        for(var i=0;i<spans.length;i++)spans[i].classList.toggle('lit',i<n);
+        lastLit=n;
+      });
+    }
+    /* ── Parallaxe bannières + hero ── */
+    function addParallax(el,fn){
+      if(el&&motionOK)ticks.push(function(vh){
+        var r=el.getBoundingClientRect();
+        if(r.bottom<-80||r.top>vh+80)return;
+        fn(el,r,vh);
+      });
+    }
+    document.querySelectorAll('.banner').forEach(function(banner){
+      var bg=banner.querySelector('.banner-bg');
+      addParallax(banner,function(el,r,vh){
+        if(bg)bg.style.transform='translate3d(0,'+(r.top*-0.12).toFixed(1)+'px,0) scale(1.14)';
+      });
+    });
+    addParallax(document.getElementById('heroMedia'),function(el,r,vh){
+      var p=clamp(-r.top/(r.height||1),0,1);
+      el.style.transform='scale('+(1-p*0.05).toFixed(4)+')';
+    });
+    /* ── Carrousel témoignages (défilement auto lent + boucle) ── */
+    var tTrack=document.getElementById('testiTrack');
+    if(tTrack){
+      var tPrev=document.getElementById('testiPrev'),
+          tNext=document.getElementById('testiNext'),
+          tTimer=null,tVisible=false,tHold=false,tDelay=5500;
+      var tBehavior=motionOK?'smooth':'auto';
+      function tStep(){
+        var card=tTrack.querySelector('.testi-card');
+        return card?card.offsetWidth+20:tTrack.clientWidth;
+      }
+      function tAtEnd(){
+        return tTrack.scrollLeft+tTrack.clientWidth>=tTrack.scrollWidth-4;
+      }
+      function tFwd(){
+        if(tAtEnd())tTrack.scrollTo({left:0,behavior:tBehavior});
+        else tTrack.scrollBy({left:tStep(),behavior:tBehavior});
+      }
+      function tBack(){
+        if(tTrack.scrollLeft<=4)tTrack.scrollTo({left:tTrack.scrollWidth,behavior:tBehavior});
+        else tTrack.scrollBy({left:-tStep(),behavior:tBehavior});
+      }
+      function tStop(){
+        if(tTimer){clearInterval(tTimer);tTimer=null;}
+      }
+      function tPlay(){
+        if(motionOK&&tVisible&&!tHold&&!tTimer)tTimer=setInterval(tFwd,tDelay);
+      }
+      function tBump(){
+        tStop();tPlay();
+      }
+      if(tNext)tNext.addEventListener('click',function(){tFwd();tBump();});
+      if(tPrev)tPrev.addEventListener('click',function(){tBack();tBump();});
+      tTrack.addEventListener('mouseenter',function(){tHold=true;tStop();});
+      tTrack.addEventListener('mouseleave',function(){tHold=false;tPlay();});
+      tTrack.addEventListener('focusin',function(){tHold=true;tStop();});
+      tTrack.addEventListener('focusout',function(){tHold=false;tPlay();});
+      tTrack.addEventListener('touchstart',function(){tHold=true;tStop();},{passive:true});
+      tTrack.addEventListener('touchend',function(){
+        setTimeout(function(){tHold=false;tPlay();},7000);
+      },{passive:true});
+      if('IntersectionObserver' in window){
+        new IntersectionObserver(function(es){
+          es.forEach(function(x){
+            tVisible=x.isIntersecting;
+            if(tVisible)tPlay();else tStop();
+          });
+        },{threshold:.3}).observe(tTrack);
+      }else{
+        tVisible=true;tPlay();
+      }
+    }
+    /* premier calcul au chargement */
+    runTicks();
+  })();
+</script>
+<script>
+  /* ═══ Notification coffret limité : apparaît après le programme, se ferme d'un clic ═══ */
+  (function(){
+    var toast=document.getElementById('stockToast');
+    if(!toast)return;
+    var motionOK=!window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var dismissed=false;
+    try{dismissed=sessionStorage.getItem('stDismiss')==='1';}catch(e){}
+    function show(){if(!dismissed)toast.classList.add('show');}
+    function hide(){
+      toast.classList.remove('show');
+      dismissed=true;
+      try{sessionStorage.setItem('stDismiss','1');}catch(e){}
+    }
+    var trigger=document.getElementById('temoignages');
+    if(trigger&&'IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){
+        es.forEach(function(x){if(x.isIntersecting){show();io.disconnect();}});
+      },{rootMargin:'0px 0px -35% 0px'});
+      io.observe(trigger);
+    }else{
+      window.addEventListener('scroll',function f(){
+        if(window.scrollY>document.body.scrollHeight*0.5){show();window.removeEventListener('scroll',f);}
+      },{passive:true});
+    }
+    var body=document.getElementById('stBody');
+    if(body)body.addEventListener('click',function(){
+      hide();
+      var el=document.getElementById('offre');
+      if(el)el.scrollIntoView({behavior:motionOK?'smooth':'auto',block:'start'});
+    });
+    var close=document.getElementById('stClose');
+    if(close)close.addEventListener('click',function(e){
+      e.stopPropagation();
+      hide();
+    });
+  })();
+</script>
+</body>
+</html>
