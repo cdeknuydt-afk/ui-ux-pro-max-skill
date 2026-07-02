@@ -471,8 +471,15 @@
     width:100%;
     aspect-ratio:4/5;
     object-fit:cover}
+  .plat-media.plat-media-wide{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:2rem}
   .plat-media.plat-media-wide img{
-    aspect-ratio:4/3}
+    aspect-ratio:auto;
+    height:auto;
+    object-fit:contain}
   .plat-copy h2{
     font-size:clamp(1.9rem,3.2vw,2.5rem);
     margin-bottom:1rem;
@@ -1067,46 +1074,6 @@
     width:17px;
     height:17px;
     color:var(--gold)}
-  .pricing-terms{
-    max-width:760px;
-    margin:2.6rem auto 0}
-  .pricing-terms-trigger{
-    width:100%;
-    background:#fff;
-    border:1px solid var(--line-soft);
-    border-radius:var(--r-md);
-    padding:1.05rem 1.5rem;
-    cursor:pointer;
-    font-size:.88rem;
-    font-weight:600;
-    color:var(--ink-soft);
-    text-align:left;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    transition:border-color .2s ease,background-color .2s ease}
-  .pricing-terms-trigger:hover{
-    border-color:rgba(28,25,23,.16)}
-  .pricing-terms-trigger::after{
-    content:'+';
-    font-size:1.4rem;
-    font-weight:300;
-    line-height:1;
-    transition:transform .3s ease}
-  .pricing-terms-trigger.open::after{
-    transform:rotate(45deg)}
-  .pricing-terms-panel{
-    overflow:hidden;
-    transition:max-height .4s ease}
-  .js-anim .pricing-terms-panel{
-    max-height:0}
-  .pricing-terms-inner{
-    padding:1.3rem .4rem .4rem;
-    font-size:.8rem;
-    color:var(--muted-2);
-    line-height:1.6}
-  .pricing-terms-inner p{
-    margin-bottom:.8rem}
   /* ── TÉMOIGNAGES ── */
   .testi-carousel{
     position:relative;
@@ -2165,17 +2132,6 @@
         Accès à vie
       </span>
     </div>
-    <div class="pricing-terms reveal">
-      <button class="pricing-terms-trigger" id="termsTrigger">Conditions d'achat en 1-clic</button>
-      <div class="pricing-terms-panel" id="termsPanel">
-        <div class="pricing-terms-inner">
-          <p><em>Offre à 129&nbsp;€&nbsp;: en cliquant sur le bouton «&nbsp;Choisir le programme seul&nbsp;», vous souscrivez en 1-CLIC au programme «&nbsp;Apprendre le Tarot&nbsp;». Vous recevrez les accès de la plateforme sécurisée comprenant les vidéos de Marianne Costa. Vous serez prélevé d'une cotisation de 129 euros. Vous bénéficiez de votre droit de rétractation pendant 15 jours. Vous pourrez contacter le Service Client pour toute demande.</em>
-          </p>
-          <p><em>Offre à 139&nbsp;€&nbsp;: en cliquant sur le bouton «&nbsp;Rejoindre avec le coffret offert&nbsp;», vous souscrivez en 1-CLIC au programme «&nbsp;Apprendre le Tarot&nbsp;» et recevrez votre coffret de Tarot en plus, expédié par la poste sous 4 semaines. Vous recevrez les accès de la plateforme sécurisée comprenant les vidéos de Marianne Costa. Vous serez prélevé d'une cotisation de 139 euros. Vous bénéficiez de votre droit de rétractation pendant 15 jours. Vous pourrez contacter le Service Client pour toute demande.</em>
-          </p>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 <!-- ══════════ TÉMOIGNAGES ══════════ -->
@@ -2482,7 +2438,6 @@
         else openPanel(t,p);
       });
     }
-    accordion('termsTrigger','termsPanel');
     accordion('sourcesTrigger','sourcesPanel');
     /* ── Renvois de sources : ouvrir le panneau avant de scroller ── */
     function openSources(){
