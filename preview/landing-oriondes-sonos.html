@@ -2755,12 +2755,20 @@
   </div>
 </div>
 <script>
-  /* ═══ Notification deadline : compte à rebours jusqu'au 05/04/2026 à 23h59:59 (heure de Paris).
-     Modifier TARGET ci-dessous pour changer l'échéance. ═══ */
+  /* ═══ Notification deadline : compte à rebours "evergreen" de 48h à partir de la 1re visite.
+     La date de fin est mémorisée dans le navigateur (localStorage) : au retour, le décompte
+     reprend là où il en est (temps écoulé pris en compte). Modifier DL_DURATION pour changer la durée. ═══ */
   (function(){
     var toast=document.getElementById('deadlineToast');
     if(!toast)return;
-    var TARGET=new Date('2026-04-05T23:59:59+02:00').getTime(); /* échéance de l'offre : 05/04/2026 */
+    var DL_KEY='oriondesDeadline';       /* clé de mémorisation */
+    var DL_DURATION=48*60*60*1000;        /* durée : 48 heures */
+    var TARGET;
+    try{
+      var st=localStorage.getItem(DL_KEY);
+      TARGET=st?parseInt(st,10):NaN;
+      if(!TARGET||isNaN(TARGET)){TARGET=Date.now()+DL_DURATION;localStorage.setItem(DL_KEY,String(TARGET));}
+    }catch(e){TARGET=Date.now()+DL_DURATION;}
     var dD=document.getElementById('dlD'),dH=document.getElementById('dlH'),
         dM=document.getElementById('dlM'),dS=document.getElementById('dlS'),
         titleEl=document.getElementById('dlTitle'),subEl=document.getElementById('dlSub'),
