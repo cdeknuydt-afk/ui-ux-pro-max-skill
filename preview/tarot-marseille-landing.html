@@ -236,12 +236,7 @@
     line-height:0}
   /* ── HERO ── */
   .hero{
-    min-height:100vh;
-    min-height:100dvh;
-    padding:6.5rem 0 2rem;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+    padding:8rem 0 4rem;
     text-align:center;
     background:
       radial-gradient(1100px 480px at 50% -160px,rgba(161,98,7,.10),transparent 70%),
@@ -286,22 +281,20 @@
     height:15px;
     color:var(--gold)}
   .media-wrap{
-    width:min(100%,1000px);
-    margin:2.2rem auto 0;
+    width:min(100%,880px);
+    margin:2.4rem auto .5rem;
     border-radius:var(--r-lg);
     overflow:hidden;
-    background:var(--surface);
+    background:#0c0a09;
     box-shadow:var(--shadow-float)}
-  .media-wrap img{
+  .media-wrap .vidyard-player-wrapper{
+    position:relative;
+    aspect-ratio:16/9}
+  .media-wrap img.vidyard-player-embed{
     width:100%;
-    aspect-ratio:21/10;
+    height:100%;
     object-fit:cover;
-    object-position:center}
-  @media(min-width:768px){
-    .media-wrap{
-      width:min(100%,1000px,calc((100vh - 34rem)*2.1));
-      width:min(100%,1000px,calc((100dvh - 34rem)*2.1))}
-  }
+    display:block}
   /* ── BANDEAU STATS ── */
   .stats-section{
     padding:4.5rem 0}
@@ -1547,6 +1540,13 @@
       </h1>
       <p class="hero-sub fade-up d3">Regrets à répétition, manque de confiance, relations qui tournent en boucle… Le Tarot de Marseille est un langage vieux de 500 ans pour lire ce qui décide à votre place — et enfin reprendre la main.
       </p>
+    </div>
+    <div class="media-wrap fade-up d4" id="heroMedia">
+      <div class="vidyard-player-wrapper">
+        <img style="width:100%;margin:auto;display:block" class="vidyard-player-embed" src="https://play.vidyard.com/bqaUfaxthnmKfZrt3vAL9v.jpg" data-uuid="bqaUfaxthnmKfZrt3vAL9v" data-v="4" data-type="inline" alt="Vidéo — Le Tarot de Marseille et votre inconscient, avec Marianne Costa">
+      </div>
+    </div>
+    <div class="hero-inner">
       <div class="hero-actions fade-up d4">
         <a href="#offre" class="btn btn-dark">Découvrir le programme</a>
         <a href="#constat" class="btn btn-ghost">Comment ça marche
@@ -1568,11 +1568,9 @@
         </span>
       </div>
     </div>
-    <div class="media-wrap fade-in" id="heroMedia">
-      <img src="https://pure-sante-cdn.pubfac.io/uploads/tarot-bg.jpg" alt="Cartes du Tarot de Marseille disposées pour un tirage" fetchpriority="high" decoding="async">
-    </div>
   </div>
 </header>
+<script src="https://play.vidyard.com/embed/v4.js" type="text/javascript" async></script>
 <!-- ══════════ STATS ══════════ -->
 <section class="stats-section" aria-label="Chiffres clés">
   <div class="container">
@@ -2541,10 +2539,6 @@
       addParallax(banner,function(el,r,vh){
         if(bg)bg.style.transform='translate3d(0,'+(r.top*-0.12).toFixed(1)+'px,0) scale(1.14)';
       });
-    });
-    addParallax(document.getElementById('heroMedia'),function(el,r,vh){
-      var p=clamp(-r.top/(r.height||1),0,1);
-      el.style.transform='scale('+(1-p*0.05).toFixed(4)+')';
     });
     /* ── Carrousel témoignages (défilement auto lent + boucle) ── */
     var tTrack=document.getElementById('testiTrack');
