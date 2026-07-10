@@ -1405,6 +1405,174 @@
   .st-close:hover{
     background:rgba(255,255,255,.16);
     color:#fff}
+  /* ── POPUP CONFIRMATION 1-CLIC ── */
+  .popup-overlay{
+    position:fixed;
+    inset:0;
+    z-index:1000;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:1.5rem;
+    background:rgba(12,10,9,.58);
+    -webkit-backdrop-filter:blur(4px);
+    backdrop-filter:blur(4px)}
+  .popup-overlay.show{
+    display:flex}
+  .popup-card{
+    position:relative;
+    width:100%;
+    max-width:430px;
+    background:var(--bg);
+    border:1px solid var(--line-soft);
+    border-radius:var(--r-lg);
+    padding:2.4rem 2rem 1.9rem;
+    text-align:center;
+    box-shadow:0 40px 90px rgba(12,10,9,.4);
+    animation:popIn .3s cubic-bezier(.2,.7,.2,1)}
+  @keyframes popIn{
+    from{opacity:0;transform:translateY(14px) scale(.97)}
+    to{opacity:1;transform:none}
+  }
+  .popup-close{
+    position:absolute;
+    top:.8rem;
+    right:.9rem;
+    width:34px;
+    height:34px;
+    border:none;
+    background:transparent;
+    color:var(--muted);
+    font-size:1.5rem;
+    line-height:1;
+    cursor:pointer;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:background-color .2s ease,color .2s ease}
+  .popup-close:hover{
+    background:var(--surface);
+    color:var(--ink)}
+  .popup-icon{
+    width:56px;
+    height:56px;
+    margin:0 auto 1.1rem;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--gold-deep);
+    background:var(--gold-pale);
+    box-shadow:inset 0 0 0 1px rgba(143,85,9,.2)}
+  .popup-icon svg{
+    width:27px;
+    height:27px}
+  .popup-title{
+    font-family:var(--f-display);
+    font-size:1.5rem;
+    letter-spacing:-.01em;
+    margin-bottom:1.2rem}
+  .popup-offer{
+    background:var(--surface);
+    border-radius:var(--r-md);
+    padding:1.1rem 1.2rem;
+    margin-bottom:1.4rem;
+    text-align:left}
+  .popup-offer-name{
+    font-size:.95rem;
+    font-weight:600;
+    color:var(--ink);
+    line-height:1.4}
+  .popup-offer-price{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:.6rem;
+    margin-top:.7rem;
+    padding-top:.7rem;
+    border-top:1px solid var(--line-soft)}
+  .popup-offer-price span{
+    font-size:.85rem;
+    color:var(--muted)}
+  .popup-offer-price strong{
+    font-family:var(--f-display);
+    font-size:1.5rem;
+    font-weight:600;
+    color:var(--ink)}
+  .popup-actions{
+    display:flex;
+    gap:.7rem}
+  .popup-btn{
+    flex:1;
+    padding:.95rem 1rem;
+    min-height:48px;
+    border-radius:999px;
+    font-family:var(--f);
+    font-weight:600;
+    font-size:.95rem;
+    cursor:pointer;
+    transition:background-color .2s ease,color .2s ease,border-color .2s ease,transform .2s ease}
+  .popup-btn:hover{
+    transform:translateY(-1px)}
+  .popup-btn-cancel{
+    background:transparent;
+    border:1.5px solid var(--line);
+    color:var(--ink-soft)}
+  .popup-btn-cancel:hover{
+    border-color:var(--ink);
+    background:var(--surface)}
+  .popup-btn-confirm{
+    background:var(--ink);
+    border:1.5px solid var(--ink);
+    color:#fff}
+  .popup-btn-confirm:hover{
+    background:#332f2a}
+  .popup-reassure{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:.4rem 1.2rem;
+    margin-top:1.3rem;
+    font-size:.76rem;
+    color:var(--muted)}
+  .popup-reassure span{
+    display:inline-flex;
+    align-items:center;
+    gap:.35rem}
+  .popup-reassure svg{
+    width:14px;
+    height:14px;
+    color:var(--gold)}
+  .popup-terms{
+    margin-top:1.2rem;
+    border-top:1px solid var(--line-soft);
+    padding-top:.9rem}
+  .popup-terms-trigger{
+    background:none;
+    border:none;
+    color:var(--muted-2);
+    font-size:.78rem;
+    font-weight:600;
+    cursor:pointer;
+    text-decoration:underline;
+    text-underline-offset:3px}
+  .popup-terms-trigger:hover{
+    color:var(--ink-soft)}
+  .popup-terms-panel{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .3s ease}
+  .popup-terms-panel p{
+    font-size:.74rem;
+    color:var(--muted-2);
+    line-height:1.6;
+    text-align:left;
+    padding-top:.8rem}
+  @media(max-width:420px){
+    .popup-actions{
+      flex-direction:column-reverse}
+  }
   /* ── REDUCED MOTION ── */
   @media (prefers-reduced-motion:reduce){
     html{
@@ -2372,6 +2540,43 @@
     <span class="st-sub">Le coffret Tarot (valeur 30&nbsp;€) est inclus tant qu'il reste des exemplaires. Voir l'offre.</span>
   </button>
 </div>
+<!-- ═══ POPUP CONFIRMATION 1-CLIC ═══ -->
+<div class="popup-overlay" id="confirmPopup" role="dialog" aria-modal="true" aria-labelledby="popupTitle" aria-hidden="true">
+  <div class="popup-card">
+    <button class="popup-close" id="popupClose" type="button" aria-label="Fermer">&times;</button>
+    <div class="popup-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+    </div>
+    <h3 class="popup-title" id="popupTitle">Confirmer votre commande en 1-clic&nbsp;?</h3>
+    <div class="popup-offer">
+      <div class="popup-offer-name" id="popupOffer">Programme « Apprendre le Tarot »</div>
+      <div class="popup-offer-price">
+        <span>Paiement unique · accès à vie</span>
+        <strong id="popupPrice">139&nbsp;€</strong>
+      </div>
+    </div>
+    <div class="popup-actions">
+      <button class="popup-btn popup-btn-cancel" id="popupCancel" type="button">Annuler</button>
+      <button class="popup-btn popup-btn-confirm" id="popupConfirm" type="button">Confirmer l'achat</button>
+    </div>
+    <div class="popup-reassure">
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Paiement 100&nbsp;% sécurisé
+      </span>
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+        Rétractation 15 jours
+      </span>
+    </div>
+    <div class="popup-terms">
+      <button class="popup-terms-trigger" id="popupTermsTrigger" type="button" aria-expanded="false" aria-controls="popupTermsPanel">Conditions d'achat en 1-clic</button>
+      <div class="popup-terms-panel" id="popupTermsPanel" aria-hidden="true">
+        <p id="popupTermsText"></p>
+      </div>
+    </div>
+  </div>
+</div>
 <script>
   (function(){
     // Scroll reveal
@@ -2631,6 +2836,92 @@
     if(close)close.addEventListener('click',function(e){
       e.stopPropagation();
       hide();
+    });
+  })();
+</script>
+<script>
+  /* ═══ Popup de confirmation 1-clic ═══
+     Intercepte le clic sur les boutons d'achat 1-clic (.buttonCheck) et
+     demande confirmation avant de déclencher réellement l'achat de la
+     plateforme. Le contenu (offre, prix, mentions légales) s'adapte à la
+     carte cliquée. ═══ */
+  (function(){
+    var popup=document.getElementById('confirmPopup');
+    if(!popup)return;
+    var motionOK=!window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var offerEl=document.getElementById('popupOffer'),
+        priceEl=document.getElementById('popupPrice'),
+        termsText=document.getElementById('popupTermsText'),
+        termsTrigger=document.getElementById('popupTermsTrigger'),
+        termsPanel=document.getElementById('popupTermsPanel'),
+        confirmBtn=document.getElementById('popupConfirm'),
+        cancelBtn=document.getElementById('popupCancel'),
+        closeBtn=document.getElementById('popupClose');
+    var pending=null,bypass=false,lastFocus=null;
+    var TERMS={
+      '129':"En cliquant sur « Confirmer l'achat », vous souscrivez en 1-CLIC au programme « Apprendre le Tarot ». Vous recevrez les accès de la plateforme sécurisée comprenant les vidéos de Marianne Costa. Vous serez prélevé d'un montant unique de 129 euros. Vous bénéficiez de votre droit de rétractation pendant 15 jours. Vous pourrez contacter le Service Client pour toute demande.",
+      '139':"En cliquant sur « Confirmer l'achat », vous souscrivez en 1-CLIC au programme « Apprendre le Tarot » et recevrez votre coffret de Tarot en plus, expédié par la poste sous 4 semaines. Vous recevrez les accès de la plateforme sécurisée comprenant les vidéos de Marianne Costa. Vous serez prélevé d'un montant unique de 139 euros. Vous bénéficiez de votre droit de rétractation pendant 15 jours. Vous pourrez contacter le Service Client pour toute demande."
+    };
+    function fillFrom(btn){
+      var card=btn.closest('.pricing-card'),
+          name=card&&card.querySelector('.plan-name'),
+          price=card&&card.querySelector('.price');
+      var priceTxt=price?price.textContent.replace(/\s+/g,' ').trim():'139 €';
+      var key=/129/.test(priceTxt)?'129':'139';
+      offerEl.textContent='Apprendre le Tarot — '+(name?name.textContent.trim():'Programme');
+      priceEl.innerHTML=priceTxt.replace(/\s*€/,'&nbsp;€');
+      termsText.textContent=TERMS[key];
+      // referme le volet mentions à chaque ouverture
+      termsTrigger.setAttribute('aria-expanded','false');
+      termsPanel.setAttribute('aria-hidden','true');
+      termsPanel.style.maxHeight='0';
+    }
+    function open(btn){
+      lastFocus=btn;
+      fillFrom(btn);
+      popup.classList.add('show');
+      popup.setAttribute('aria-hidden','false');
+      document.body.style.overflow='hidden';
+      confirmBtn.focus();
+    }
+    function close(){
+      popup.classList.remove('show');
+      popup.setAttribute('aria-hidden','true');
+      document.body.style.overflow='';
+      if(lastFocus&&lastFocus.focus)lastFocus.focus();
+    }
+    // Intercepteur en phase capture (passe avant le handler de la plateforme)
+    function intercept(e){
+      var btn=e.target.closest?e.target.closest('.buttonCheck'):null;
+      if(!btn)return;
+      if(bypass)return;               // clic ré-émis après confirmation : on laisse passer
+      e.preventDefault();
+      e.stopPropagation();
+      if(e.stopImmediatePropagation)e.stopImmediatePropagation();
+      pending=btn;
+      open(btn);
+    }
+    document.addEventListener('click',intercept,true);
+    confirmBtn.addEventListener('click',function(){
+      var btn=pending;
+      close();
+      if(!btn)return;
+      bypass=true;                    // autorise le vrai clic à traverser l'intercepteur
+      try{btn.click();}catch(e){}
+      bypass=false;
+    });
+    cancelBtn.addEventListener('click',close);
+    closeBtn.addEventListener('click',close);
+    popup.addEventListener('click',function(e){ if(e.target===popup)close(); });
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape'&&popup.classList.contains('show'))close();
+    });
+    // Accordéon mentions légales
+    termsTrigger.addEventListener('click',function(){
+      var op=termsTrigger.getAttribute('aria-expanded')==='true';
+      termsTrigger.setAttribute('aria-expanded',String(!op));
+      termsPanel.setAttribute('aria-hidden',String(op));
+      termsPanel.style.maxHeight=op?'0':termsPanel.scrollHeight+'px';
     });
   })();
 </script>
