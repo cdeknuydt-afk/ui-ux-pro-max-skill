@@ -402,35 +402,43 @@
   .laws-close strong{
     color:var(--ink);
     font-weight:600}
-  /* ── BANNER PLEIN ÉCRAN ── */
+  /* ── BANNER PLEIN ÉCRAN ──
+     Image de fond + overlay + contenu empilés dans une seule cellule de
+     grille : l'image ne peut jamais décaler le texte, même si un style
+     externe neutralise son position:absolute. */
   .banner{
     position:relative;
+    display:grid;
+    grid-template:1fr / 1fr;
     min-height:520px;
     height:74vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
     text-align:center;
     overflow:hidden;
     background:var(--ink)}
   .banner-bg{
-    position:absolute;
-    inset:0;
+    grid-area:1/1;
+    align-self:stretch;
+    justify-self:stretch;
     width:100%;
     height:100%;
     object-fit:cover;
+    z-index:0;
     will-change:transform}
   .banner::after{
     content:'';
-    position:absolute;
-    inset:0;
+    grid-area:1/1;
+    z-index:1;
     background:linear-gradient(180deg,rgba(12,10,9,.48) 0%,rgba(12,10,9,.66) 100%)}
   .banner-content{
+    grid-area:1/1;
+    place-self:center;
     position:relative;
     z-index:2;
+    width:100%;
+    max-width:800px;
+    margin:0 auto;
     color:#fff;
-    padding:0 1.5rem;
-    max-width:800px}
+    padding:2.5rem 1.5rem}
   .banner-content .overline{
     color:var(--gold-soft)}
   .banner-quote{
@@ -1643,8 +1651,13 @@
     .law{
       grid-template-columns:44px 1fr}
     .banner{
-      height:62vh;
-      min-height:440px}
+      height:auto;
+      min-height:60vh;
+      padding:1rem 0}
+    .banner-quote{
+      font-size:clamp(1.6rem,6.2vw,2.3rem)}
+    .banner-content{
+      padding:3.5rem 1.4rem}
     .top-nav-link{
       display:none}
     .top-nav-logo-word{
